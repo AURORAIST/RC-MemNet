@@ -1,1 +1,1 @@
-# RC-DMNet
+# RC-MemNet
