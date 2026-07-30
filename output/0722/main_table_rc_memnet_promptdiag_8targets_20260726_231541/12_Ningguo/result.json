@@ -1,0 +1,1905 @@
+{
+  "task": "leave_one_region_out_vowel_classification",
+  "method": "RC-MemNet",
+  "ablation_variant": "rc_memnet",
+  "paper_alignment": {
+    "shared_acoustic_encoder": true,
+    "rpl_prompt_inside_encoder": true,
+    "prompt_conditioned_memory_query": true,
+    "category_aligned_shared_memory": true,
+    "region_level_read_before_write": true,
+    "label_guided_source_region_writes": true,
+    "target_prompt_fusion_only": true,
+    "target_memory_read_only": true,
+    "read_only_query_inference": true
+  },
+  "ablation_semantics": {
+    "dual_level": "target/global memories with target prompt disabled",
+    "uniform_prompt_fusion": "target/global memories with uniform source-prompt fusion and no support adaptation",
+    "rc_memnet": "shared persistent memory with support-adapted source-prompt fusion",
+    "rc_dmnet": "legacy alias for rc_memnet",
+    "no_context_prompt": "remove learned context prompts from source and target encoding",
+    "no_memory_adapter": "remove memory read/write adaptation and keep prompt-conditioned encoder",
+    "no_prompt_no_memory": "remove both context prompts and memory adaptation",
+    "no_slow_consolidation": "full PCLR without slow global-memory consolidation",
+    "full_pclr": "full PCLR with prompt routing, gated adaptation, and slow consolidation"
+  },
+  "metrics": {
+    "accuracy": 0.5997490589711418,
+    "macro_f1": 0.4929930609493487,
+    "weighted_f1": 0.5864177568279806,
+    "micro_f1": 0.5997490589711418,
+    "support_size": 36.0,
+    "query_size": 797.0
+  },
+  "metrics_std": {
+    "accuracy": 0.0,
+    "macro_f1": 0.0,
+    "weighted_f1": 0.0,
+    "micro_f1": 0.0,
+    "support_size": 0.0,
+    "query_size": 0.0
+  },
+  "val_metrics": {
+    "accuracy": 0.6627270737579339,
+    "macro_f1": 0.5705631371270287,
+    "weighted_f1": 0.6602271618303026,
+    "micro_f1": 0.6627270737579339
+  },
+  "evaluation_splits": {
+    "test": {
+      "runs": 1,
+      "support_shots": 4,
+      "metrics": [
+        {
+          "accuracy": 0.5997490589711418,
+          "macro_f1": 0.4929930609493487,
+          "weighted_f1": 0.5864177568279806,
+          "micro_f1": 0.5997490589711418,
+          "support_size": 36,
+          "query_size": 797
+        }
+      ],
+      "mean": {
+        "accuracy": 0.5997490589711418,
+        "macro_f1": 0.4929930609493487,
+        "weighted_f1": 0.5864177568279806,
+        "micro_f1": 0.5997490589711418,
+        "support_size": 36.0,
+        "query_size": 797.0
+      },
+      "std": {
+        "accuracy": 0.0,
+        "macro_f1": 0.0,
+        "weighted_f1": 0.0,
+        "micro_f1": 0.0,
+        "support_size": 0.0,
+        "query_size": 0.0
+      }
+    }
+  },
+  "target_eval_device": "cpu",
+  "report": {
+    "a": {
+      "precision": 0.703030303030303,
+      "recall": 0.48333333333333334,
+      "f1-score": 0.5728395061728395,
+      "support": 240.0
+    },
+    "e": {
+      "precision": 0.4935064935064935,
+      "recall": 0.6333333333333333,
+      "f1-score": 0.5547445255474452,
+      "support": 60.0
+    },
+    "i": {
+      "precision": 0.7414634146341463,
+      "recall": 0.9382716049382716,
+      "f1-score": 0.8283378746594006,
+      "support": 162.0
+    },
+    "o": {
+      "precision": 0.6307692307692307,
+      "recall": 0.43157894736842106,
+      "f1-score": 0.5125,
+      "support": 95.0
+    },
+    "u": {
+      "precision": 0.5086705202312138,
+      "recall": 0.8,
+      "f1-score": 0.6219081272084805,
+      "support": 110.0
+    },
+    "y": {
+      "precision": 0.41025641025641024,
+      "recall": 0.3333333333333333,
+      "f1-score": 0.367816091954023,
+      "support": 48.0
+    },
+    "ɔ": {
+      "precision": 0.23809523809523808,
+      "recall": 0.8333333333333334,
+      "f1-score": 0.37037037037037035,
+      "support": 12.0
+    },
+    "ə": {
+      "precision": 0.5384615384615384,
+      "recall": 0.28,
+      "f1-score": 0.3684210526315789,
+      "support": 50.0
+    },
+    "ɛ": {
+      "precision": 0.6,
+      "recall": 0.15,
+      "f1-score": 0.24,
+      "support": 20.0
+    },
+    "accuracy": 0.5997490589711418,
+    "macro avg": {
+      "precision": 0.540472572109397,
+      "recall": 0.5425759872933362,
+      "f1-score": 0.4929930609493487,
+      "support": 797.0
+    },
+    "weighted avg": {
+      "precision": 0.6220879512288984,
+      "recall": 0.5997490589711418,
+      "f1-score": 0.5864177568279806,
+      "support": 797.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      116,
+      22,
+      29,
+      12,
+      30,
+      0,
+      26,
+      4,
+      1
+    ],
+    [
+      6,
+      38,
+      2,
+      0,
+      9,
+      0,
+      1,
+      4,
+      0
+    ],
+    [
+      6,
+      4,
+      152,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      6,
+      2,
+      5,
+      41,
+      23,
+      15,
+      3,
+      0,
+      0
+    ],
+    [
+      1,
+      8,
+      5,
+      2,
+      88,
+      6,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      3,
+      5,
+      2,
+      16,
+      16,
+      0,
+      4,
+      1
+    ],
+    [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      10,
+      0,
+      0
+    ],
+    [
+      12,
+      0,
+      5,
+      8,
+      7,
+      2,
+      2,
+      14,
+      0
+    ],
+    [
+      15,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3
+    ]
+  ],
+  "top_confusions": [
+    {
+      "true_label": "a",
+      "pred_label": "u",
+      "count": 30
+    },
+    {
+      "true_label": "a",
+      "pred_label": "i",
+      "count": 29
+    },
+    {
+      "true_label": "a",
+      "pred_label": "ɔ",
+      "count": 26
+    },
+    {
+      "true_label": "o",
+      "pred_label": "u",
+      "count": 23
+    },
+    {
+      "true_label": "a",
+      "pred_label": "e",
+      "count": 22
+    },
+    {
+      "true_label": "y",
+      "pred_label": "u",
+      "count": 16
+    },
+    {
+      "true_label": "o",
+      "pred_label": "y",
+      "count": 15
+    },
+    {
+      "true_label": "ɛ",
+      "pred_label": "a",
+      "count": 15
+    },
+    {
+      "true_label": "a",
+      "pred_label": "o",
+      "count": 12
+    },
+    {
+      "true_label": "ə",
+      "pred_label": "a",
+      "count": 12
+    }
+  ],
+  "split": {
+    "protocol": "loro",
+    "holdout_region": "12宁国",
+    "target_labels_used_for_training": false,
+    "train_regions": [
+      "01A酉华",
+      "01塘南",
+      "01墩上镇茅坦村",
+      "01杨柳镇",
+      "01榔桥",
+      "01焦村",
+      "01砖墙",
+      "01繁阳",
+      "01西湖镇",
+      "01许镇",
+      "01长垅",
+      "01香口村",
+      "01高路亭",
+      "02乌石",
+      "02云岭",
+      "02何湾镇",
+      "02崔东安",
+      "02梅龙镇双湖村",
+      "02横渡村",
+      "02河口村",
+      "02淳溪",
+      "02陵阳",
+      "03弋江镇",
+      "03新明",
+      "03新河",
+      "03桃花潭",
+      "03湖阳",
+      "03马衙镇马衙村",
+      "04博望",
+      "04新港",
+      "04梅街镇刘街村",
+      "04甘棠",
+      "04籍山镇",
+      "04茂林",
+      "05新丰",
+      "05棠溪镇石门村",
+      "05黄村",
+      "06铜陵",
+      "14溧水",
+      "六郎镇"
+    ],
+    "num_train_regions": 40
+  },
+  "split_audit": {
+    "protocol": "loro",
+    "holdout_region": "12宁国",
+    "all_regions": [
+      "01A酉华",
+      "01塘南",
+      "01墩上镇茅坦村",
+      "01杨柳镇",
+      "01榔桥",
+      "01焦村",
+      "01砖墙",
+      "01繁阳",
+      "01西湖镇",
+      "01许镇",
+      "01长垅",
+      "01香口村",
+      "01高路亭",
+      "02乌石",
+      "02云岭",
+      "02何湾镇",
+      "02崔东安",
+      "02梅龙镇双湖村",
+      "02横渡村",
+      "02河口村",
+      "02淳溪",
+      "02陵阳",
+      "03弋江镇",
+      "03新明",
+      "03新河",
+      "03桃花潭",
+      "03湖阳",
+      "03马衙镇马衙村",
+      "04博望",
+      "04新港",
+      "04梅街镇刘街村",
+      "04甘棠",
+      "04籍山镇",
+      "04茂林",
+      "05新丰",
+      "05棠溪镇石门村",
+      "05黄村",
+      "06铜陵",
+      "12宁国",
+      "14溧水",
+      "六郎镇"
+    ],
+    "num_all_regions": 41,
+    "source_pool_regions": [
+      "01A酉华",
+      "01塘南",
+      "01墩上镇茅坦村",
+      "01杨柳镇",
+      "01榔桥",
+      "01焦村",
+      "01砖墙",
+      "01繁阳",
+      "01西湖镇",
+      "01许镇",
+      "01长垅",
+      "01香口村",
+      "01高路亭",
+      "02乌石",
+      "02云岭",
+      "02何湾镇",
+      "02崔东安",
+      "02梅龙镇双湖村",
+      "02横渡村",
+      "02河口村",
+      "02淳溪",
+      "02陵阳",
+      "03弋江镇",
+      "03新明",
+      "03新河",
+      "03桃花潭",
+      "03湖阳",
+      "03马衙镇马衙村",
+      "04博望",
+      "04新港",
+      "04梅街镇刘街村",
+      "04甘棠",
+      "04籍山镇",
+      "04茂林",
+      "05新丰",
+      "05棠溪镇石门村",
+      "05黄村",
+      "06铜陵",
+      "14溧水",
+      "六郎镇"
+    ],
+    "num_source_pool_regions": 40,
+    "train_regions": [
+      "01A酉华",
+      "01塘南",
+      "01墩上镇茅坦村",
+      "01杨柳镇",
+      "01榔桥",
+      "01焦村",
+      "01砖墙",
+      "01繁阳",
+      "01西湖镇",
+      "01许镇",
+      "01长垅",
+      "01香口村",
+      "01高路亭",
+      "02乌石",
+      "02云岭",
+      "02何湾镇",
+      "02崔东安",
+      "02梅龙镇双湖村",
+      "02横渡村",
+      "02河口村",
+      "02淳溪",
+      "02陵阳",
+      "03弋江镇",
+      "03新明",
+      "03新河",
+      "03桃花潭",
+      "03湖阳",
+      "03马衙镇马衙村",
+      "04博望",
+      "04新港",
+      "04梅街镇刘街村",
+      "04甘棠",
+      "04籍山镇",
+      "04茂林",
+      "05新丰",
+      "05棠溪镇石门村",
+      "05黄村",
+      "06铜陵",
+      "14溧水",
+      "六郎镇"
+    ],
+    "val_regions": [
+      "01A酉华",
+      "01塘南",
+      "01墩上镇茅坦村",
+      "01杨柳镇",
+      "01榔桥",
+      "01焦村",
+      "01砖墙",
+      "01繁阳",
+      "01西湖镇",
+      "01许镇",
+      "01长垅",
+      "01香口村",
+      "01高路亭",
+      "02乌石",
+      "02云岭",
+      "02何湾镇",
+      "02崔东安",
+      "02梅龙镇双湖村",
+      "02横渡村",
+      "02河口村",
+      "02淳溪",
+      "02陵阳",
+      "03弋江镇",
+      "03新明",
+      "03新河",
+      "03桃花潭",
+      "03湖阳",
+      "03马衙镇马衙村",
+      "04博望",
+      "04新港",
+      "04梅街镇刘街村",
+      "04甘棠",
+      "04籍山镇",
+      "04茂林",
+      "05新丰",
+      "05棠溪镇石门村",
+      "05黄村",
+      "06铜陵",
+      "14溧水",
+      "六郎镇"
+    ],
+    "test_regions": [
+      "12宁国"
+    ],
+    "num_train_regions": 40,
+    "source_pool_rows": 45684,
+    "train_rows": 41115,
+    "val_rows": 4569,
+    "test_rows": 833,
+    "train_plus_val_rows": 45684,
+    "target_rows_in_train": 0,
+    "target_rows_in_val": 0,
+    "non_target_rows_in_test": 0,
+    "target_labels_used_for_training": false,
+    "train_regions_cover_all_non_target_regions": true,
+    "missing_source_regions_in_train": [],
+    "val_regions_subset_of_source_pool": true,
+    "test_is_holdout_only": true,
+    "train_fraction": 1.0,
+    "val_size": 0.1,
+    "region_counts": {
+      "full": {
+        "01A酉华": 1251,
+        "01塘南": 419,
+        "01墩上镇茅坦村": 1288,
+        "01杨柳镇": 1250,
+        "01榔桥": 840,
+        "01焦村": 1240,
+        "01砖墙": 1257,
+        "01繁阳": 429,
+        "01西湖镇": 1259,
+        "01许镇": 1655,
+        "01长垅": 1255,
+        "01香口村": 1232,
+        "01高路亭": 1252,
+        "02乌石": 1667,
+        "02云岭": 1251,
+        "02何湾镇": 1236,
+        "02崔东安": 419,
+        "02梅龙镇双湖村": 420,
+        "02横渡村": 1246,
+        "02河口村": 1206,
+        "02淳溪": 1275,
+        "02陵阳": 1263,
+        "03弋江镇": 1240,
+        "03新明": 1256,
+        "03新河": 1250,
+        "03桃花潭": 1277,
+        "03湖阳": 1262,
+        "03马衙镇马衙村": 1248,
+        "04博望": 1245,
+        "04新港": 1254,
+        "04梅街镇刘街村": 1246,
+        "04甘棠": 840,
+        "04籍山镇": 412,
+        "04茂林": 1269,
+        "05新丰": 1255,
+        "05棠溪镇石门村": 1252,
+        "05黄村": 1252,
+        "06铜陵": 609,
+        "12宁国": 833,
+        "14溧水": 1662,
+        "六郎镇": 1245
+      },
+      "source_pool": {
+        "01A酉华": 1251,
+        "01塘南": 419,
+        "01墩上镇茅坦村": 1288,
+        "01杨柳镇": 1250,
+        "01榔桥": 840,
+        "01焦村": 1240,
+        "01砖墙": 1257,
+        "01繁阳": 429,
+        "01西湖镇": 1259,
+        "01许镇": 1655,
+        "01长垅": 1255,
+        "01香口村": 1232,
+        "01高路亭": 1252,
+        "02乌石": 1667,
+        "02云岭": 1251,
+        "02何湾镇": 1236,
+        "02崔东安": 419,
+        "02梅龙镇双湖村": 420,
+        "02横渡村": 1246,
+        "02河口村": 1206,
+        "02淳溪": 1275,
+        "02陵阳": 1263,
+        "03弋江镇": 1240,
+        "03新明": 1256,
+        "03新河": 1250,
+        "03桃花潭": 1277,
+        "03湖阳": 1262,
+        "03马衙镇马衙村": 1248,
+        "04博望": 1245,
+        "04新港": 1254,
+        "04梅街镇刘街村": 1246,
+        "04甘棠": 840,
+        "04籍山镇": 412,
+        "04茂林": 1269,
+        "05新丰": 1255,
+        "05棠溪镇石门村": 1252,
+        "05黄村": 1252,
+        "06铜陵": 609,
+        "14溧水": 1662,
+        "六郎镇": 1245
+      },
+      "train": {
+        "01A酉华": 1131,
+        "01塘南": 371,
+        "01墩上镇茅坦村": 1179,
+        "01杨柳镇": 1104,
+        "01榔桥": 772,
+        "01焦村": 1107,
+        "01砖墙": 1127,
+        "01繁阳": 387,
+        "01西湖镇": 1124,
+        "01许镇": 1476,
+        "01长垅": 1127,
+        "01香口村": 1109,
+        "01高路亭": 1128,
+        "02乌石": 1486,
+        "02云岭": 1104,
+        "02何湾镇": 1119,
+        "02崔东安": 376,
+        "02梅龙镇双湖村": 368,
+        "02横渡村": 1123,
+        "02河口村": 1088,
+        "02淳溪": 1141,
+        "02陵阳": 1117,
+        "03弋江镇": 1132,
+        "03新明": 1145,
+        "03新河": 1129,
+        "03桃花潭": 1137,
+        "03湖阳": 1148,
+        "03马衙镇马衙村": 1124,
+        "04博望": 1131,
+        "04新港": 1122,
+        "04梅街镇刘街村": 1122,
+        "04甘棠": 750,
+        "04籍山镇": 366,
+        "04茂林": 1158,
+        "05新丰": 1128,
+        "05棠溪镇石门村": 1141,
+        "05黄村": 1123,
+        "06铜陵": 556,
+        "14溧水": 1509,
+        "六郎镇": 1130
+      },
+      "val": {
+        "01A酉华": 120,
+        "01塘南": 48,
+        "01墩上镇茅坦村": 109,
+        "01杨柳镇": 146,
+        "01榔桥": 68,
+        "01焦村": 133,
+        "01砖墙": 130,
+        "01繁阳": 42,
+        "01西湖镇": 135,
+        "01许镇": 179,
+        "01长垅": 128,
+        "01香口村": 123,
+        "01高路亭": 124,
+        "02乌石": 181,
+        "02云岭": 147,
+        "02何湾镇": 117,
+        "02崔东安": 43,
+        "02梅龙镇双湖村": 52,
+        "02横渡村": 123,
+        "02河口村": 118,
+        "02淳溪": 134,
+        "02陵阳": 146,
+        "03弋江镇": 108,
+        "03新明": 111,
+        "03新河": 121,
+        "03桃花潭": 140,
+        "03湖阳": 114,
+        "03马衙镇马衙村": 124,
+        "04博望": 114,
+        "04新港": 132,
+        "04梅街镇刘街村": 124,
+        "04甘棠": 90,
+        "04籍山镇": 46,
+        "04茂林": 111,
+        "05新丰": 127,
+        "05棠溪镇石门村": 111,
+        "05黄村": 129,
+        "06铜陵": 53,
+        "14溧水": 153,
+        "六郎镇": 115
+      },
+      "test": {
+        "12宁国": 833
+      }
+    },
+    "label_counts_by_region": {
+      "train": {
+        "01A酉华": {
+          "a": 330,
+          "e": 84,
+          "i": 217,
+          "o": 138,
+          "u": 160,
+          "y": 68,
+          "ɔ": 22,
+          "ə": 78,
+          "ɛ": 34
+        },
+        "01塘南": {
+          "a": 105,
+          "e": 30,
+          "i": 75,
+          "o": 45,
+          "u": 50,
+          "y": 24,
+          "ɔ": 8,
+          "ə": 24,
+          "ɛ": 10
+        },
+        "01墩上镇茅坦村": {
+          "a": 359,
+          "e": 93,
+          "i": 227,
+          "o": 140,
+          "u": 156,
+          "y": 70,
+          "ɔ": 21,
+          "ə": 76,
+          "ɛ": 37
+        },
+        "01杨柳镇": {
+          "a": 318,
+          "e": 80,
+          "i": 220,
+          "o": 134,
+          "u": 155,
+          "y": 68,
+          "ɔ": 22,
+          "ə": 75,
+          "ɛ": 32
+        },
+        "01榔桥": {
+          "a": 235,
+          "e": 58,
+          "i": 149,
+          "o": 89,
+          "u": 104,
+          "y": 51,
+          "ɔ": 14,
+          "ə": 51,
+          "ɛ": 21
+        },
+        "01焦村": {
+          "a": 321,
+          "e": 86,
+          "i": 224,
+          "o": 132,
+          "u": 150,
+          "y": 69,
+          "ɔ": 22,
+          "ə": 72,
+          "ɛ": 31
+        },
+        "01砖墙": {
+          "a": 332,
+          "e": 84,
+          "i": 232,
+          "o": 127,
+          "u": 156,
+          "y": 69,
+          "ɔ": 22,
+          "ə": 71,
+          "ɛ": 34
+        },
+        "01繁阳": {
+          "a": 110,
+          "e": 29,
+          "i": 82,
+          "o": 44,
+          "u": 53,
+          "y": 24,
+          "ɔ": 7,
+          "ə": 25,
+          "ɛ": 13
+        },
+        "01西湖镇": {
+          "a": 325,
+          "e": 88,
+          "i": 222,
+          "o": 138,
+          "u": 157,
+          "y": 68,
+          "ɔ": 22,
+          "ə": 70,
+          "ɛ": 34
+        },
+        "01许镇": {
+          "a": 426,
+          "e": 113,
+          "i": 303,
+          "o": 168,
+          "u": 204,
+          "y": 98,
+          "ɔ": 27,
+          "ə": 93,
+          "ɛ": 44
+        },
+        "01长垅": {
+          "a": 326,
+          "e": 87,
+          "i": 223,
+          "o": 134,
+          "u": 153,
+          "y": 72,
+          "ɔ": 23,
+          "ə": 72,
+          "ɛ": 37
+        },
+        "01香口村": {
+          "a": 326,
+          "e": 82,
+          "i": 221,
+          "o": 126,
+          "u": 159,
+          "y": 73,
+          "ɔ": 22,
+          "ə": 72,
+          "ɛ": 28
+        },
+        "01高路亭": {
+          "a": 330,
+          "e": 84,
+          "i": 229,
+          "o": 136,
+          "u": 157,
+          "y": 73,
+          "ɔ": 22,
+          "ə": 68,
+          "ɛ": 29
+        },
+        "02乌石": {
+          "a": 438,
+          "e": 106,
+          "i": 292,
+          "o": 175,
+          "u": 201,
+          "y": 100,
+          "ɔ": 30,
+          "ə": 103,
+          "ɛ": 41
+        },
+        "02云岭": {
+          "a": 328,
+          "e": 80,
+          "i": 222,
+          "o": 129,
+          "u": 154,
+          "y": 68,
+          "ɔ": 21,
+          "ə": 67,
+          "ɛ": 35
+        },
+        "02何湾镇": {
+          "a": 327,
+          "e": 88,
+          "i": 221,
+          "o": 140,
+          "u": 152,
+          "y": 68,
+          "ɔ": 19,
+          "ə": 70,
+          "ɛ": 34
+        },
+        "02崔东安": {
+          "a": 107,
+          "e": 30,
+          "i": 76,
+          "o": 41,
+          "u": 53,
+          "y": 24,
+          "ɔ": 7,
+          "ə": 27,
+          "ɛ": 11
+        },
+        "02梅龙镇双湖村": {
+          "a": 107,
+          "e": 26,
+          "i": 71,
+          "o": 44,
+          "u": 52,
+          "y": 23,
+          "ɔ": 8,
+          "ə": 28,
+          "ɛ": 9
+        },
+        "02横渡村": {
+          "a": 329,
+          "e": 86,
+          "i": 222,
+          "o": 133,
+          "u": 154,
+          "y": 68,
+          "ɔ": 22,
+          "ə": 75,
+          "ɛ": 34
+        },
+        "02河口村": {
+          "a": 309,
+          "e": 79,
+          "i": 221,
+          "o": 129,
+          "u": 156,
+          "y": 73,
+          "ɔ": 21,
+          "ə": 70,
+          "ɛ": 30
+        },
+        "02淳溪": {
+          "a": 335,
+          "e": 96,
+          "i": 227,
+          "o": 130,
+          "u": 156,
+          "y": 72,
+          "ɔ": 21,
+          "ə": 71,
+          "ɛ": 33
+        },
+        "02陵阳": {
+          "a": 328,
+          "e": 84,
+          "i": 227,
+          "o": 135,
+          "u": 153,
+          "y": 62,
+          "ɔ": 22,
+          "ə": 72,
+          "ɛ": 34
+        },
+        "03弋江镇": {
+          "a": 330,
+          "e": 86,
+          "i": 227,
+          "o": 128,
+          "u": 158,
+          "y": 75,
+          "ɔ": 22,
+          "ə": 72,
+          "ɛ": 34
+        },
+        "03新明": {
+          "a": 335,
+          "e": 78,
+          "i": 236,
+          "o": 136,
+          "u": 152,
+          "y": 74,
+          "ɔ": 22,
+          "ə": 80,
+          "ɛ": 32
+        },
+        "03新河": {
+          "a": 336,
+          "e": 83,
+          "i": 222,
+          "o": 128,
+          "u": 156,
+          "y": 74,
+          "ɔ": 23,
+          "ə": 76,
+          "ɛ": 31
+        },
+        "03桃花潭": {
+          "a": 338,
+          "e": 84,
+          "i": 232,
+          "o": 129,
+          "u": 147,
+          "y": 76,
+          "ɔ": 21,
+          "ə": 75,
+          "ɛ": 35
+        },
+        "03湖阳": {
+          "a": 341,
+          "e": 85,
+          "i": 230,
+          "o": 142,
+          "u": 153,
+          "y": 69,
+          "ɔ": 23,
+          "ə": 73,
+          "ɛ": 32
+        },
+        "03马衙镇马衙村": {
+          "a": 328,
+          "e": 88,
+          "i": 225,
+          "o": 133,
+          "u": 155,
+          "y": 69,
+          "ɔ": 20,
+          "ə": 72,
+          "ɛ": 34
+        },
+        "04博望": {
+          "a": 324,
+          "e": 84,
+          "i": 230,
+          "o": 138,
+          "u": 160,
+          "y": 66,
+          "ɔ": 23,
+          "ə": 74,
+          "ɛ": 32
+        },
+        "04新港": {
+          "a": 334,
+          "e": 86,
+          "i": 220,
+          "o": 133,
+          "u": 148,
+          "y": 74,
+          "ɔ": 19,
+          "ə": 73,
+          "ɛ": 35
+        },
+        "04梅街镇刘街村": {
+          "a": 331,
+          "e": 87,
+          "i": 231,
+          "o": 135,
+          "u": 157,
+          "y": 64,
+          "ɔ": 19,
+          "ə": 67,
+          "ɛ": 31
+        },
+        "04甘棠": {
+          "a": 221,
+          "e": 58,
+          "i": 153,
+          "o": 89,
+          "u": 104,
+          "y": 42,
+          "ɔ": 14,
+          "ə": 49,
+          "ɛ": 20
+        },
+        "04籍山镇": {
+          "a": 111,
+          "e": 23,
+          "i": 73,
+          "o": 43,
+          "u": 49,
+          "y": 23,
+          "ɔ": 8,
+          "ə": 24,
+          "ɛ": 12
+        },
+        "04茂林": {
+          "a": 336,
+          "e": 91,
+          "i": 224,
+          "o": 136,
+          "u": 163,
+          "y": 73,
+          "ɔ": 21,
+          "ə": 76,
+          "ɛ": 38
+        },
+        "05新丰": {
+          "a": 332,
+          "e": 88,
+          "i": 220,
+          "o": 129,
+          "u": 155,
+          "y": 68,
+          "ɔ": 24,
+          "ə": 80,
+          "ɛ": 32
+        },
+        "05棠溪镇石门村": {
+          "a": 323,
+          "e": 84,
+          "i": 234,
+          "o": 136,
+          "u": 164,
+          "y": 71,
+          "ɔ": 22,
+          "ə": 73,
+          "ɛ": 34
+        },
+        "05黄村": {
+          "a": 331,
+          "e": 84,
+          "i": 231,
+          "o": 131,
+          "u": 145,
+          "y": 72,
+          "ɔ": 22,
+          "ə": 74,
+          "ɛ": 33
+        },
+        "06铜陵": {
+          "a": 191,
+          "e": 33,
+          "i": 99,
+          "o": 62,
+          "u": 67,
+          "y": 30,
+          "ɔ": 8,
+          "ə": 53,
+          "ɛ": 13
+        },
+        "14溧水": {
+          "a": 445,
+          "e": 110,
+          "i": 305,
+          "o": 174,
+          "u": 209,
+          "y": 94,
+          "ɔ": 28,
+          "ə": 100,
+          "ɛ": 44
+        },
+        "六郎镇": {
+          "a": 333,
+          "e": 86,
+          "i": 222,
+          "o": 129,
+          "u": 161,
+          "y": 70,
+          "ɔ": 23,
+          "ə": 76,
+          "ɛ": 30
+        }
+      },
+      "test": {
+        "12宁国": {
+          "a": 244,
+          "e": 64,
+          "i": 166,
+          "o": 99,
+          "u": 114,
+          "y": 52,
+          "ɔ": 16,
+          "ə": 54,
+          "ɛ": 24
+        }
+      }
+    }
+  },
+  "init_checkpoint": {
+    "enabled": false
+  },
+  "split_sizes": {
+    "train": 41115,
+    "val": 4569,
+    "test": 833
+  },
+  "label_counts": {
+    "train": {
+      "a": 12071,
+      "e": 3091,
+      "i": 8217,
+      "o": 4838,
+      "u": 5648,
+      "y": 2569,
+      "ɔ": 787,
+      "ə": 2697,
+      "ɛ": 1197
+    },
+    "val": {
+      "a": 1342,
+      "e": 343,
+      "i": 913,
+      "o": 538,
+      "u": 628,
+      "y": 285,
+      "ɔ": 87,
+      "ə": 300,
+      "ɛ": 133
+    },
+    "test": {
+      "a": 244,
+      "e": 64,
+      "i": 166,
+      "o": 99,
+      "u": 114,
+      "y": 52,
+      "ɔ": 16,
+      "ə": 54,
+      "ɛ": 24
+    }
+  },
+  "source_regions": [
+    "01A酉华",
+    "01塘南",
+    "01墩上镇茅坦村",
+    "01杨柳镇",
+    "01榔桥",
+    "01焦村",
+    "01砖墙",
+    "01繁阳",
+    "01西湖镇",
+    "01许镇",
+    "01长垅",
+    "01香口村",
+    "01高路亭",
+    "02乌石",
+    "02云岭",
+    "02何湾镇",
+    "02崔东安",
+    "02梅龙镇双湖村",
+    "02横渡村",
+    "02河口村",
+    "02淳溪",
+    "02陵阳",
+    "03弋江镇",
+    "03新明",
+    "03新河",
+    "03桃花潭",
+    "03湖阳",
+    "03马衙镇马衙村",
+    "04博望",
+    "04新港",
+    "04梅街镇刘街村",
+    "04甘棠",
+    "04籍山镇",
+    "04茂林",
+    "05新丰",
+    "05棠溪镇石门村",
+    "05黄村",
+    "06铜陵",
+    "14溧水",
+    "六郎镇"
+  ],
+  "cache": {
+    "matrix": {
+      "train": {
+        "source": "exact",
+        "path": "/home/ustc1958/lxy/graph/tone/complete_package0712/output/0712/matrix_cache/train_8cc7d9dc39f28f3667a65c23a850250148a7c27f68ea6f241699d38d203e8f63.npy"
+      },
+      "val": {
+        "source": "exact",
+        "path": "/home/ustc1958/lxy/graph/tone/complete_package0712/output/0712/matrix_cache/val_34b4542f566938f0116594ff9ff7b56d65656b468f25c59f7429f5f9dc638946.npy"
+      },
+      "test": {
+        "source": "exact",
+        "path": "/home/ustc1958/lxy/graph/tone/complete_package0712/output/0712/matrix_cache/test_d25752d5c6da476057790bad35da1ee9946d8fb21ac14e7a5332914bd2b25929.npy"
+      },
+      "token_norm": {
+        "mode": "global",
+        "mean_shape": [
+          1,
+          1,
+          512
+        ],
+        "std_shape": [
+          1,
+          1,
+          512
+        ]
+      }
+    },
+    "aux": {
+      "train": {
+        "split": "train",
+        "rows": 41115,
+        "source": "acoustic",
+        "representation": "sequence",
+        "source_counts": {
+          "acoustic:row_cache": 41115
+        },
+        "shape": [
+          41115,
+          32,
+          245
+        ],
+        "branch_dims": [
+          128,
+          39,
+          78
+        ],
+        "row_hash": "91e181295a11ba3342f2773d0d69a74debbcf6ceb751a34365264316930c0b63",
+        "config": {
+          "sample_rate": 16000,
+          "n_mfcc": 39,
+          "n_mels": 128,
+          "f0_segments": 5,
+          "use_delta_mfcc": true,
+          "use_formants": true,
+          "f0_min": 75.0,
+          "f0_max": 600.0,
+          "n_fft_mfcc": 2048,
+          "n_fft_mel": 2048
+        },
+        "token_shape": [
+          32,
+          512
+        ],
+        "path": "output/0722/feature_memory_aux_cache/train_c9044f82544ef8c1806206e5c3c40d3fdd4ff3f44eca01399cdd29955e146f94.npy",
+        "meta_path": "output/0722/feature_memory_aux_cache/train_c9044f82544ef8c1806206e5c3c40d3fdd4ff3f44eca01399cdd29955e146f94.json"
+      },
+      "val": {
+        "split": "val",
+        "rows": 4569,
+        "source": "acoustic",
+        "representation": "sequence",
+        "source_counts": {
+          "acoustic:row_cache": 4569
+        },
+        "shape": [
+          4569,
+          32,
+          245
+        ],
+        "branch_dims": [
+          128,
+          39,
+          78
+        ],
+        "row_hash": "11c34a459262b29fbcdded1c36fbc3ebdd879d1b5c218a298b8c07d4829a2d51",
+        "config": {
+          "sample_rate": 16000,
+          "n_mfcc": 39,
+          "n_mels": 128,
+          "f0_segments": 5,
+          "use_delta_mfcc": true,
+          "use_formants": true,
+          "f0_min": 75.0,
+          "f0_max": 600.0,
+          "n_fft_mfcc": 2048,
+          "n_fft_mel": 2048
+        },
+        "token_shape": [
+          32,
+          512
+        ],
+        "path": "output/0722/feature_memory_aux_cache/val_b927dd6ef331825580cdcce82d4c8a89ce4b98695267cf1073f532fb732e53d9.npy",
+        "meta_path": "output/0722/feature_memory_aux_cache/val_b927dd6ef331825580cdcce82d4c8a89ce4b98695267cf1073f532fb732e53d9.json"
+      },
+      "test": {
+        "split": "test",
+        "rows": 833,
+        "source": "acoustic",
+        "representation": "sequence",
+        "source_counts": {
+          "acoustic:row_cache": 833
+        },
+        "shape": [
+          833,
+          32,
+          245
+        ],
+        "branch_dims": [
+          128,
+          39,
+          78
+        ],
+        "row_hash": "4582f957ccc849b94ab28a115715bb7f58289d39d2cf93cc780c8503c7df188f",
+        "config": {
+          "sample_rate": 16000,
+          "n_mfcc": 39,
+          "n_mels": 128,
+          "f0_segments": 5,
+          "use_delta_mfcc": true,
+          "use_formants": true,
+          "f0_min": 75.0,
+          "f0_max": 600.0,
+          "n_fft_mfcc": 2048,
+          "n_fft_mel": 2048
+        },
+        "token_shape": [
+          32,
+          512
+        ],
+        "path": "output/0722/feature_memory_aux_cache/test_fbdf8e5fd6591db2c83abb26f3758eb4c1ada2b4c29e2967a80a0df2d1cf5720.npy",
+        "meta_path": "output/0722/feature_memory_aux_cache/test_fbdf8e5fd6591db2c83abb26f3758eb4c1ada2b4c29e2967a80a0df2d1cf5720.json"
+      },
+      "norm": {
+        "mode": "global",
+        "mean_shape": [
+          1,
+          1,
+          245
+        ],
+        "std_shape": [
+          1,
+          1,
+          245
+        ]
+      },
+      "rows_hash": {
+        "train": "91e181295a11ba3342f2773d0d69a74debbcf6ceb751a34365264316930c0b63",
+        "val": "11c34a459262b29fbcdded1c36fbc3ebdd879d1b5c218a298b8c07d4829a2d51",
+        "test": "4582f957ccc849b94ab28a115715bb7f58289d39d2cf93cc780c8503c7df188f"
+      }
+    }
+  },
+  "config": {
+    "csv": "output/0722/data/wu_vowel_segments.paper_regions.csv",
+    "output": "output/0722/main_table_rc_memnet_promptdiag_8targets_20260726_231541/12_Ningguo/result.json",
+    "predictions_output": "output/0722/main_table_rc_memnet_promptdiag_8targets_20260726_231541/12_Ningguo/predictions.csv",
+    "curve_output": "output/0722/main_table_rc_memnet_promptdiag_8targets_20260726_231541/12_Ningguo/curve.csv",
+    "audit_output": "output/0722/main_table_rc_memnet_promptdiag_8targets_20260726_231541/12_Ningguo/audit.json",
+    "checkpoint_output": "",
+    "init_checkpoint": "",
+    "save_checkpoint": true,
+    "path_column": "wav_path",
+    "start_column": "start_time",
+    "end_column": "end_time",
+    "label_column": "vowel",
+    "region_column": "site",
+    "speaker_column": "speaker_id",
+    "labels": [
+      "a",
+      "e",
+      "i",
+      "o",
+      "u",
+      "y",
+      "ɔ",
+      "ə",
+      "ɛ"
+    ],
+    "protocol": "loro",
+    "holdout_region": "12宁国",
+    "val_size": 0.1,
+    "test_size": 0.1,
+    "train_fraction": 1.0,
+    "seed": 0,
+    "cache_dir": "/home/ustc1958/lxy/graph/tone/complete_package0712/output/salmonn_style_whisper_cache_base",
+    "matrix_cache_dir": "/home/ustc1958/lxy/graph/tone/complete_package0712/output/0712/matrix_cache",
+    "feature_norm": "global",
+    "matrix_cache_scan": true,
+    "whisper_model": "base",
+    "device": "cuda",
+    "target_sr": 16000,
+    "token_chunks": 32,
+    "audio_root": "",
+    "aux_source": "acoustic",
+    "aux_representation": "sequence",
+    "aux_cache_dir": "output/0722/feature_memory_aux_cache",
+    "old_feature_cache_dir": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/feature_cache_vowel",
+    "aux_n_mfcc": 39,
+    "aux_n_mels": 128,
+    "aux_f0_segments": 5,
+    "aux_use_delta_mfcc": true,
+    "aux_use_formants": true,
+    "batch_size": 64,
+    "eval_batch_size": 256,
+    "max_steps": 3000,
+    "lr": 0.0003,
+    "weight_decay": 0.0001,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "class_weight_power": 0.5,
+    "sampler_domain_power": 1.0,
+    "sampler_class_power": 0.5,
+    "hidden_dim": 256,
+    "score_dim": 128,
+    "prompt_dim": 128,
+    "num_slots": 4,
+    "num_prompts": 8,
+    "dropout": 0.1,
+    "address_temperature": 0.2,
+    "classifier_temperature": 0.2,
+    "memory_mix": 0.5,
+    "source_write_kappa": 4.0,
+    "target_write_kappa": 1.0,
+    "global_momentum": 0.1,
+    "ablation_variant": "rc_memnet",
+    "write_top_k": 1,
+    "target_support_shots": 4,
+    "target_adapt_steps": 30,
+    "target_adapt_lr": 0.05,
+    "eval_split_runs": 1,
+    "log_every": 50,
+    "eval_every": 300,
+    "require_all_source_regions": true,
+    "quiet": true
+  },
+  "checkpoint_manifest": {
+    "schema_version": 1,
+    "task": "leave_one_region_out_vowel_classification",
+    "method": "RC-MemNet",
+    "script": "tools/experiments/run_rc_dmnet.py",
+    "data": {
+      "csv": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/data/wu_vowel_segments.paper_regions.csv",
+      "path_column": "wav_path",
+      "start_column": "start_time",
+      "end_column": "end_time",
+      "label_column": "vowel",
+      "region_column": "site",
+      "speaker_column": "speaker_id",
+      "labels": [
+        "a",
+        "e",
+        "i",
+        "o",
+        "u",
+        "y",
+        "ɔ",
+        "ə",
+        "ɛ"
+      ],
+      "protocol": "loro",
+      "holdout_region": "12宁国",
+      "val_size": 0.1,
+      "test_size": 0.1,
+      "train_fraction": 1.0,
+      "seed": 0,
+      "target_sr": 16000
+    },
+    "feature_pipeline": {
+      "whisper_model": "base",
+      "cache_dir": "/home/ustc1958/lxy/graph/tone/complete_package0712/output/salmonn_style_whisper_cache_base",
+      "matrix_cache_dir": "/home/ustc1958/lxy/graph/tone/complete_package0712/output/0712/matrix_cache",
+      "feature_norm": "global",
+      "matrix_cache_scan": true,
+      "token_chunks": 32,
+      "audio_root": "",
+      "aux_source": "acoustic",
+      "aux_representation": "sequence",
+      "aux_cache_dir": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/feature_memory_aux_cache",
+      "old_feature_cache_dir": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/feature_cache_vowel",
+      "aux_n_mfcc": 39,
+      "aux_n_mels": 128,
+      "aux_f0_segments": 5,
+      "aux_use_delta_mfcc": true,
+      "aux_use_formants": true
+    },
+    "evaluation": {
+      "target_support_shots": 4,
+      "target_adapt_steps": 30,
+      "target_adapt_lr": 0.05,
+      "eval_split_runs": 1,
+      "ablation_variant": "rc_memnet"
+    },
+    "model": {
+      "rcdmnet_config": {
+        "input_dim": 512,
+        "aux_dim": 245,
+        "aux_branch_dims": [
+          128,
+          39,
+          78
+        ],
+        "num_classes": 9,
+        "num_regions": 40,
+        "hidden_dim": 256,
+        "score_dim": 128,
+        "prompt_dim": 128,
+        "num_slots": 4,
+        "num_prompts": 8,
+        "dropout": 0.1,
+        "address_temperature": 0.2,
+        "classifier_temperature": 0.2,
+        "memory_mix": 0.5,
+        "source_write_kappa": 4.0,
+        "target_write_kappa": 1.0,
+        "global_momentum": 0.1,
+        "use_context_prompts": true,
+        "use_memory_read": true,
+        "use_prompt_routing": true,
+        "count_based_adaptation": false,
+        "slow_consolidation": true,
+        "write_top_k": 1,
+        "source_composition_mode": "convex"
+      },
+      "source_regions": [
+        "01A酉华",
+        "01塘南",
+        "01墩上镇茅坦村",
+        "01杨柳镇",
+        "01榔桥",
+        "01焦村",
+        "01砖墙",
+        "01繁阳",
+        "01西湖镇",
+        "01许镇",
+        "01长垅",
+        "01香口村",
+        "01高路亭",
+        "02乌石",
+        "02云岭",
+        "02何湾镇",
+        "02崔东安",
+        "02梅龙镇双湖村",
+        "02横渡村",
+        "02河口村",
+        "02淳溪",
+        "02陵阳",
+        "03弋江镇",
+        "03新明",
+        "03新河",
+        "03桃花潭",
+        "03湖阳",
+        "03马衙镇马衙村",
+        "04博望",
+        "04新港",
+        "04梅街镇刘街村",
+        "04甘棠",
+        "04籍山镇",
+        "04茂林",
+        "05新丰",
+        "05棠溪镇石门村",
+        "05黄村",
+        "06铜陵",
+        "14溧水",
+        "六郎镇"
+      ],
+      "num_source_regions": 40,
+      "parameters": {
+        "trainable": 2716275,
+        "total": 2716275
+      }
+    },
+    "split": {
+      "protocol": "loro",
+      "holdout_region": "12宁国",
+      "target_labels_used_for_training": false,
+      "train_regions": [
+        "01A酉华",
+        "01塘南",
+        "01墩上镇茅坦村",
+        "01杨柳镇",
+        "01榔桥",
+        "01焦村",
+        "01砖墙",
+        "01繁阳",
+        "01西湖镇",
+        "01许镇",
+        "01长垅",
+        "01香口村",
+        "01高路亭",
+        "02乌石",
+        "02云岭",
+        "02何湾镇",
+        "02崔东安",
+        "02梅龙镇双湖村",
+        "02横渡村",
+        "02河口村",
+        "02淳溪",
+        "02陵阳",
+        "03弋江镇",
+        "03新明",
+        "03新河",
+        "03桃花潭",
+        "03湖阳",
+        "03马衙镇马衙村",
+        "04博望",
+        "04新港",
+        "04梅街镇刘街村",
+        "04甘棠",
+        "04籍山镇",
+        "04茂林",
+        "05新丰",
+        "05棠溪镇石门村",
+        "05黄村",
+        "06铜陵",
+        "14溧水",
+        "六郎镇"
+      ],
+      "num_train_regions": 40
+    },
+    "split_hash": {
+      "train": "e97118581ea2114cdcde8ecb50e4e52ac7e46a0b5955026d3c2b40148714566f",
+      "val": "0766a2edcf0f7558b2134ae4f468cadb56544c1ec9038eb13ecd2532d027ae8e",
+      "test": "9a550fb40e24715103054673503e42aa3392c2a0471064d3a406720038c35a1a"
+    },
+    "cache": {
+      "matrix": {
+        "train": {
+          "source": "exact",
+          "path": "/home/ustc1958/lxy/graph/tone/complete_package0712/output/0712/matrix_cache/train_8cc7d9dc39f28f3667a65c23a850250148a7c27f68ea6f241699d38d203e8f63.npy"
+        },
+        "val": {
+          "source": "exact",
+          "path": "/home/ustc1958/lxy/graph/tone/complete_package0712/output/0712/matrix_cache/val_34b4542f566938f0116594ff9ff7b56d65656b468f25c59f7429f5f9dc638946.npy"
+        },
+        "test": {
+          "source": "exact",
+          "path": "/home/ustc1958/lxy/graph/tone/complete_package0712/output/0712/matrix_cache/test_d25752d5c6da476057790bad35da1ee9946d8fb21ac14e7a5332914bd2b25929.npy"
+        },
+        "token_norm": {
+          "mode": "global",
+          "mean_shape": [
+            1,
+            1,
+            512
+          ],
+          "std_shape": [
+            1,
+            1,
+            512
+          ]
+        }
+      },
+      "aux": {
+        "train": {
+          "split": "train",
+          "rows": 41115,
+          "source": "acoustic",
+          "representation": "sequence",
+          "source_counts": {
+            "acoustic:row_cache": 41115
+          },
+          "shape": [
+            41115,
+            32,
+            245
+          ],
+          "branch_dims": [
+            128,
+            39,
+            78
+          ],
+          "row_hash": "91e181295a11ba3342f2773d0d69a74debbcf6ceb751a34365264316930c0b63",
+          "config": {
+            "sample_rate": 16000,
+            "n_mfcc": 39,
+            "n_mels": 128,
+            "f0_segments": 5,
+            "use_delta_mfcc": true,
+            "use_formants": true,
+            "f0_min": 75.0,
+            "f0_max": 600.0,
+            "n_fft_mfcc": 2048,
+            "n_fft_mel": 2048
+          },
+          "token_shape": [
+            32,
+            512
+          ],
+          "path": "output/0722/feature_memory_aux_cache/train_c9044f82544ef8c1806206e5c3c40d3fdd4ff3f44eca01399cdd29955e146f94.npy",
+          "meta_path": "output/0722/feature_memory_aux_cache/train_c9044f82544ef8c1806206e5c3c40d3fdd4ff3f44eca01399cdd29955e146f94.json"
+        },
+        "val": {
+          "split": "val",
+          "rows": 4569,
+          "source": "acoustic",
+          "representation": "sequence",
+          "source_counts": {
+            "acoustic:row_cache": 4569
+          },
+          "shape": [
+            4569,
+            32,
+            245
+          ],
+          "branch_dims": [
+            128,
+            39,
+            78
+          ],
+          "row_hash": "11c34a459262b29fbcdded1c36fbc3ebdd879d1b5c218a298b8c07d4829a2d51",
+          "config": {
+            "sample_rate": 16000,
+            "n_mfcc": 39,
+            "n_mels": 128,
+            "f0_segments": 5,
+            "use_delta_mfcc": true,
+            "use_formants": true,
+            "f0_min": 75.0,
+            "f0_max": 600.0,
+            "n_fft_mfcc": 2048,
+            "n_fft_mel": 2048
+          },
+          "token_shape": [
+            32,
+            512
+          ],
+          "path": "output/0722/feature_memory_aux_cache/val_b927dd6ef331825580cdcce82d4c8a89ce4b98695267cf1073f532fb732e53d9.npy",
+          "meta_path": "output/0722/feature_memory_aux_cache/val_b927dd6ef331825580cdcce82d4c8a89ce4b98695267cf1073f532fb732e53d9.json"
+        },
+        "test": {
+          "split": "test",
+          "rows": 833,
+          "source": "acoustic",
+          "representation": "sequence",
+          "source_counts": {
+            "acoustic:row_cache": 833
+          },
+          "shape": [
+            833,
+            32,
+            245
+          ],
+          "branch_dims": [
+            128,
+            39,
+            78
+          ],
+          "row_hash": "4582f957ccc849b94ab28a115715bb7f58289d39d2cf93cc780c8503c7df188f",
+          "config": {
+            "sample_rate": 16000,
+            "n_mfcc": 39,
+            "n_mels": 128,
+            "f0_segments": 5,
+            "use_delta_mfcc": true,
+            "use_formants": true,
+            "f0_min": 75.0,
+            "f0_max": 600.0,
+            "n_fft_mfcc": 2048,
+            "n_fft_mel": 2048
+          },
+          "token_shape": [
+            32,
+            512
+          ],
+          "path": "output/0722/feature_memory_aux_cache/test_fbdf8e5fd6591db2c83abb26f3758eb4c1ada2b4c29e2967a80a0df2d1cf5720.npy",
+          "meta_path": "output/0722/feature_memory_aux_cache/test_fbdf8e5fd6591db2c83abb26f3758eb4c1ada2b4c29e2967a80a0df2d1cf5720.json"
+        },
+        "norm": {
+          "mode": "global",
+          "mean_shape": [
+            1,
+            1,
+            245
+          ],
+          "std_shape": [
+            1,
+            1,
+            245
+          ]
+        },
+        "rows_hash": {
+          "train": "91e181295a11ba3342f2773d0d69a74debbcf6ceb751a34365264316930c0b63",
+          "val": "11c34a459262b29fbcdded1c36fbc3ebdd879d1b5c218a298b8c07d4829a2d51",
+          "test": "4582f957ccc849b94ab28a115715bb7f58289d39d2cf93cc780c8503c7df188f"
+        }
+      }
+    },
+    "training": {
+      "steps": 3000,
+      "best_val_macro_f1": 0.5705631371270287,
+      "training_time_sec": 153.84639883041382
+    },
+    "init_checkpoint": {
+      "enabled": false
+    },
+    "labels": [
+      "a",
+      "e",
+      "i",
+      "o",
+      "u",
+      "y",
+      "ɔ",
+      "ə",
+      "ɛ"
+    ],
+    "runtime": {
+      "device": "cuda",
+      "torch_version": "2.10.0+cu128"
+    }
+  },
+  "training": {
+    "steps": 3000,
+    "best_val_macro_f1": 0.5705631371270287,
+    "training_time_sec": 153.84639883041382
+  },
+  "files": {
+    "output": "output/0722/main_table_rc_memnet_promptdiag_8targets_20260726_231541/12_Ningguo/result.json",
+    "curve": "output/0722/main_table_rc_memnet_promptdiag_8targets_20260726_231541/12_Ningguo/curve.csv",
+    "predictions": "output/0722/main_table_rc_memnet_promptdiag_8targets_20260726_231541/12_Ningguo/predictions.csv",
+    "audit": "output/0722/main_table_rc_memnet_promptdiag_8targets_20260726_231541/12_Ningguo/audit.json",
+    "checkpoint": "output/0722/main_table_rc_memnet_promptdiag_8targets_20260726_231541/12_Ningguo/result.pt"
+  },
+  "parameters": {
+    "trainable": 2716275,
+    "total": 2716275
+  },
+  "split_hash": {
+    "train": "e97118581ea2114cdcde8ecb50e4e52ac7e46a0b5955026d3c2b40148714566f",
+    "val": "0766a2edcf0f7558b2134ae4f468cadb56544c1ec9038eb13ecd2532d027ae8e",
+    "test": "9a550fb40e24715103054673503e42aa3392c2a0471064d3a406720038c35a1a"
+  }
+}

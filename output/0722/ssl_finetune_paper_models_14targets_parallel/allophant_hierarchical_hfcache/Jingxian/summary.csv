@@ -1,0 +1,2 @@
+﻿model,resolved_model,target,protocol,k,splits,train_scheme,accuracy,accuracy_std,macro_f1,macro_f1_std,weighted_f1,weighted_f1_std,zero_shot_macro_f1,zero_shot_accuracy,time_sec
+allophant-hierarchical-hfcache,allophant-hierarchical-hfcache,Jingxian,loro,4,100,last_layer,0.2601264308901418,0.050309420388711015,0.23269288685845269,0.03515238444645892,0.25891542060848005,0.061918476620129316,0.2882097819656525,0.32416369502462217,284.7271466013044

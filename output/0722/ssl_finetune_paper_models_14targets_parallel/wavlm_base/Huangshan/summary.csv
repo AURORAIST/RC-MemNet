@@ -1,0 +1,2 @@
+﻿model,resolved_model,target,protocol,k,splits,train_scheme,accuracy,accuracy_std,macro_f1,macro_f1_std,weighted_f1,weighted_f1_std,zero_shot_macro_f1,zero_shot_accuracy,time_sec
+wavlm-base,wavlm-base,Huangshan,loro,4,100,last_layer,0.2947926711668274,0.03984872636352435,0.25741596466506467,0.030238484593830404,0.30848646044663774,0.046175320031002075,0.37750099940182336,0.4742729306487696,2537.60480905883

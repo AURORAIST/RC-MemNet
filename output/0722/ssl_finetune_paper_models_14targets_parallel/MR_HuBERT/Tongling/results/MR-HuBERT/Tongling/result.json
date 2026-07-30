@@ -1,0 +1,149 @@
+{
+  "model": "MR-HuBERT",
+  "resolved_model": "MR-HuBERT",
+  "model_path": "/home/ustc1958/lxy/graph/tone/model/MR-HuBERT/mrhubert_mono_base.pt",
+  "target": "Tongling",
+  "protocol": "loro",
+  "k": 4,
+  "splits": 100,
+  "region_column": "region",
+  "holdout": "06铜陵",
+  "split": {
+    "protocol": "loro",
+    "holdout_region": "06铜陵",
+    "target_labels_used_for_training": false,
+    "train_regions": [
+      "01当涂",
+      "01横渡镇",
+      "01语音信号",
+      "02七都镇",
+      "02芜湖",
+      "03池州",
+      "04甘棠",
+      "04青阳",
+      "05孙村",
+      "07宣城",
+      "08泾县",
+      "09繁昌",
+      "10南陵",
+      "11黄山",
+      "13高淳"
+    ],
+    "num_train_regions": 15
+  },
+  "train_scheme": "last_layer",
+  "metrics": {
+    "accuracy": 0.5385936222403924,
+    "macro_f1": 0.48513735076788583,
+    "weighted_f1": 0.5443047056456415,
+    "micro_f1": 0.5385936222403924
+  },
+  "metrics_std": {
+    "accuracy": 0.04532752025543353,
+    "macro_f1": 0.034198934148516574,
+    "weighted_f1": 0.054969261158051376,
+    "micro_f1": 0.04532752025543353
+  },
+  "zero_shot": {
+    "accuracy": 0.6108022239872914,
+    "macro_f1": 0.5473922263416435,
+    "micro_f1": 0.6108022239872914,
+    "weighted_f1": 0.6210483630386445
+  },
+  "test_embeddings_shape": [
+    1259,
+    768
+  ],
+  "training": {
+    "steps": 1500,
+    "best_val_macro_f1": 0.5332015658895479,
+    "training_time_sec": 123.55780625343323,
+    "backbone": "MR-HuBERT",
+    "train_scheme": "last_layer",
+    "hidden_size": 768
+  },
+  "history": [
+    {
+      "step": 150.0,
+      "loss": 1.6401854753494263,
+      "val_accuracy": 0.44365885992045956,
+      "val_macro_f1": 0.34649215641559067,
+      "val_micro_f1": 0.44365885992045956,
+      "val_weighted_f1": 0.4308300368985055
+    },
+    {
+      "step": 300.0,
+      "loss": 1.5497162342071533,
+      "val_accuracy": 0.43680954485196644,
+      "val_macro_f1": 0.38281521245075795,
+      "val_micro_f1": 0.43680954485196644,
+      "val_weighted_f1": 0.45567105817096293
+    },
+    {
+      "step": 450.0,
+      "loss": 1.3523300886154175,
+      "val_accuracy": 0.5011047282368537,
+      "val_macro_f1": 0.44387039596120015,
+      "val_micro_f1": 0.5011047282368537,
+      "val_weighted_f1": 0.5103774220618966
+    },
+    {
+      "step": 600.0,
+      "loss": 1.404159665107727,
+      "val_accuracy": 0.4637649138311975,
+      "val_macro_f1": 0.42615943045357996,
+      "val_micro_f1": 0.4637649138311975,
+      "val_weighted_f1": 0.4785899120280887
+    },
+    {
+      "step": 750.0,
+      "loss": 1.5001558065414429,
+      "val_accuracy": 0.5028722934158197,
+      "val_macro_f1": 0.4527754421653841,
+      "val_micro_f1": 0.5028722934158197,
+      "val_weighted_f1": 0.5190923883026287
+    },
+    {
+      "step": 900.0,
+      "loss": 0.9301674962043762,
+      "val_accuracy": 0.4924878479893946,
+      "val_macro_f1": 0.46069555803632206,
+      "val_micro_f1": 0.4924878479893946,
+      "val_weighted_f1": 0.5121155118536096
+    },
+    {
+      "step": 1050.0,
+      "loss": 1.0905874967575073,
+      "val_accuracy": 0.5585505965532479,
+      "val_macro_f1": 0.5100279217251384,
+      "val_micro_f1": 0.5585505965532479,
+      "val_weighted_f1": 0.5807791334194234
+    },
+    {
+      "step": 1200.0,
+      "loss": 1.0424131155014038,
+      "val_accuracy": 0.5227574016791869,
+      "val_macro_f1": 0.48187651869602216,
+      "val_micro_f1": 0.5227574016791869,
+      "val_weighted_f1": 0.5503625204405654
+    },
+    {
+      "step": 1350.0,
+      "loss": 1.2102631330490112,
+      "val_accuracy": 0.5874944763588157,
+      "val_macro_f1": 0.5325883202854383,
+      "val_micro_f1": 0.5874944763588157,
+      "val_weighted_f1": 0.6066476003701432
+    },
+    {
+      "step": 1500.0,
+      "loss": 0.6614260077476501,
+      "val_accuracy": 0.5852850198851083,
+      "val_macro_f1": 0.5332015658895479,
+      "val_micro_f1": 0.5852850198851083,
+      "val_weighted_f1": 0.5972000231002512
+    }
+  ],
+  "test_rows": 1259,
+  "time_sec": 126.20425941236317
+}

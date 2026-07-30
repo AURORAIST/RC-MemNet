@@ -1,0 +1,2 @@
+﻿model,resolved_model,target,protocol,k,splits,train_scheme,accuracy,accuracy_std,macro_f1,macro_f1_std,weighted_f1,weighted_f1_std,zero_shot_macro_f1,zero_shot_accuracy,time_sec
+wav2vec2-large-robust-hfcache,wav2vec2-large-robust-hfcache,Suncun,loro,4,100,last_layer,0.17864643150123047,0.04491424389411621,0.130207076342037,0.02347742746887993,0.18011295532940583,0.0525287623296844,0.08766087237938174,0.29800796812749003,214.7191535178572

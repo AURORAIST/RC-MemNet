@@ -1,0 +1,149 @@
+{
+  "model": "MR-HuBERT",
+  "resolved_model": "MR-HuBERT",
+  "model_path": "/home/ustc1958/lxy/graph/tone/model/MR-HuBERT/mrhubert_mono_base.pt",
+  "target": "Suncun",
+  "protocol": "loro",
+  "k": 4,
+  "splits": 100,
+  "region_column": "region",
+  "holdout": "05孙村",
+  "split": {
+    "protocol": "loro",
+    "holdout_region": "05孙村",
+    "target_labels_used_for_training": false,
+    "train_regions": [
+      "01当涂",
+      "01横渡镇",
+      "01语音信号",
+      "02七都镇",
+      "02芜湖",
+      "03池州",
+      "04甘棠",
+      "04青阳",
+      "06铜陵",
+      "07宣城",
+      "08泾县",
+      "09繁昌",
+      "10南陵",
+      "11黄山",
+      "13高淳"
+    ],
+    "num_train_regions": 15
+  },
+  "train_scheme": "last_layer",
+  "metrics": {
+    "accuracy": 0.5597703035274817,
+    "macro_f1": 0.506205948125343,
+    "weighted_f1": 0.5736798161231729,
+    "micro_f1": 0.5597703035274817
+  },
+  "metrics_std": {
+    "accuracy": 0.039931354526441754,
+    "macro_f1": 0.03657626841751107,
+    "weighted_f1": 0.04387797249577249,
+    "micro_f1": 0.039931354526441754
+  },
+  "zero_shot": {
+    "accuracy": 0.6175298804780877,
+    "macro_f1": 0.5676805792301265,
+    "micro_f1": 0.6175298804780877,
+    "weighted_f1": 0.6305213017094953
+  },
+  "test_embeddings_shape": [
+    1255,
+    768
+  ],
+  "training": {
+    "steps": 1500,
+    "best_val_macro_f1": 0.5153630661582833,
+    "training_time_sec": 124.69650459289551,
+    "backbone": "MR-HuBERT",
+    "train_scheme": "last_layer",
+    "hidden_size": 768
+  },
+  "history": [
+    {
+      "step": 150.0,
+      "loss": 2.108724355697632,
+      "val_accuracy": 0.501877623149989,
+      "val_macro_f1": 0.34764617242110263,
+      "val_micro_f1": 0.501877623149989,
+      "val_weighted_f1": 0.49067927628026664
+    },
+    {
+      "step": 300.0,
+      "loss": 1.8235528469085693,
+      "val_accuracy": 0.43450408659156176,
+      "val_macro_f1": 0.39352415654878575,
+      "val_micro_f1": 0.43450408659156176,
+      "val_weighted_f1": 0.4581859676541712
+    },
+    {
+      "step": 450.0,
+      "loss": 1.7363923788070679,
+      "val_accuracy": 0.5358957366909654,
+      "val_macro_f1": 0.462621012766153,
+      "val_micro_f1": 0.5358957366909654,
+      "val_weighted_f1": 0.5473845506978248
+    },
+    {
+      "step": 600.0,
+      "loss": 2.060309886932373,
+      "val_accuracy": 0.47360282747956706,
+      "val_macro_f1": 0.4318463839800395,
+      "val_micro_f1": 0.47360282747956706,
+      "val_weighted_f1": 0.49597725343655613
+    },
+    {
+      "step": 750.0,
+      "loss": 1.136647343635559,
+      "val_accuracy": 0.532803180914513,
+      "val_macro_f1": 0.4687226046412629,
+      "val_micro_f1": 0.532803180914513,
+      "val_weighted_f1": 0.542308030148488
+    },
+    {
+      "step": 900.0,
+      "loss": 0.6444834470748901,
+      "val_accuracy": 0.5601943892202341,
+      "val_macro_f1": 0.4988880766630818,
+      "val_micro_f1": 0.5601943892202341,
+      "val_weighted_f1": 0.5717167768474914
+    },
+    {
+      "step": 1050.0,
+      "loss": 0.9983929395675659,
+      "val_accuracy": 0.5617406671084604,
+      "val_macro_f1": 0.5055892855622827,
+      "val_micro_f1": 0.5617406671084604,
+      "val_weighted_f1": 0.5745455873073948
+    },
+    {
+      "step": 1200.0,
+      "loss": 1.1629101037979126,
+      "val_accuracy": 0.5593108018555335,
+      "val_macro_f1": 0.5102129637171992,
+      "val_micro_f1": 0.5593108018555335,
+      "val_weighted_f1": 0.5726257763856902
+    },
+    {
+      "step": 1350.0,
+      "loss": 0.6465206146240234,
+      "val_accuracy": 0.5657168102496134,
+      "val_macro_f1": 0.5153630661582833,
+      "val_micro_f1": 0.5657168102496134,
+      "val_weighted_f1": 0.579873171482813
+    },
+    {
+      "step": 1500.0,
+      "loss": 0.7064344882965088,
+      "val_accuracy": 0.5557764523967307,
+      "val_macro_f1": 0.5080029523003494,
+      "val_micro_f1": 0.5557764523967307,
+      "val_weighted_f1": 0.572711747157971
+    }
+  ],
+  "test_rows": 1255,
+  "time_sec": 127.44410111568868
+}

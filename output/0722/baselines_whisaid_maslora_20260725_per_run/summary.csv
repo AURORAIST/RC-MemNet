@@ -1,0 +1,2 @@
+model_type,region,holdout_region,runs,accuracy,accuracy_std,macro_f1,macro_f1_std,weighted_f1,weighted_f1_std,per_run_csv,checkpoint
+mas_lora,Qingyang,04青阳,100,0.6783782908933965,0.024053708549969414,0.6113409669292893,0.021677680309102814,0.6856388428937037,0.02322232792725125,output/0722/baselines_whisaid_maslora_20260725_per_run/mas_lora/04_Qingyang/per_run_metrics.csv,/home/ustc1958/lxy/graph/tone/model/maslora_e2e_04.pt

@@ -1,0 +1,12 @@
+{
+  "model_type": "mas_lora",
+  "holdout_region": "08泾县",
+  "metrics": {
+    "accuracy": 0.6498759171342252
+  },
+  "metrics_std": {
+    "accuracy": 0.026842513462373267
+  },
+  "eval_split_runs": 100,
+  "target_support_shots": 4
+}

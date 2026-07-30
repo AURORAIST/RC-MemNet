@@ -1,0 +1,2 @@
+﻿model,resolved_model,target,accuracy,accuracy_std,macro_f1,macro_f1_std,weighted_f1,weighted_f1_std,zero_shot_macro_f1,zero_shot_accuracy,time_sec
+hubert-base-ls960,hubert-base-ls960,Chizhou,0.5260059062384644,0.03385739955901173,0.47187413450552684,0.028681954918741818,0.5508095485561453,0.035609326657289754,0.5507591480760552,0.5991932526585992,181.43624881654978

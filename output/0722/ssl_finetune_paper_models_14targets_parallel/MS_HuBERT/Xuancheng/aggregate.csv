@@ -1,0 +1,2 @@
+﻿model,accuracy,macro_f1,weighted_f1,zero_shot_macro_f1,zero_shot_accuracy
+MS-HuBERT,0.5276029654036245,0.47809406076264566,0.5355354196001365,0.5692572180735889,0.6336

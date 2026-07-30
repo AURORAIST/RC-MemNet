@@ -1,0 +1,2 @@
+﻿model,resolved_model,target,protocol,k,splits,train_scheme,accuracy,accuracy_std,macro_f1,macro_f1_std,weighted_f1,weighted_f1_std,zero_shot_macro_f1,zero_shot_accuracy,time_sec
+MS-HuBERT,MS-HuBERT,Tongling,loro,4,100,last_layer,0.5350449713818479,0.04245442299283855,0.48159634047972766,0.03678117499781138,0.5454272924177517,0.04906108061252754,0.549351139794855,0.630659253375695,155.58436288498342

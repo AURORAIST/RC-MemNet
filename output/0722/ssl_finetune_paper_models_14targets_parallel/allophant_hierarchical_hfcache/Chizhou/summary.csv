@@ -1,0 +1,2 @@
+﻿model,resolved_model,target,protocol,k,splits,train_scheme,accuracy,accuracy_std,macro_f1,macro_f1_std,weighted_f1,weighted_f1_std,zero_shot_macro_f1,zero_shot_accuracy,time_sec
+allophant-hierarchical-hfcache,allophant-hierarchical-hfcache,Chizhou,loro,4,100,last_layer,0.4379900332225914,0.045800909937506226,0.38388958043996724,0.032388275077835434,0.454236781030478,0.05406691717909201,0.4414340466407042,0.51008434176751,2755.6289337538183

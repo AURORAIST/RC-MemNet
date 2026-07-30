@@ -1,0 +1,149 @@
+{
+  "model": "wav2vec2-large-robust-hfcache",
+  "resolved_model": "wav2vec2-large-robust-hfcache",
+  "model_path": "/home/ustc1958/lxy/graph/tone/.hf_cache/prepared_wav2vec2-large-robust",
+  "target": "Suncun",
+  "protocol": "loro",
+  "k": 4,
+  "splits": 100,
+  "region_column": "region",
+  "holdout": "05孙村",
+  "split": {
+    "protocol": "loro",
+    "holdout_region": "05孙村",
+    "target_labels_used_for_training": false,
+    "train_regions": [
+      "01当涂",
+      "01横渡镇",
+      "01语音信号",
+      "02七都镇",
+      "02芜湖",
+      "03池州",
+      "04甘棠",
+      "04青阳",
+      "06铜陵",
+      "07宣城",
+      "08泾县",
+      "09繁昌",
+      "10南陵",
+      "11黄山",
+      "13高淳"
+    ],
+    "num_train_regions": 15
+  },
+  "train_scheme": "last_layer",
+  "metrics": {
+    "accuracy": 0.17864643150123047,
+    "macro_f1": 0.130207076342037,
+    "weighted_f1": 0.18011295532940583,
+    "micro_f1": 0.17864643150123047
+  },
+  "metrics_std": {
+    "accuracy": 0.04491424389411621,
+    "macro_f1": 0.02347742746887993,
+    "weighted_f1": 0.0525287623296844,
+    "micro_f1": 0.04491424389411621
+  },
+  "zero_shot": {
+    "accuracy": 0.29800796812749003,
+    "macro_f1": 0.08766087237938174,
+    "micro_f1": 0.29800796812749003,
+    "weighted_f1": 0.18653497409635286
+  },
+  "test_embeddings_shape": [
+    1255,
+    1024
+  ],
+  "training": {
+    "steps": 1500,
+    "best_val_macro_f1": 0.09081031370970082,
+    "training_time_sec": 211.42365336418152,
+    "backbone": "wav2vec2-large-robust-hfcache",
+    "train_scheme": "last_layer",
+    "hidden_size": 1024
+  },
+  "history": [
+    {
+      "step": 150.0,
+      "loss": 2.166536808013916,
+      "val_accuracy": 0.13055003313452618,
+      "val_macro_f1": 0.06847976965423491,
+      "val_micro_f1": 0.13055003313452618,
+      "val_weighted_f1": 0.08781902726957957
+    },
+    {
+      "step": 300.0,
+      "loss": 2.26992130279541,
+      "val_accuracy": 0.30881378396288933,
+      "val_macro_f1": 0.09081031370970082,
+      "val_micro_f1": 0.30881378396288933,
+      "val_weighted_f1": 0.19189675518194235
+    },
+    {
+      "step": 450.0,
+      "loss": 2.1525661945343018,
+      "val_accuracy": 0.3085928871217142,
+      "val_macro_f1": 0.08952855411163117,
+      "val_micro_f1": 0.3085928871217142,
+      "val_weighted_f1": 0.19123900168459387
+    },
+    {
+      "step": 600.0,
+      "loss": 1.9036566019058228,
+      "val_accuracy": 0.2931301082394522,
+      "val_macro_f1": 0.06333618066949824,
+      "val_micro_f1": 0.2931301082394522,
+      "val_weighted_f1": 0.14957104992475675
+    },
+    {
+      "step": 750.0,
+      "loss": 1.8139756917953491,
+      "val_accuracy": 0.294234592445328,
+      "val_macro_f1": 0.06825742225899759,
+      "val_micro_f1": 0.294234592445328,
+      "val_weighted_f1": 0.15653531278400784
+    },
+    {
+      "step": 900.0,
+      "loss": 1.8342607021331787,
+      "val_accuracy": 0.220675944333996,
+      "val_macro_f1": 0.07837662791572142,
+      "val_micro_f1": 0.220675944333996,
+      "val_weighted_f1": 0.13968480754975904
+    },
+    {
+      "step": 1050.0,
+      "loss": 2.2584850788116455,
+      "val_accuracy": 0.23392975480450628,
+      "val_macro_f1": 0.08871480847120344,
+      "val_micro_f1": 0.23392975480450628,
+      "val_weighted_f1": 0.16113357173939727
+    },
+    {
+      "step": 1200.0,
+      "loss": 1.7328972816467285,
+      "val_accuracy": 0.2301745085045284,
+      "val_macro_f1": 0.06696673955998168,
+      "val_micro_f1": 0.2301745085045284,
+      "val_weighted_f1": 0.12792214150721526
+    },
+    {
+      "step": 1350.0,
+      "loss": 2.33249568939209,
+      "val_accuracy": 0.06781533024077756,
+      "val_macro_f1": 0.02810272562442219,
+      "val_micro_f1": 0.06781533024077756,
+      "val_weighted_f1": 0.046559269783433964
+    },
+    {
+      "step": 1500.0,
+      "loss": 1.789393663406372,
+      "val_accuracy": 0.03313452617627568,
+      "val_macro_f1": 0.01256227720858835,
+      "val_micro_f1": 0.03313452617627568,
+      "val_weighted_f1": 0.00839236488073179
+    }
+  ],
+  "test_rows": 1255,
+  "time_sec": 214.7191535178572
+}

@@ -1,0 +1,17 @@
+\begin{table}[!t]
+\centering
+\caption{Statistical significance of RC-MemNet improvements over saved baselines.}
+\label{tab:statistical_significance}
+\scriptsize
+\begin{tabular}{llrrrrr}
+\toprule
+Baseline & Metric & $n$ & Baseline & RC-MemNet & Gain & $p$ \\
+\midrule
+mas_lora & accuracy & 8 & 65.94 & 65.06 & -0.87 & 0.7266 n.s. \\
+mas_lora per-run (04青阳) & accuracy & 100 & 67.84 & 71.40 & 3.56 & <1e-4 *** \\
+mas_lora per-run (04青阳) & macro_f1 & 100 & 61.13 & 64.46 & 3.32 & <1e-4 *** \\
+mas_lora per-run (04青阳) & weighted_f1 & 100 & 68.56 & 71.82 & 3.26 & <1e-4 *** \\
+whisaid & accuracy & 8 & 48.00 & 65.06 & 17.06 & 0.0078 ** \\
+\bottomrule
+\end{tabular}
+\end{table}

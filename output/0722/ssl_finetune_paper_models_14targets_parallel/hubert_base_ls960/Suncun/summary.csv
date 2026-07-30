@@ -1,0 +1,2 @@
+﻿model,resolved_model,target,accuracy,accuracy_std,macro_f1,macro_f1_std,weighted_f1,weighted_f1_std,zero_shot_macro_f1,zero_shot_accuracy,time_sec
+hubert-base-ls960,hubert-base-ls960,Suncun,0.4924446267432321,0.04631629794086692,0.4488215964288898,0.04148895268603574,0.5061647676144415,0.05291178773860176,0.5486943288349312,0.5936254980079682,179.62883553095162

@@ -1,0 +1,6 @@
+﻿baseline,baseline_mean_pct,ci95_pct,comparison_type,gain_pct,main_mean_pct,metric,n,negative,note,p_value,p_value_normal_approx,p_value_sign_test,positive,stars,zero
+mas_lora,65.94,"[-4.79, 2.64]",region_paired,-0.87,65.06,accuracy,8,3,Paired by holdout region,0.7266,0.6698,0.7266,5,n.s.,0
+mas_lora per-run (04青阳),67.84,"[3.11, 4.05]",baseline_per_run,3.56,71.40,accuracy,100,3,RC-MemNet point estimate minus saved baseline per-run metrics,<1e-4,<1e-4,<1e-4,97,***,0
+mas_lora per-run (04青阳),61.13,"[2.91, 3.75]",baseline_per_run,3.32,64.46,macro_f1,100,3,RC-MemNet point estimate minus saved baseline per-run metrics,<1e-4,<1e-4,<1e-4,97,***,0
+mas_lora per-run (04青阳),68.56,"[2.81, 3.72]",baseline_per_run,3.26,71.82,weighted_f1,100,4,RC-MemNet point estimate minus saved baseline per-run metrics,<1e-4,<1e-4,<1e-4,96,***,0
+whisaid,48.00,"[12.79, 21.00]",region_paired,17.06,65.06,accuracy,8,0,Paired by holdout region,0.0078,<1e-4,0.0078,8,**,0

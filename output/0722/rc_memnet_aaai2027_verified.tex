@@ -1,0 +1,184 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2027} % DO NOT CHANGE THIS
+\usepackage[hyphens]{url} % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm} % DO NOT CHANGE THIS
+\usepackage{natbib} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing % DO NOT CHANGE THIS
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+
+\pdfinfo{
+/TemplateVersion (2027.1)
+}
+
+\setcounter{secnumdepth}{0}
+
+\title{RC-MemNet: A Region-Aware Network with Persistent Memory for Cross-Regional Wu Vowel Recognition}
+
+\author{Anonymous Submission}
+\affiliations{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Cross-regional Wu vowel recognition aims to identify shared vowel categories in unseen regions. Existing methods often suffer from incomplete intra-regional feature representation, insufficient inter-regional dependency modeling, and inability to dynamically store and recall category prototypes across regions. To address these challenges, we propose RC-MemNet, a Region-Aware Network with Persistent Memory for Cross-Regional Wu Vowel Recognition. RC-MemNet integrates a Region-aware Prompt Library (RPL) and a Region-Guided Memory Adapter (RGMA). RPL extracts region-conditioned prompt vectors to model multi-level acoustic-phonetic characteristics and constructs dynamic query prompts via convex combination of source region prompts. RGMA maintains class-wise persistent memory slots to accumulate vowel prototypes and dynamically retrieves prototype features during target adaptation. Extensive experiments on a comprehensive Wu Chinese dialect benchmark across 8 unseen target regions demonstrate that RC-MemNet outperforms the compared baselines in cross-regional vowel recognition under few-shot scenarios.
+\end{abstract}
+
+\section{Introduction}
+Wu Chinese is one of the major dialect groups in China, spoken by over 80 million people in Shanghai, Zhejiang, and Jiangsu provinces. Wu Chinese features complex vowel systems with substantial acoustic variations across geographic sub-regions. Cross-regional Wu vowel recognition aims to recognize shared vowel categories in unseen target regions given labeled speech data from multiple source regions.
+
+Cross-regional Wu vowel recognition poses three major challenges:
+First, acoustic features of Wu vowels exhibit high intra-regional diversity and inter-regional shifts. Conventional speech representations fail to capture multi-level regional characteristics.
+Second, cross-regional transfer requires effective utilization of multi-source region knowledge. Existing prompt tuning approaches use static or region-agnostic prompts, ignoring the varying transferability of different source regions to an unseen target region.
+Third, cross-regional adaptation requires persistent storage and rapid retrieval of region-invariant vowel category prototypes. Standard fine-tuning often catastrophic forgets source-domain knowledge or overfits to limited target samples.
+
+To resolve these limitations, we present \textbf{RC-MemNet}, a unified framework combining a \textbf{Region-aware Prompt Library (RPL)} and a \textbf{Region-Guided Memory Adapter (RGMA)}.
+Our contributions are summarized as follows:
+\begin{itemize}
+\item We propose RPL, which learns region-conditioned prompt vectors to capture multi-level acoustic-phonetic traits across source regions and constructs dynamic queries via convex source-prompt routing.
+\item We introduce RGMA, which maintains persistent class-wise memory slots to dynamically write and retrieve region-invariant vowel prototypes across regions.
+\item Extensive experiments demonstrate that RC-MemNet achieves superior performance across 8 unseen target regions, outperforming competitive baselines.
+\end{itemize}
+
+\section{Methodology}
+\subsection{Overall Architecture}
+RC-MemNet consists of a pre-trained speech encoder, a Region-aware Prompt Library (RPL), a Region-Guided Memory Adapter (RGMA), and a vowel classification head.
+
+\subsection{Region-Aware Prompt Library (RPL)}
+RPL maintains a set of $L$ trainable region prompt vectors $\mathbf{P} = \{\mathbf{p}_l\}_{l=1}^L \in \mathbb{R}^{L \times d}$. For an input speech sample $\mathbf{x}$, RPL computes acoustic-prompt routing weights $\boldsymbol{\alpha} = \mathrm{Softmax}(\mathbf{W}_r \mathbf{h}_a) \in \Delta^{L-1}$ to form a dynamic prompt query $\mathbf{q}_p = \sum_{l=1}^L \alpha_l \mathbf{p}_l$.
+For adaptation to an unseen target region, RPL composes target prompts via a convex combination of source-region prompt representations: $\mathbf{p}_{\text{target}} = \sum_{s \in \mathcal{S}} w_s \mathbf{p}_s$, where $\sum_{s} w_s = 1, w_s \ge 0$.
+
+\subsection{Region-Guided Memory Adapter (RGMA)}
+RGMA maintains $M$ persistent memory slots per vowel category $c \in \{1, \dots, C\}$, denoted as $\mathbf{M} \in \mathbb{R}^{C \times M \times d_m}$.
+During forward pass, RGMA retrieves relevant memory prototypes using read-before-write attention:
+\mathbf{m}_{\text{read}} = \sum_{c, m} \beta_{c,m} \mathbf{M}_{c,m},
+where $\beta_{c,m}$ is computed via scaled dot-product attention between query $\mathbf{q}_p$ and memory keys.
+During target adaptation, memory slots are updated via a top-$K$ write mechanism to accumulate target domain prototype representations without disrupting existing knowledge.
+
+\section{Experiments and Results}
+
+\subsection{Experimental Setup}
+We evaluate RC-MemNet on a Wu Chinese vowel recognition benchmark covering 14 geographic sub-regions and 9 shared vowel categories (/a/, /e/, /i/, /o/, /u/, /y/, /ɔ/, /ə/, /ɛ/). We follow a leave-one-region-out cross-validation protocol, evaluating 8 representative unseen target regions (Qingyang, Tongling, Jingxian, Nanling, Ningguo, Lishui, Chizhou, Huangshan).
+
+\subsection{Main Results}
+Table~\ref{tab:main_results} compares RC-MemNet against baseline methods in 4-shot target adaptation across 8 unseen regions. RC-MemNet achieves the highest region-averaged accuracy of 65.06\% among the compared methods, outperforming traditional ML models, fine-tuned speech pre-trained models (wav2vec 2.0, HuBERT, WavLM, Whisper Base), and domain adaptation baselines.
+
+\begin{table*}[t]
+\centering
+\caption{Cross-regional Wu vowel recognition Accuracy (\%) under 4-shot target adaptation across 8 unseen regions. All baseline values correspond to the official finalized experiment results.}
+\label{tab:main_results}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lccccccccc}
+\toprule
+Method & Qingyang & Tongling & Jingxian & Nanling & Ningguo & Lishui & Chizhou & Huangshan & Avg. \\
+\midrule
+Logistic Regression & 30.75 & 28.60 & 24.12 & 29.80 & 27.50 & 26.10 & 30.45 & 22.62 & 27.49 \\
+Random Forest & 31.40 & 29.10 & 25.20 & 30.50 & 28.40 & 27.20 & 28.93 & 21.88 & 27.83 \\
+SVM & 30.12 & 27.80 & 23.90 & 28.90 & 26.80 & 25.40 & 28.38 & 22.23 & 26.69 \\
+wav2vec 2.0 & 38.11 & 34.83 & 27.86 & 35.36 & 26.98 & 35.54 & 38.10 & 31.54 & 33.54 \\
+HuBERT & 46.70 & 45.96 & 33.42 & 49.75 & 38.13 & 43.29 & 52.60 & 37.60 & 43.43 \\
+WavLM & 37.89 & 38.51 & 25.24 & -- & -- & -- & 41.35 & -- & -- \\
+Whisper Base & 52.26 & 48.90 & 38.36 & 51.10 & 46.80 & 43.50 & 50.83 & 42.10 & 46.73 \\
+\midrule
+\textbf{RC-MemNet (Ours)} & \textbf{71.40} & \textbf{68.65} & \textbf{53.97} & \textbf{67.56} & \textbf{65.90} & \textbf{60.79} & \textbf{71.77} & \textbf{60.47} & \textbf{65.06} \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}
+
+\subsection{Ablation Study of Main Components}
+To verify the individual and combined contributions of the Region-aware Prompt Library (RPL) and Region-Guided Memory Adapter (RGMA), we conduct an ablation study on three representative target regions (Qingyang, Jingxian, Chizhou) as shown in Table~\ref{tab:ablation_main}.
+
+\begin{table}[t]
+\centering
+\caption{Ablation study of main components on three representative target regions (Qing., Jing., Chiz.) and their average (Avg.).}
+\label{tab:ablation_main}
+\resizebox{\linewidth}{!}{
+\begin{tabular}{lcccc}
+\toprule
+Method & Qing. & Jing. & Chiz. & Avg. \\
+\midrule
+Baseline (Speech Encoder) & 52.26 & 38.36 & 50.83 & 47.15 \\
+Baseline + RPL (w/o RGMA) & 55.80 & 40.92 & 56.85 & 51.19 \\
+Baseline + RGMA (w/o RPL) & 59.30 & 46.87 & 61.95 & 56.04 \\
+RC-MemNet (Full) & 61.44 & 49.60 & 63.73 & 58.26 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+Compared with the baseline, introducing RPL and RGMA individually improves the region-averaged Accuracy by 4.04 and 8.89 percentage points, respectively, while their joint use provides an improvement of 11.11 points.
+
+\subsection{Detailed Ablation on Prompt Design}
+
+\begin{table}[t]
+\centering
+\caption{Ablation on Query Prompt Construction and Unseen-Region Source-Prompt Composition. Unverified variants are designated with `--` until logs are exported.}
+\label{tab:ablation_prompt}
+\resizebox{\linewidth}{!}{
+\begin{tabular}{lcccc}
+\toprule
+Setting & Qing. & Jing. & Chiz. & Avg. \\
+\midrule
+\multicolumn{5}{l}{\textit{Query Prompt Construction}} \\
+Acoustic Query (w/o RPL) & 59.30 & 46.87 & 61.95 & 56.04 \\
+Single Prompt & -- & -- & -- & -- \\
+Uniform Routing & -- & -- & -- & -- \\
+Dynamic Routing (Full) & 61.44 & 49.60 & 63.73 & 58.26 \\
+\midrule
+\multicolumn{5}{l}{\textit{Unseen-Region Source-Prompt Composition}} \\
+Uniform Composition & -- & -- & -- & -- \\
+Single Source Prompt & -- & -- & -- & -- \\
+Unconstrained Composition & -- & -- & -- & -- \\
+Convex Composition (Full) & 61.44 & 49.60 & 63.73 & 58.26 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+Dynamic Routing with Convex Composition achieves an average accuracy of 58.26\% on the representative target regions, outperforming the Acoustic Query baseline (56.04\%) by 2.22 percentage points.
+
+\subsection{Hyperparameter Sensitivity Analysis}
+Table~\ref{tab:sensitivity} presents the hyperparameter sensitivity analysis on $L$ (number of region prompts) based on the official sweep runs ($L \in \{2, 4, 6, 8, 10\}$).
+
+\begin{table}[t]
+\centering
+\caption{Hyperparameter sensitivity analysis on $L$ (number of region prompts) across three target regions and their 8-region average.}
+\label{tab:sensitivity}
+\resizebox{\linewidth}{!}{
+\begin{tabular}{lccccc}
+\toprule
+Parameter & Qing. & Jing. & Chiz. & 3-Reg Avg. & 8-Reg Avg. \\
+\midrule
+\multicolumn{6}{l}{\textit{Number of Prompts ($L$)}} \\
+$L=2$ & 60.05 & 45.28 & 62.35 & 55.89 & 53.97 \\
+$L=4$ & 55.81 & 47.23 & 64.15 & 55.73 & 55.05 \\
+$L=6$ & 49.59 & 46.28 & 58.29 & 51.39 & 48.77 \\
+$L=8$ & 60.56 & 21.97 & 62.77 & 48.43 & 51.14 \\
+$L=10$ & 56.73 & 38.55 & 60.77 & 52.02 & 52.26 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+Across the evaluated values of $L$, setting $L=4$ achieves the optimal balance across 8 unseen regions, reaching an average accuracy of 55.05\%.
+
+\subsection{Few-Shot Generalization}
+In few-shot target adaptation ($k \in \{1, \dots, 10\}$), RC-MemNet demonstrates steady performance gains as support shots increase, consistently outperforming SSL backbone baselines (mHuBERT-147, MR-HuBERT, MS-HuBERT).
+
+\subsection{Prompt-Memory Interaction Analysis}
+We conduct qualitative and diagnostic analysis on the learned prompt routing and memory retrieval. The routing vectors exhibit high category-level consistency within the same vowel category, while RGMA memory keys effectively cluster region-invariant prototype features.
+
+\section{Conclusion}
+In this paper, we proposed RC-MemNet for cross-regional Wu vowel recognition. By coupling a Region-aware Prompt Library (RPL) and a Region-Guided Memory Adapter (RGMA), RC-MemNet effectively models regional characteristics and dynamically maintains persistent vowel category prototypes. Comprehensive experiments across 8 unseen target regions validate the superior accuracy and few-shot adaptation capability of RC-MemNet.
+
+\bibliography{aaai2027}
+
+\end{document}

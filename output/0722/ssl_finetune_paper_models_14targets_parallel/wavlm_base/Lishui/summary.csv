@@ -1,0 +1,2 @@
+﻿model,resolved_model,target,protocol,k,splits,train_scheme,accuracy,accuracy_std,macro_f1,macro_f1_std,weighted_f1,weighted_f1_std,zero_shot_macro_f1,zero_shot_accuracy,time_sec
+wavlm-base,wavlm-base,Lishui,loro,4,100,last_layer,0.3204674046740468,0.05141155361272796,0.2847038327825753,0.03520840731204384,0.3319748874248189,0.06333623067010159,0.3619555250722073,0.3916967509025271,2477.5179738998413

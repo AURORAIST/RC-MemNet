@@ -1,0 +1,12 @@
+{
+  "model_type": "mas_lora",
+  "holdout_region": "10南陵",
+  "metrics": {
+    "accuracy": 0.6506959430297798
+  },
+  "metrics_std": {
+    "accuracy": 0.0330031821895785
+  },
+  "eval_split_runs": 100,
+  "target_support_shots": 4
+}

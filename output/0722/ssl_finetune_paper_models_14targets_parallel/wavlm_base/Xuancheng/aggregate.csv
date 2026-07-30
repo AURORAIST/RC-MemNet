@@ -1,0 +1,2 @@
+﻿model,accuracy,macro_f1,weighted_f1,zero_shot_macro_f1,zero_shot_accuracy
+wavlm-base,0.3461943986820428,0.3261823449770784,0.3438283717698382,0.4490461959871179,0.476

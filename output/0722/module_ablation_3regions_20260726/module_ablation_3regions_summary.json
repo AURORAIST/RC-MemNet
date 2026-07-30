@@ -1,0 +1,102 @@
+{
+  "baseline": {
+    "label": "Baseline",
+    "regions": {
+      "Qingyang": {
+        "accuracy": 67.662821888412,
+        "accuracy_std": 0.06899177364162774,
+        "macro_f1": 62.18802343009142,
+        "macro_f1_std": 0.0967617160850336
+      },
+      "Jingxian": {
+        "accuracy": 50.752605501452244,
+        "accuracy_std": 0.05014351135348738,
+        "macro_f1": 43.67179348042496,
+        "macro_f1_std": 0.12595559087524547
+      },
+      "Chizhou": {
+        "accuracy": 68.562200073828,
+        "accuracy_std": 0.046891468211960156,
+        "macro_f1": 61.18562325568858,
+        "macro_f1_std": 0.11330983754993124
+      }
+    },
+    "avg_accuracy": 62.325875821230746,
+    "avg_macro_f1": 55.68181338873499
+  },
+  "baseline_rpl": {
+    "label": "Baseline + RPL",
+    "regions": {
+      "Qingyang": {
+        "accuracy": 67.60890557939916,
+        "accuracy_std": 0.30384837144834104,
+        "macro_f1": 61.7330536988429,
+        "macro_f1_std": 0.34809844575138243
+      },
+      "Jingxian": {
+        "accuracy": 49.861951136169495,
+        "accuracy_std": 1.2247194317403494,
+        "macro_f1": 43.37081283306888,
+        "macro_f1_std": 0.4298002250624171
+      },
+      "Chizhou": {
+        "accuracy": 68.890734588409,
+        "accuracy_std": 0.1347525365809999,
+        "macro_f1": 61.933313405915726,
+        "macro_f1_std": 0.20680848981157848
+      }
+    },
+    "avg_accuracy": 62.12053043465922,
+    "avg_macro_f1": 55.67905997927584
+  },
+  "baseline_rgma": {
+    "label": "Baseline + RGMA",
+    "regions": {
+      "Qingyang": {
+        "accuracy": 68.57269313304722,
+        "accuracy_std": 0.0690381100692439,
+        "macro_f1": 63.428364626774545,
+        "macro_f1_std": 0.11516463980011073
+      },
+      "Jingxian": {
+        "accuracy": 50.30206731590637,
+        "accuracy_std": 0.049193981105197966,
+        "macro_f1": 43.07133883045544,
+        "macro_f1_std": 0.11384763918637808
+      },
+      "Chizhou": {
+        "accuracy": 72.40346991509784,
+        "accuracy_std": 0.047175333407617204,
+        "macro_f1": 65.8794812852912,
+        "macro_f1_std": 0.0798125143353618
+      }
+    },
+    "avg_accuracy": 63.75941012135048,
+    "avg_macro_f1": 57.459728247507066
+  },
+  "rc_memnet": {
+    "label": "RC-MemNet",
+    "regions": {
+      "Qingyang": {
+        "accuracy": 68.97398068669527,
+        "accuracy_std": 0.41805622361310596,
+        "macro_f1": 63.672192114128876,
+        "macro_f1_std": 0.3248045311217968
+      },
+      "Jingxian": {
+        "accuracy": 48.84982060481804,
+        "accuracy_std": 0.9790800794279622,
+        "macro_f1": 42.083054734611856,
+        "macro_f1_std": 0.9177591163940362
+      },
+      "Chizhou": {
+        "accuracy": 72.23827980804725,
+        "accuracy_std": 0.6773798517602541,
+        "macro_f1": 65.73858674275664,
+        "macro_f1_std": 0.5614580073266459
+      }
+    },
+    "avg_accuracy": 63.35402703318686,
+    "avg_macro_f1": 57.16461119716579
+  }
+}

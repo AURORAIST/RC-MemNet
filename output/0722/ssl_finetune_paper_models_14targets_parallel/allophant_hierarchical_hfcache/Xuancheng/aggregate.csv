@@ -1,0 +1,2 @@
+﻿model,accuracy,macro_f1,weighted_f1,zero_shot_macro_f1,zero_shot_accuracy
+allophant-hierarchical-hfcache,0.3984514003294893,0.36350354195515405,0.3955496152708099,0.40047554002289604,0.4232

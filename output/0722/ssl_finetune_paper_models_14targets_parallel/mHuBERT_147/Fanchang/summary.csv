@@ -1,0 +1,2 @@
+﻿model,resolved_model,target,protocol,k,splits,train_scheme,accuracy,accuracy_std,macro_f1,macro_f1_std,weighted_f1,weighted_f1_std,zero_shot_macro_f1,zero_shot_accuracy,time_sec
+mHuBERT-147,mHuBERT-147,Fanchang,loro,4,100,last_layer,0.5073102610807529,0.04262237770588886,0.46173918668632297,0.0335466010471077,0.5173755867122375,0.04924191754379673,0.5201914395642433,0.5733808674985146,180.98857152089477

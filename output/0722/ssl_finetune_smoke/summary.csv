@@ -1,0 +1,2 @@
+﻿model,resolved_model,target,accuracy,accuracy_std,macro_f1,macro_f1_std,weighted_f1,weighted_f1_std,zero_shot_macro_f1,zero_shot_accuracy,time_sec
+wav2vec2-base,wav2vec2-base,Chizhou,0.24,0.0,0.27539682539682536,0.0,0.27904761904761904,0.0,0.047619047619047616,0.06666666666666667,1.4667370710521936

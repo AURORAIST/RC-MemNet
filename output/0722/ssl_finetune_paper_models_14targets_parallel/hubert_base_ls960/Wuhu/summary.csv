@@ -1,0 +1,2 @@
+﻿model,resolved_model,target,accuracy,accuracy_std,macro_f1,macro_f1_std,weighted_f1,weighted_f1_std,zero_shot_macro_f1,zero_shot_accuracy,time_sec
+hubert-base-ls960,hubert-base-ls960,Wuhu,0.4550372208436725,0.05681036503772257,0.42129310939231424,0.03994518521065004,0.4636997064541847,0.06273766789511619,0.4958667771545492,0.5228915662650603,181.94576896727085

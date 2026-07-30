@@ -1,0 +1,2 @@
+﻿model,resolved_model,target,protocol,k,splits,train_scheme,accuracy,accuracy_std,macro_f1,macro_f1_std,weighted_f1,weighted_f1_std,zero_shot_macro_f1,zero_shot_accuracy,time_sec
+wav2vec2-xls-r-300m-hfcache,wav2vec2-xls-r-300m-hfcache,Dangtu,loro,4,100,last_layer,0.22465743944636682,0.06685337724027719,0.17461367613798817,0.03486511578732646,0.22825265190075125,0.07386931842024169,0.1513361230599002,0.2911825017088175,214.337018603459

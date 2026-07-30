@@ -1,0 +1,2 @@
+﻿model,accuracy,macro_f1,weighted_f1,zero_shot_macro_f1,zero_shot_accuracy
+wav2vec2-xls-r-300m-hfcache,0.2518031430934657,0.20301668376078377,0.2725463301733509,0.2050789843099884,0.3863453815261044

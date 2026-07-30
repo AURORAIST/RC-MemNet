@@ -1,0 +1,2 @@
+﻿model,resolved_model,target,protocol,k,splits,train_scheme,accuracy,accuracy_std,macro_f1,macro_f1_std,weighted_f1,weighted_f1_std,zero_shot_macro_f1,zero_shot_accuracy,time_sec
+whisper-base,whisper-base,Wuhu,loro,4,100,last_layer,0.4797187758478081,0.03921412601755002,0.4427555890968901,0.028788418774698857,0.4987318947575337,0.04108142108572988,0.5717451163589649,0.6281124497991968,632.5145777724683

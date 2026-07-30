@@ -1,0 +1,37 @@
+{
+  "Qingyang": {
+    "accuracy": 69.66201716738198,
+    "macro_f1": 64.26408765486823,
+    "query_size": 3728.0
+  },
+  "Tongling": {
+    "accuracy": 64.26819296811121,
+    "macro_f1": 54.63028337872954,
+    "query_size": 1223.0
+  },
+  "Jingxian": {
+    "accuracy": 50.99948744233727,
+    "macro_f1": 44.33467555389139,
+    "query_size": 5853.0
+  },
+  "Nanling": {
+    "accuracy": 65.3649877967606,
+    "macro_f1": 61.75201978339621,
+    "query_size": 4507.0
+  },
+  "Ningguo": {
+    "accuracy": 66.12296110414053,
+    "macro_f1": 57.476252544516406,
+    "query_size": 797.0
+  },
+  "Lishui": {
+    "accuracy": 56.08856088560885,
+    "macro_f1": 51.23912477089475,
+    "query_size": 1626.0
+  },
+  "Average": {
+    "accuracy": 62.08436789405673,
+    "macro_f1": 55.616073947716096,
+    "query_size": 17734.0
+  }
+}

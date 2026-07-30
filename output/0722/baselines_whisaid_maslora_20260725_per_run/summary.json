@@ -1,0 +1,16 @@
+[
+  {
+    "model_type": "mas_lora",
+    "region": "Qingyang",
+    "holdout_region": "04青阳",
+    "runs": 100,
+    "accuracy": 0.6783782908933965,
+    "accuracy_std": 0.024053708549969414,
+    "macro_f1": 0.6113409669292893,
+    "macro_f1_std": 0.021677680309102814,
+    "weighted_f1": 0.6856388428937037,
+    "weighted_f1_std": 0.02322232792725125,
+    "per_run_csv": "output/0722/baselines_whisaid_maslora_20260725_per_run/mas_lora/04_Qingyang/per_run_metrics.csv",
+    "checkpoint": "/home/ustc1958/lxy/graph/tone/model/maslora_e2e_04.pt"
+  }
+]

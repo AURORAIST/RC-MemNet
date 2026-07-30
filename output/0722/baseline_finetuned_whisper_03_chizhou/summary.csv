@@ -1,0 +1,2 @@
+﻿accuracy,accuracy_std,error,evaluated_rows,feature,macro_f1,macro_f1_std,method,region,status,test_rows,time_sec,train_rows,train_rows_used,weighted_f1,weighted_f1_std
+0.6756508984231756,0.0,,5454,whisper,0.6116157453787878,0.0,whisper-svm,03池州,done,5454,158.82704751752317,36956,36956,0.6837633710974318,0.0

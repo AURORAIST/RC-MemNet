@@ -1,0 +1,80 @@
+{
+  "region_results": [
+    {
+      "region": "Qingyang",
+      "same_sim": 0.2659428437164523,
+      "diff_sim": 0.06263641545897514,
+      "cosine_gap": 0.2033064282574772,
+      "purity_acoust": 6.48246556520462,
+      "purity_unif": 7.173220068216324,
+      "purity_dyn": 8.727417886257172
+    },
+    {
+      "region": "Tongling",
+      "same_sim": 0.34914574487660727,
+      "diff_sim": 0.07932377769684221,
+      "cosine_gap": 0.26982196717976503,
+      "purity_acoust": 6.51310533285141,
+      "purity_unif": 7.625099271535873,
+      "purity_dyn": 8.339952677488327
+    },
+    {
+      "region": "Jingxian",
+      "same_sim": 0.23585409472655197,
+      "diff_sim": 0.08677704252760104,
+      "cosine_gap": 0.14907705219895093,
+      "purity_acoust": 6.257428973913193,
+      "purity_unif": 6.240448355674744,
+      "purity_dyn": 6.172525137662888
+    },
+    {
+      "region": "Nanling",
+      "same_sim": 0.33996732991049866,
+      "diff_sim": 0.07545869944846226,
+      "cosine_gap": 0.26450863046203643,
+      "purity_acoust": 7.0878274738788605,
+      "purity_unif": 6.152322143316269,
+      "purity_dyn": 5.61303086578846
+    },
+    {
+      "region": "Ningguo",
+      "same_sim": 0.2916531448206667,
+      "diff_sim": 0.09625230172773573,
+      "cosine_gap": 0.19540084309293093,
+      "purity_acoust": 7.563025504350662,
+      "purity_unif": 7.6230488717556,
+      "purity_dyn": 8.523409068584442
+    },
+    {
+      "region": "Lishui",
+      "same_sim": 0.32270158863189435,
+      "diff_sim": 0.09763072022929162,
+      "cosine_gap": 0.22507086840260274,
+      "purity_acoust": 6.317689269781113,
+      "purity_unif": 6.468110531568527,
+      "purity_dyn": 5.5655837059021
+    },
+    {
+      "region": "Chizhou",
+      "same_sim": 0.35651652953427115,
+      "diff_sim": 0.09201676883174499,
+      "cosine_gap": 0.2644997607025262,
+      "purity_acoust": 7.966630160808563,
+      "purity_unif": 8.782544732093811,
+      "purity_dyn": 9.93766039609909
+    },
+    {
+      "region": "Huangshan",
+      "same_sim": 0.28901919045280955,
+      "diff_sim": 0.08258270003919141,
+      "cosine_gap": 0.20643649041361814,
+      "purity_acoust": 4.290508106350899,
+      "purity_unif": 4.010866209864616,
+      "purity_dyn": 3.8990091532468796
+    }
+  ],
+  "avg_cosine_gap": 0.22226525508873846,
+  "avg_purity_dyn": 7.09732361137867,
+  "avg_purity_acoust": 6.559835048392415,
+  "avg_purity_unif": 6.759457523003221
+}

@@ -1,0 +1,74 @@
+{
+  "model": "wav2vec2-base",
+  "resolved_model": "wav2vec2-base",
+  "model_path": "/home/ustc1958/lxy/graph/tone/model/wav2vec2-base",
+  "target": "Chizhou",
+  "region_column": "region",
+  "holdout": "03池州",
+  "split": {
+    "protocol": "loro",
+    "holdout_region": "03池州",
+    "target_labels_used_for_training": false,
+    "train_regions": [
+      "01当涂",
+      "01横渡镇",
+      "01语音信号",
+      "02七都镇",
+      "02芜湖",
+      "04甘棠",
+      "04青阳",
+      "05孙村",
+      "06铜陵",
+      "07宣城",
+      "08泾县",
+      "09繁昌",
+      "10南陵",
+      "11黄山",
+      "13高淳"
+    ],
+    "num_train_regions": 15
+  },
+  "train_scheme": "linear_probe",
+  "metrics": {
+    "accuracy": 0.24,
+    "macro_f1": 0.27539682539682536,
+    "weighted_f1": 0.27904761904761904,
+    "micro_f1": 0.24
+  },
+  "metrics_std": {
+    "accuracy": 0.0,
+    "macro_f1": 0.0,
+    "weighted_f1": 0.0,
+    "micro_f1": 0.0
+  },
+  "zero_shot": {
+    "accuracy": 0.06666666666666667,
+    "macro_f1": 0.047619047619047616,
+    "micro_f1": 0.06666666666666667,
+    "weighted_f1": 0.11428571428571428
+  },
+  "test_embeddings_shape": [
+    30,
+    768
+  ],
+  "training": {
+    "steps": 1,
+    "best_val_macro_f1": 0.13714285714285715,
+    "training_time_sec": 0.9713501930236816,
+    "backbone": "wav2vec2-base",
+    "train_scheme": "linear_probe",
+    "hidden_size": 768
+  },
+  "history": [
+    {
+      "step": 1.0,
+      "loss": 2.1415205001831055,
+      "val_accuracy": 0.25,
+      "val_macro_f1": 0.13714285714285715,
+      "val_micro_f1": 0.25,
+      "val_weighted_f1": 0.2357142857142857
+    }
+  ],
+  "test_rows": 30,
+  "time_sec": 1.4667370710521936
+}

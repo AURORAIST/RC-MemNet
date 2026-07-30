@@ -1,0 +1,2 @@
+﻿model,accuracy,macro_f1,weighted_f1,zero_shot_macro_f1,zero_shot_accuracy
+wav2vec2-large-robust-hfcache,0.17209535256410255,0.13651760041601788,0.16762559770054847,0.08907791357858452,0.1990521327014218

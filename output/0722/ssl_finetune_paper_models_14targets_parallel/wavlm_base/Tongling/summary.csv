@@ -1,0 +1,2 @@
+﻿model,resolved_model,target,accuracy,accuracy_std,macro_f1,macro_f1_std,weighted_f1,weighted_f1_std,zero_shot_macro_f1,zero_shot_accuracy,time_sec
+wavlm-base,wavlm-base,Tongling,0.38511038430089944,0.054443762557032906,0.3544295995136805,0.04314341892265079,0.386632059093677,0.06575183010402635,0.41692182944584394,0.4892772041302621,2486.7336478233337

@@ -1,0 +1,149 @@
+{
+  "model": "wav2vec2-large-robust-hfcache",
+  "resolved_model": "wav2vec2-large-robust-hfcache",
+  "model_path": "/home/ustc1958/lxy/graph/tone/.hf_cache/prepared_wav2vec2-large-robust",
+  "target": "Chizhou",
+  "protocol": "loro",
+  "k": 4,
+  "splits": 100,
+  "region_column": "region",
+  "holdout": "03池州",
+  "split": {
+    "protocol": "loro",
+    "holdout_region": "03池州",
+    "target_labels_used_for_training": false,
+    "train_regions": [
+      "01当涂",
+      "01横渡镇",
+      "01语音信号",
+      "02七都镇",
+      "02芜湖",
+      "04甘棠",
+      "04青阳",
+      "05孙村",
+      "06铜陵",
+      "07宣城",
+      "08泾县",
+      "09繁昌",
+      "10南陵",
+      "11黄山",
+      "13高淳"
+    ],
+    "num_train_regions": 15
+  },
+  "train_scheme": "last_layer",
+  "metrics": {
+    "accuracy": 0.1466315983757844,
+    "macro_f1": 0.1166344284652607,
+    "weighted_f1": 0.1454158665204258,
+    "micro_f1": 0.1466315983757844
+  },
+  "metrics_std": {
+    "accuracy": 0.02953378335361935,
+    "macro_f1": 0.012594798252182323,
+    "weighted_f1": 0.030085467932320444,
+    "micro_f1": 0.02953378335361935
+  },
+  "zero_shot": {
+    "accuracy": 0.26916024935826915,
+    "macro_f1": 0.07894730452880824,
+    "micro_f1": 0.26916024935826915,
+    "weighted_f1": 0.1537504127011944
+  },
+  "test_embeddings_shape": [
+    5454,
+    1024
+  ],
+  "training": {
+    "steps": 1500,
+    "best_val_macro_f1": 0.08192329130664852,
+    "training_time_sec": 284.001083612442,
+    "backbone": "wav2vec2-large-robust-hfcache",
+    "train_scheme": "last_layer",
+    "hidden_size": 1024
+  },
+  "history": [
+    {
+      "step": 150.0,
+      "loss": 2.2046873569488525,
+      "val_accuracy": 0.1329437545653762,
+      "val_macro_f1": 0.06300068224888034,
+      "val_micro_f1": 0.1329437545653762,
+      "val_weighted_f1": 0.11116436702053356
+    },
+    {
+      "step": 300.0,
+      "loss": 2.115173101425171,
+      "val_accuracy": 0.2934015096177258,
+      "val_macro_f1": 0.05041946484236072,
+      "val_micro_f1": 0.2934015096177258,
+      "val_weighted_f1": 0.13313832388979838
+    },
+    {
+      "step": 450.0,
+      "loss": 2.3769946098327637,
+      "val_accuracy": 0.2934015096177258,
+      "val_macro_f1": 0.05040997322623828,
+      "val_micro_f1": 0.2934015096177258,
+      "val_weighted_f1": 0.13311326019930708
+    },
+    {
+      "step": 600.0,
+      "loss": 2.0322108268737793,
+      "val_accuracy": 0.2938884830776723,
+      "val_macro_f1": 0.05385732074581304,
+      "val_micro_f1": 0.2938884830776723,
+      "val_weighted_f1": 0.1354620660842092
+    },
+    {
+      "step": 750.0,
+      "loss": 2.0413978099823,
+      "val_accuracy": 0.2934015096177258,
+      "val_macro_f1": 0.05040997322623828,
+      "val_micro_f1": 0.2934015096177258,
+      "val_weighted_f1": 0.13311326019930708
+    },
+    {
+      "step": 900.0,
+      "loss": 2.009700298309326,
+      "val_accuracy": 0.28074019965911856,
+      "val_macro_f1": 0.06285733563040197,
+      "val_micro_f1": 0.28074019965911856,
+      "val_weighted_f1": 0.14572047285550055
+    },
+    {
+      "step": 1050.0,
+      "loss": 2.1053125858306885,
+      "val_accuracy": 0.293644996347699,
+      "val_macro_f1": 0.05115793629965981,
+      "val_micro_f1": 0.293644996347699,
+      "val_weighted_f1": 0.13369432178066648
+    },
+    {
+      "step": 1200.0,
+      "loss": 2.1043896675109863,
+      "val_accuracy": 0.1358655953250548,
+      "val_macro_f1": 0.055175439515498435,
+      "val_micro_f1": 0.1358655953250548,
+      "val_weighted_f1": 0.11217833157846206
+    },
+    {
+      "step": 1350.0,
+      "loss": 1.723068118095398,
+      "val_accuracy": 0.25785244704163623,
+      "val_macro_f1": 0.08192329130664852,
+      "val_micro_f1": 0.25785244704163623,
+      "val_weighted_f1": 0.15111816155724997
+    },
+    {
+      "step": 1500.0,
+      "loss": 2.2735846042633057,
+      "val_accuracy": 0.2702702702702703,
+      "val_macro_f1": 0.07574816892112578,
+      "val_micro_f1": 0.2702702702702703,
+      "val_weighted_f1": 0.15524180690815884
+    }
+  ],
+  "test_rows": 5454,
+  "time_sec": 311.7096662223339
+}

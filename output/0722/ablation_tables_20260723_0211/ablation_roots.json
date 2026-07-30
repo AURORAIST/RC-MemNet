@@ -1,0 +1,17 @@
+{
+  "RC-MemNet": {
+    "result_json": 14,
+    "checkpoint": 14,
+    "root": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/main_table_rc_memnet_14targets_20260722_231203"
+  },
+  "w/o Prompt Routing": {
+    "result_json": 14,
+    "checkpoint": 14,
+    "root": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/ablation_prompt_20260723_001604"
+  },
+  "w/o RGMA Adapter": {
+    "result_json": 14,
+    "checkpoint": 14,
+    "root": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/ablation_memory_count_based_v2_20260723_012548"
+  }
+}

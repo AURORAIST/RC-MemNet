@@ -1,0 +1,2 @@
+﻿model,resolved_model,target,protocol,k,splits,train_scheme,accuracy,accuracy_std,macro_f1,macro_f1_std,weighted_f1,weighted_f1_std,zero_shot_macro_f1,zero_shot_accuracy,time_sec
+whisper-base,whisper-base,Huangshan,loro,4,100,last_layer,0.42565252330440373,0.044610744058563856,0.3776152868172911,0.03344893912858869,0.4468194585211895,0.04756276226396627,0.494525730163969,0.5952380952380952,594.9180344808847

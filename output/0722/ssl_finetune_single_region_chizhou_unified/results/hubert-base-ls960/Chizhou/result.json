@@ -1,0 +1,149 @@
+{
+  "model": "hubert-base-ls960",
+  "resolved_model": "hubert-base-ls960",
+  "model_path": "/home/ustc1958/lxy/graph/tone/model/hubert-base-ls960",
+  "target": "Chizhou",
+  "protocol": "loro",
+  "k": 4,
+  "splits": 100,
+  "region_column": "region",
+  "holdout": "03池州",
+  "split": {
+    "protocol": "loro",
+    "holdout_region": "03池州",
+    "target_labels_used_for_training": false,
+    "train_regions": [
+      "01当涂",
+      "01横渡镇",
+      "01语音信号",
+      "02七都镇",
+      "02芜湖",
+      "04甘棠",
+      "04青阳",
+      "05孙村",
+      "06铜陵",
+      "07宣城",
+      "08泾县",
+      "09繁昌",
+      "10南陵",
+      "11黄山",
+      "13高淳"
+    ],
+    "num_train_regions": 15
+  },
+  "train_scheme": "last_layer",
+  "metrics": {
+    "accuracy": 0.5260059062384644,
+    "macro_f1": 0.47187460137051557,
+    "weighted_f1": 0.5508106077448494,
+    "micro_f1": 0.5260059062384644
+  },
+  "metrics_std": {
+    "accuracy": 0.03385739955901173,
+    "macro_f1": 0.028682596649951392,
+    "weighted_f1": 0.035608920637112254,
+    "micro_f1": 0.03385739955901173
+  },
+  "zero_shot": {
+    "accuracy": 0.5991932526585992,
+    "macro_f1": 0.5507591480760552,
+    "micro_f1": 0.5991932526585992,
+    "weighted_f1": 0.6260285637654134
+  },
+  "test_embeddings_shape": [
+    5454,
+    768
+  ],
+  "training": {
+    "steps": 1500,
+    "best_val_macro_f1": 0.49565325353058814,
+    "training_time_sec": 164.70839619636536,
+    "backbone": "hubert-base-ls960",
+    "train_scheme": "last_layer",
+    "hidden_size": 768
+  },
+  "history": [
+    {
+      "step": 150.0,
+      "loss": 1.8553096055984497,
+      "val_accuracy": 0.4453372291210129,
+      "val_macro_f1": 0.32709037019511567,
+      "val_micro_f1": 0.4453372291210129,
+      "val_weighted_f1": 0.43077748487784506
+    },
+    {
+      "step": 300.0,
+      "loss": 1.370491862297058,
+      "val_accuracy": 0.4541027514000487,
+      "val_macro_f1": 0.39774703677988976,
+      "val_micro_f1": 0.4541027514000487,
+      "val_weighted_f1": 0.4782314080360816
+    },
+    {
+      "step": 450.0,
+      "loss": 2.1080734729766846,
+      "val_accuracy": 0.4438763087411736,
+      "val_macro_f1": 0.40438511089756485,
+      "val_micro_f1": 0.4438763087411736,
+      "val_weighted_f1": 0.4677136433154145
+    },
+    {
+      "step": 600.0,
+      "loss": 1.8588721752166748,
+      "val_accuracy": 0.5052349646944242,
+      "val_macro_f1": 0.45644279064870535,
+      "val_micro_f1": 0.5052349646944242,
+      "val_weighted_f1": 0.5288442086241659
+    },
+    {
+      "step": 750.0,
+      "loss": 1.5918452739715576,
+      "val_accuracy": 0.46895544192841493,
+      "val_macro_f1": 0.4371465754590542,
+      "val_micro_f1": 0.46895544192841493,
+      "val_weighted_f1": 0.4968245664231703
+    },
+    {
+      "step": 900.0,
+      "loss": 1.55375075340271,
+      "val_accuracy": 0.5519844168492817,
+      "val_macro_f1": 0.48146402038086894,
+      "val_micro_f1": 0.5519844168492817,
+      "val_weighted_f1": 0.5586211263897781
+    },
+    {
+      "step": 1050.0,
+      "loss": 1.3244853019714355,
+      "val_accuracy": 0.5476016557097638,
+      "val_macro_f1": 0.4945973510886086,
+      "val_micro_f1": 0.5476016557097638,
+      "val_weighted_f1": 0.5639808551173936
+    },
+    {
+      "step": 1200.0,
+      "loss": 1.0181810855865479,
+      "val_accuracy": 0.5556367177988799,
+      "val_macro_f1": 0.49091625450771326,
+      "val_micro_f1": 0.5556367177988799,
+      "val_weighted_f1": 0.5646103879629134
+    },
+    {
+      "step": 1350.0,
+      "loss": 1.7039883136749268,
+      "val_accuracy": 0.5495495495495496,
+      "val_macro_f1": 0.49565325353058814,
+      "val_micro_f1": 0.5495495495495496,
+      "val_weighted_f1": 0.569857651682795
+    },
+    {
+      "step": 1500.0,
+      "loss": 0.8051597476005554,
+      "val_accuracy": 0.537618699780862,
+      "val_macro_f1": 0.48234542711832123,
+      "val_micro_f1": 0.537618699780862,
+      "val_weighted_f1": 0.558249363709407
+    }
+  ],
+  "test_rows": 5454,
+  "time_sec": 176.66226047463715
+}

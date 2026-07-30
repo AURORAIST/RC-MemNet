@@ -1,0 +1,149 @@
+{
+  "model": "wav2vec2-xls-r-300m-hfcache",
+  "resolved_model": "wav2vec2-xls-r-300m-hfcache",
+  "model_path": "/home/ustc1958/lxy/graph/tone/.hf_cache/prepared_wav2vec2-xls-r-300m",
+  "target": "Chizhou",
+  "protocol": "loro",
+  "k": 4,
+  "splits": 100,
+  "region_column": "region",
+  "holdout": "03池州",
+  "split": {
+    "protocol": "loro",
+    "holdout_region": "03池州",
+    "target_labels_used_for_training": false,
+    "train_regions": [
+      "01当涂",
+      "01横渡镇",
+      "01语音信号",
+      "02七都镇",
+      "02芜湖",
+      "04甘棠",
+      "04青阳",
+      "05孙村",
+      "06铜陵",
+      "07宣城",
+      "08泾县",
+      "09繁昌",
+      "10南陵",
+      "11黄山",
+      "13高淳"
+    ],
+    "num_train_regions": 15
+  },
+  "train_scheme": "last_layer",
+  "metrics": {
+    "accuracy": 0.1878054632705795,
+    "macro_f1": 0.16233725525540763,
+    "weighted_f1": 0.20128249423027406,
+    "micro_f1": 0.1878054632705795
+  },
+  "metrics_std": {
+    "accuracy": 0.023604997760536844,
+    "macro_f1": 0.015304376867585316,
+    "weighted_f1": 0.025106658130642702,
+    "micro_f1": 0.023604997760536844
+  },
+  "zero_shot": {
+    "accuracy": 0.2841950861752842,
+    "macro_f1": 0.1333511521316681,
+    "micro_f1": 0.2841950861752842,
+    "weighted_f1": 0.22017348813234994
+  },
+  "test_embeddings_shape": [
+    5454,
+    1024
+  ],
+  "training": {
+    "steps": 1500,
+    "best_val_macro_f1": 0.12347534364404628,
+    "training_time_sec": 277.8049325942993,
+    "backbone": "wav2vec2-xls-r-300m-hfcache",
+    "train_scheme": "last_layer",
+    "hidden_size": 1024
+  },
+  "history": [
+    {
+      "step": 150.0,
+      "loss": 2.0529847145080566,
+      "val_accuracy": 0.22741660579498418,
+      "val_macro_f1": 0.10844749809099648,
+      "val_micro_f1": 0.22741660579498418,
+      "val_weighted_f1": 0.1679967935912767
+    },
+    {
+      "step": 300.0,
+      "loss": 2.121833086013794,
+      "val_accuracy": 0.28463598733869006,
+      "val_macro_f1": 0.10280750406625344,
+      "val_micro_f1": 0.28463598733869006,
+      "val_weighted_f1": 0.19843794555586972
+    },
+    {
+      "step": 450.0,
+      "loss": 1.9347987174987793,
+      "val_accuracy": 0.2573654735816898,
+      "val_macro_f1": 0.12347534364404628,
+      "val_micro_f1": 0.2573654735816898,
+      "val_weighted_f1": 0.2068579834553619
+    },
+    {
+      "step": 600.0,
+      "loss": 2.0486221313476562,
+      "val_accuracy": 0.24762600438276114,
+      "val_macro_f1": 0.10314088210118601,
+      "val_micro_f1": 0.24762600438276114,
+      "val_weighted_f1": 0.19542831221226956
+    },
+    {
+      "step": 750.0,
+      "loss": 2.148607015609741,
+      "val_accuracy": 0.15047479912344777,
+      "val_macro_f1": 0.0787075913233588,
+      "val_micro_f1": 0.15047479912344777,
+      "val_weighted_f1": 0.11014631223267904
+    },
+    {
+      "step": 900.0,
+      "loss": 1.9121410846710205,
+      "val_accuracy": 0.2115899683467251,
+      "val_macro_f1": 0.10365568435536744,
+      "val_micro_f1": 0.2115899683467251,
+      "val_weighted_f1": 0.17876633772784692
+    },
+    {
+      "step": 1050.0,
+      "loss": 1.8151171207427979,
+      "val_accuracy": 0.15071828585342098,
+      "val_macro_f1": 0.10958768367204287,
+      "val_micro_f1": 0.15071828585342098,
+      "val_weighted_f1": 0.14754510325356546
+    },
+    {
+      "step": 1200.0,
+      "loss": 1.4709455966949463,
+      "val_accuracy": 0.20038957876795715,
+      "val_macro_f1": 0.09480189403365609,
+      "val_micro_f1": 0.20038957876795715,
+      "val_weighted_f1": 0.1505967252955037
+    },
+    {
+      "step": 1350.0,
+      "loss": 2.0480525493621826,
+      "val_accuracy": 0.1465790114438763,
+      "val_macro_f1": 0.0822996761411344,
+      "val_micro_f1": 0.1465790114438763,
+      "val_weighted_f1": 0.11726750196365911
+    },
+    {
+      "step": 1500.0,
+      "loss": 2.039964437484741,
+      "val_accuracy": 0.12612612612612611,
+      "val_macro_f1": 0.06082989444437551,
+      "val_micro_f1": 0.12612612612612611,
+      "val_weighted_f1": 0.06100591021389186
+    }
+  ],
+  "test_rows": 5454,
+  "time_sec": 304.07089349627495
+}

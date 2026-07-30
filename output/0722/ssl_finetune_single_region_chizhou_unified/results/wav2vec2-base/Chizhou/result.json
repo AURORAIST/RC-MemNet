@@ -1,0 +1,149 @@
+{
+  "model": "wav2vec2-base",
+  "resolved_model": "wav2vec2-base",
+  "model_path": "/home/ustc1958/lxy/graph/tone/model/wav2vec2-base",
+  "target": "Chizhou",
+  "protocol": "loro",
+  "k": 4,
+  "splits": 100,
+  "region_column": "region",
+  "holdout": "03池州",
+  "split": {
+    "protocol": "loro",
+    "holdout_region": "03池州",
+    "target_labels_used_for_training": false,
+    "train_regions": [
+      "01当涂",
+      "01横渡镇",
+      "01语音信号",
+      "02七都镇",
+      "02芜湖",
+      "04甘棠",
+      "04青阳",
+      "05孙村",
+      "06铜陵",
+      "07宣城",
+      "08泾县",
+      "09繁昌",
+      "10南陵",
+      "11黄山",
+      "13高淳"
+    ],
+    "num_train_regions": 15
+  },
+  "train_scheme": "last_layer",
+  "metrics": {
+    "accuracy": 0.39325027685492797,
+    "macro_f1": 0.35465300986962356,
+    "weighted_f1": 0.4155180866420175,
+    "micro_f1": 0.39325027685492797
+  },
+  "metrics_std": {
+    "accuracy": 0.03956542621505626,
+    "macro_f1": 0.027193555534228225,
+    "weighted_f1": 0.04724961833013899,
+    "micro_f1": 0.03956542621505626
+  },
+  "zero_shot": {
+    "accuracy": 0.48001466813348004,
+    "macro_f1": 0.4246445825816488,
+    "micro_f1": 0.48001466813348004,
+    "weighted_f1": 0.5081360923074438
+  },
+  "test_embeddings_shape": [
+    5454,
+    768
+  ],
+  "training": {
+    "steps": 1500,
+    "best_val_macro_f1": 0.39228998778521995,
+    "training_time_sec": 199.36906599998474,
+    "backbone": "wav2vec2-base",
+    "train_scheme": "last_layer",
+    "hidden_size": 768
+  },
+  "history": [
+    {
+      "step": 150.0,
+      "loss": 2.006828546524048,
+      "val_accuracy": 0.3710737764791819,
+      "val_macro_f1": 0.23876220683373514,
+      "val_micro_f1": 0.3710737764791819,
+      "val_weighted_f1": 0.37087631263217175
+    },
+    {
+      "step": 300.0,
+      "loss": 1.54996919631958,
+      "val_accuracy": 0.3888483077672267,
+      "val_macro_f1": 0.27609898156481516,
+      "val_micro_f1": 0.3888483077672267,
+      "val_weighted_f1": 0.3955305618663811
+    },
+    {
+      "step": 450.0,
+      "loss": 1.7243150472640991,
+      "val_accuracy": 0.4170927684441198,
+      "val_macro_f1": 0.3139921168815002,
+      "val_micro_f1": 0.4170927684441198,
+      "val_weighted_f1": 0.41646577554348657
+    },
+    {
+      "step": 600.0,
+      "loss": 1.773779034614563,
+      "val_accuracy": 0.40613586559532505,
+      "val_macro_f1": 0.287402210542351,
+      "val_micro_f1": 0.40613586559532505,
+      "val_weighted_f1": 0.38774574693610775
+    },
+    {
+      "step": 750.0,
+      "loss": 1.96147882938385,
+      "val_accuracy": 0.4343803262722182,
+      "val_macro_f1": 0.35273332729088586,
+      "val_micro_f1": 0.4343803262722182,
+      "val_weighted_f1": 0.4434336928180828
+    },
+    {
+      "step": 900.0,
+      "loss": 1.956781029701233,
+      "val_accuracy": 0.42512783053323594,
+      "val_macro_f1": 0.30968974648942826,
+      "val_micro_f1": 0.42512783053323594,
+      "val_weighted_f1": 0.40952749242971437
+    },
+    {
+      "step": 1050.0,
+      "loss": 1.5724341869354248,
+      "val_accuracy": 0.4558071585098612,
+      "val_macro_f1": 0.3654321785355658,
+      "val_micro_f1": 0.4558071585098612,
+      "val_weighted_f1": 0.46184435579482924
+    },
+    {
+      "step": 1200.0,
+      "loss": 1.2394706010818481,
+      "val_accuracy": 0.46384222059897734,
+      "val_macro_f1": 0.3914923455618195,
+      "val_micro_f1": 0.46384222059897734,
+      "val_weighted_f1": 0.471028042924207
+    },
+    {
+      "step": 1350.0,
+      "loss": 1.7860124111175537,
+      "val_accuracy": 0.4411979547114682,
+      "val_macro_f1": 0.39228998778521995,
+      "val_micro_f1": 0.4411979547114682,
+      "val_weighted_f1": 0.467933623100856
+    },
+    {
+      "step": 1500.0,
+      "loss": 1.289257287979126,
+      "val_accuracy": 0.43097151205259315,
+      "val_macro_f1": 0.3808884718969938,
+      "val_micro_f1": 0.43097151205259315,
+      "val_weighted_f1": 0.45442324304467574
+    }
+  ],
+  "test_rows": 5454,
+  "time_sec": 212.92416485212743
+}

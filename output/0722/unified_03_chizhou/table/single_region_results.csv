@@ -1,0 +1,10 @@
+﻿method,display_method,accuracy,accuracy_std,macro_f1,macro_f1_std,source
+count_based_adaptation,Count-based adaptation,0.7211830933923958,0.004179607290641472,0.6593925957266592,0.004640818360717859,/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/ablation_memory_count_based_v2_20260723_012548/03_Chizhou/result.json
+no_prompt_routing,No prompt routing,0.7192063492063494,0.00043599946895570414,0.6613698251080921,0.0007340439395070945,/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/ablation_prompt_20260723_001604/03_Chizhou/result.json
+rc_memnet,RC-MemNet,0.7177021040974529,0.004209700420574005,0.6536308484335297,0.005192428593341322,/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/main_table_rc_memnet_14targets_20260722_231203/03_Chizhou/result.json
+logreg,logreg,0.3044647471391657,0.0403275508803646,0.2668056696504923,0.0278450766183048,/home/ustc1958/lxy/graph/tone/complete_package0614/output/0614/traditional_downstream_baselines_4shot_s100_add2_20260701/summary.csv
+random_forest,random_forest,0.2892617201919527,0.0466023195254999,0.249348436704802,0.0306792369077078,/home/ustc1958/lxy/graph/tone/complete_package0614/output/0614/traditional_downstream_baselines_4shot_s100_add2_20260701/summary.csv
+svm,svm,0.2838316722037652,0.0340398113534949,0.2490360405598397,0.0234837404195512,/home/ustc1958/lxy/graph/tone/complete_package0614/output/0614/traditional_downstream_baselines_4shot_s100_add2_20260701/summary.csv
+xgboost,xgboost,0.2222775932078257,0.0376440579808159,0.1930951450353251,0.0251266638183682,/home/ustc1958/lxy/graph/tone/complete_package0614/output/0614/traditional_downstream_baselines_4shot_s100_add2_20260701/summary.csv
+whisper-base,whisper-base,0.2125212255444813,0.0277726357412968,0.1862949257022139,0.018728187211738,/home/ustc1958/lxy/graph/tone/complete_package0614/output/0614/local_hf_ssl_4shot_s100_add2_20260701/summary.csv
+lightgbm,lightgbm,0.2011554078995939,0.0339097356929911,0.1750323367484496,0.023870714648754,/home/ustc1958/lxy/graph/tone/complete_package0614/output/0614/traditional_downstream_baselines_4shot_s100_add2_20260701/summary.csv

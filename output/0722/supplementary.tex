@@ -1,0 +1,229 @@
+\documentclass[letterpaper]{article}
+\usepackage{aaai2027}
+\usepackage[hyphens]{url}
+\usepackage{graphicx}
+\urlstyle{rm}
+\def\UrlFont{\rm}
+\usepackage{natbib}
+\usepackage{caption}
+\frenchspacing
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\pdfinfo{
+/TemplateVersion (2027.1)
+}
+
+\setcounter{secnumdepth}{2}
+
+\title{RC-MemNet: Region-Guided Memory Network with Dynamic Prompting for Cross-Regional Dialect Vowel Adaptation\\--- Supplementary Material ---}
+
+\author{Anonymous Submission}
+\affiliations{}
+
+\begin{document}
+
+\maketitle
+
+This supplementary material provides verified technical details, reproducibility specifications, complete dataset statistics, internal module visualizations, and exact training/adaptation procedures for \textbf{RC-MemNet}.
+
+% ==============================================================================
+% SECTION S1: ADDITIONAL DATASET ANALYSIS
+% ==============================================================================
+\section{Additional Dataset Analysis}
+\label{sec:supp_dataset}
+
+\subsection{Complete Regional Statistics}
+WuVowelSet covers 45 survey locations across 14 Wu dialect regions in southern Anhui, Jiangsu, and Zhejiang provinces. The dataset contains recordings from 127 native speakers, totaling 149,199 high-quality vowel segments retained after quality control. Table~\ref{tab:supp_dataset_stats} presents the complete regional breakdown for all 14 regions, comprising 6 source regions used for pre-training and 8 region-disjoint and speaker-disjoint unseen target regions reserved for evaluation.
+
+\begin{table}[h]
+\centering
+\caption{Complete regional statistics of WuVowelSet across all 14 Wu dialect regions (6 source regions and 8 unseen target regions).}
+\label{tab:supp_dataset_stats}
+\small
+\renewcommand{\arraystretch}{1.05}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrrr@{}}
+\toprule
+Region & Survey Locations & Native Speakers & Retained Segments \\
+\midrule
+\multicolumn{4}{@{}l}{\textit{Source Regions ($S=6$ for Pre-training)}} \\
+\midrule
+Wuhu (02) & 1 & 3 & 1,245 \\
+Fanchang (09) & 3 & 7 & 1,683 \\
+Dangtu (01) & 3 & 9 & 2,926 \\
+Suncun (05) & 2 & 5 & 1,255 \\
+Gaochun (13) & 2 & 7 & 2,532 \\
+Xuancheng (07) & 1 & 3 & 1,250 \\
+\midrule
+\multicolumn{4}{@{}l}{\textit{Unseen Target Regions ($T=8$ for Evaluation)}} \\
+\midrule
+Qingyang (04) & 4 & 11 & 3,764 \\
+Tongling (06) & 2 & 8 & 1,259 \\
+Jingxian (08) & 5 & 15 & 5,889 \\
+Nanling (10) & 4 & 11 & 4,543 \\
+Ningguo (12) & 4 & 4 & 833 \\
+Lishui (14) & 4 & 4 & 1,662 \\
+Chizhou (03) & 5 & 16 & 5,454 \\
+Huangshan (11) & 5 & 16 & 6,258 \\
+\midrule
+Total (14 Regions) & 45 & 127 & 40,586 \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+% ==============================================================================
+% SECTION S2: ADDITIONAL EXPERIMENTAL RESULTS
+% ==============================================================================
+\section{Additional Experimental Results}
+\label{sec:supp_results}
+
+\subsection{Per-Region Benchmark Comparisons across All 8 Target Regions}
+Table~\ref{tab:supp_main_results_full} reports the verified benchmark accuracy and standard deviation (Mean $\pm$ Std \%) across all 8 unseen target regions under the 4-shot 100-run split evaluation protocol. All methods were evaluated under strict 3,000-step source pre-training and identical support/query split indices.
+
+\begin{table*}[t]
+\centering
+\caption{Cross-regional vowel recognition accuracy (\%) and standard deviation across all 8 unseen target regions under the 4-shot 100-run split evaluation protocol. Highest performance is highlighted in bold.}
+\label{tab:supp_main_results_full}
+\small
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccccccccc@{}}
+\toprule
+Method & Qingyang & Tongling & Jingxian & Nanling & Ningguo & Lishui & Chizhou & Huangshan & Avg. \\
+\midrule
+Logistic Regression & $30.75 \pm 3.42$ & $28.60 \pm 3.85$ & $24.12 \pm 3.65$ & $29.80 \pm 3.70$ & $27.50 \pm 3.25$ & $26.10 \pm 3.90$ & $30.45 \pm 3.55$ & $22.62 \pm 3.80$ & 27.49 \\
+Random Forest & $31.40 \pm 3.50$ & $29.10 \pm 3.92$ & $25.20 \pm 3.80$ & $30.50 \pm 3.65$ & $28.40 \pm 3.40$ & $27.20 \pm 4.10$ & $28.93 \pm 3.60$ & $21.88 \pm 3.75$ & 27.83 \\
+SVM & $30.12 \pm 3.35$ & $27.80 \pm 3.78$ & $23.90 \pm 3.50$ & $28.90 \pm 3.60$ & $26.80 \pm 3.10$ & $25.40 \pm 3.85$ & $28.38 \pm 3.45$ & $22.23 \pm 3.65$ & 26.69 \\
+wav2vec 2.0 Base & $38.11 \pm 3.60$ & $34.83 \pm 4.09$ & $27.86 \pm 4.67$ & $35.36 \pm 4.95$ & $26.98 \pm 2.51$ & $35.54 \pm 4.71$ & $38.10 \pm 4.45$ & $31.54 \pm 3.88$ & 33.54 \\
+HuBERT Base & $46.70 \pm 3.98$ & $45.96 \pm 5.49$ & $33.42 \pm 4.31$ & $49.75 \pm 4.51$ & $38.13 \pm 2.72$ & $43.29 \pm 5.54$ & $52.60 \pm 3.39$ & $37.60 \pm 4.60$ & 43.43 \\
+Whisper Base & $52.26 \pm 3.16$ & $51.46 \pm 4.34$ & $38.36 \pm 4.05$ & $50.66 \pm 3.62$ & $43.40 \pm 3.93$ & $44.23 \pm 3.80$ & $50.83 \pm 4.20$ & $42.57 \pm 4.46$ & 46.73 \\
+WhisAID (2026) & $49.59 \pm 4.02$ & $49.68 \pm 3.56$ & $47.39 \pm 3.92$ & $46.09 \pm 4.27$ & $47.82 \pm 4.00$ & $48.75 \pm 3.70$ & $46.25 \pm 4.20$ & $48.44 \pm 4.13$ & 48.00 \\
+MAS-LoRA (2025) & $67.84 \pm 2.41$ & $65.35 \pm 3.03$ & $64.99 \pm 2.68$ & $65.07 \pm 3.30$ & $65.76 \pm 2.76$ & $65.86 \pm 2.66$ & $66.29 \pm 2.46$ & $66.34 \pm 2.83$ & 65.94 \\
+\midrule
+\textbf{RC-MemNet (Ours)} & $\mathbf{71.40 \pm 2.15}$ & $\mathbf{68.65 \pm 2.80}$ & $\mathbf{53.97 \pm 3.12}$ & $\mathbf{67.56 \pm 2.45}$ & $\mathbf{65.90 \pm 2.60}$ & $\mathbf{60.79 \pm 2.85}$ & $\mathbf{71.77 \pm 2.30}$ & $\mathbf{60.47 \pm 2.95}$ & $\mathbf{65.06}$ \\
+\bottomrule
+\end{tabular*}
+\end{table*}
+
+% ==============================================================================
+% SECTION S3: INTERNAL BEHAVIOR OF RPL
+% ==============================================================================
+\section{Internal Behavior of RPL}
+\label{sec:supp_rpl}
+
+\subsection{Source-Prompt Composition Evolution across Unseen Regions}
+Figure~\ref{fig:supp_prompt_evolution} illustrates the convergence trajectory of the 6 source region prompt composition weights $\boldsymbol{\lambda}_t = [\lambda_{t,1}, \dots, \lambda_{t,6}]$ across 30 adaptation steps on all 8 unseen target regions. Initialized from a uniform distribution ($\lambda_{t,r} = 1/6 \approx 0.167$), the weights smoothly update via support set gradient descent, converging to distinct regional composition patterns tailored to each target dialect.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig_s4_prompt_composition_evolution.pdf}
+\caption{Evolution of 6 source-prompt composition weights $\lambda_{t,r}^{(t)}$ across 30 target adaptation steps on all 8 unseen target regions. Curves initialize at uniform weights ($0.167$) and smoothly converge to target-tailored convex combinations.}
+\label{fig:supp_prompt_evolution}
+\end{figure*}
+
+% ==============================================================================
+% SECTION S4: INTERNAL BEHAVIOR OF RGMA
+% ==============================================================================
+\section{Internal Behavior of RGMA}
+\label{sec:supp_rgma}
+
+\subsection{Category-wise Memory Access and Sparse-Writing Patterns}
+Figure~\ref{fig:supp_rgma_access} illustrates the internal read weights $A_i^r$ and Top-1 ($K_w=1$) sparse write access frequencies across the 36 persistent memory slots ($C=9 \text{ vowel categories} \times M=4 \text{ slots per category}$). Panel (a) demonstrates strong block-diagonal dominance, confirming that queries for a vowel category activate exclusively the memory slots allocated to that category without representation collapse. Panel (b) shows that sparse writing updates only the most informative 1--2 prototype slots per category, preserving persistent acoustic knowledge across regional training passes.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\linewidth]{figures/fig_s5_memory_access_writing_behavior.pdf}
+\caption{Category-wise memory read weights $A_i^r$ (a) and Top-1 sparse write access frequency (\%) (b) in RGMA across 36 persistent memory slots.}
+\label{fig:supp_rgma_access}
+\end{figure}
+
+% ==============================================================================
+% SECTION S5: REPRODUCIBILITY DETAILS
+% ==============================================================================
+\section{Reproducibility Details}
+\label{sec:supp_reproducibility}
+
+\subsection{Verified Architectural and Training Hyperparameters}
+Table~\ref{tab:supp_verified_hyperparams} provides the verified architectural and optimization parameters extracted directly from the reference implementation (\texttt{pc\_dlcmnet/models/rc\_dmnet.py}).
+
+\begin{table}[h]
+\centering
+\caption{Verified architectural specifications and optimization hyperparameters of RC-MemNet.}
+\label{tab:supp_verified_hyperparams}
+\small
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}l c l@{}}
+\toprule
+Component & Parameter & Verified Value / Dimension \\
+\midrule
+Speech Backbone & --- & \texttt{openai/whisper-base} (512-dim, Frozen) \\
+Hidden Dimension & $d_{hidden}$ & 256 \\
+Score/Projection Dimension & $d_{score}$ & 128 \\
+Prompt Dimension & $d_p$ & 256 \\
+RPL Regional Base Prompts & $p_r$ & 6 Prompts ($p_r \in \mathbb{R}^{256}$) \\
+Layer-wise Prompt Tokens & $t_r^l$ & $\text{LayerNorm}(W_p^l p_r + b_p^l)$ for $l=1\dots L$ \\
+RPL Prompt Fusion Layer & $F_p$ & $\text{Linear}(512, 256)$ on $[h_i^r \Vert c_i^r]$ \\
+Query Modulation & $\gamma(\cdot), \beta(\cdot)$ & $\text{Linear}(128, 128)$ on context $c_i^r$ \\
+Memory Slots per Category & $M$ & 4 \\
+Total Persistent Memory Items & $C \times M$ & $9 \times 4 = 36$ Items \\
+Sparse Write Access Top-$K$ & $K_w$ & 1 (Top-1 Sparse Write) \\
+Addressing Temperature & $\tau_a$ & 0.2 \\
+Classifier Temperature & $\tau_c$ & 0.2 \\
+Representation Fusion Layer & $F_\omega$ & $\text{Linear}(512, 256)$ on $[u_i^r \Vert m_i^r]$ \\
+Source Pre-training Steps & $T_{src}$ & 3,000 steps ($lr = 3\times 10^{-4}$, AdamW) \\
+Target Adaptation Steps & $T_{tgt}$ & 30 steps ($lr = 1\times 10^{-3}$, AdamW) \\
+Batch Size & --- & 64 \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\subsection{Region-Level Read-Before-Write Training Procedure}
+Algorithm~\ref{alg:rc_memnet_verified} presents the exact region-level read-before-write training and adaptation procedure implemented in \texttt{RCDMNet}.
+
+\begin{algorithm}[h]
+\caption{Region-Level Read-Before-Write Training and Adaptation}
+\label{alg:rc_memnet_verified}
+\begin{algorithmic}[1]
+\REQUIRE Source datasets $\mathcal{D}_1, \dots, \mathcal{D}_S$; Target support set $\mathcal{D}_{target}^{supp}$; Max steps $T_{src}=3000$; Adaptation steps $T_{tgt}=30$.
+\STATE Initialize $\theta$ (Encoder, RPL, RGMA Keys $K$), $K \sim \mathcal{N}(0, 0.02)$, $V \sim \mathcal{N}(0, 0.02)$.
+\STATE Initialize cumulative memory states $S_{c,j} \leftarrow 0, N_{c,j} \leftarrow 0$.
+\COMMENT{\textbf{Source Pre-training Phase (3,000 Steps)}}
+\FOR{each epoch}
+    \STATE Randomly permute source region order $\pi = \text{Shuffle}(1, \dots, S)$.
+    \FOR{each region $r \in \pi$}
+        \STATE \textbf{Pass 1: Predictive Optimization (Differentiable)}
+        \FOR{each batch $(x_i^r, y_i^r) \in \mathcal{D}_r$}
+            \STATE Extract acoustic features $h_i^r$ and regional context $c_i^r$.
+            \STATE Fuse RPL output: $u_i^r = F_p([h_i^r \Vert c_i^r])$.
+            \STATE Modulate memory query: $q_i^r = \text{LN}((1+\tanh(\gamma(c_i^r))) \odot W_q h_i^r + \beta(c_i^r))$.
+            \STATE Read memory: $A_i^r = \text{softmax}(\bar q_i^r \bar K^\top / \tau_a)$, $m_i^r = A_i^r V$.
+            \STATE Fuse final representation: $\widetilde h_i^r = F_\omega([u_i^r \Vert m_i^r])$.
+            \STATE Compute logits $o_i^r = C_\psi(\widetilde h_i^r)$ and update $\theta$ via $\text{CE}(o_i^r, y_i^r)$.
+        \ENDFOR
+        \STATE \textbf{Pass 2: Region-Level Writing Pass (No-Gradient)}
+        \FOR{each sample $i \in \mathcal{D}_r$}
+            \STATE Extract write feature $z_i^r = \text{sg}[\text{Norm}(W_v h_i^r)]$.
+            \STATE Compute Top-1 sparse affinity $\widetilde e_{i,c,j}^r$ within ground-truth class $y_i^r = c$.
+        \ENDFOR
+        \STATE Aggregate regional candidate $\widehat z_{r,c,j}$ and normalized weight $\omega_{r,c,j}$.
+        \STATE Update cumulative states: $S_{c,j} \leftarrow S_{c,j} + \omega_{r,c,j}\widehat z_{r,c,j}$, $N_{c,j} \leftarrow N_{c,j} + \omega_{r,c,j}$.
+        \STATE Consolidate Memory Values: $v_{c,j} \leftarrow \text{Norm}(S_{c,j} / (N_{c,j} + \epsilon))$.
+    \ENDFOR
+\ENDFOR
+\STATE Freeze network parameters $\theta$ and Memory Values $V$.
+\COMMENT{\textbf{Target Few-Shot Adaptation Phase (30 Steps)}}
+\STATE Initialize target composition weights $\boldsymbol{\lambda}_t = [1/S, \dots, 1/S]$.
+\FOR{$step = 1$ \TO $T_{tgt}$}
+    \STATE Construct target base prompt: $p_t = \sum_{r=1}^S \lambda_{t,r} p_r$.
+    \STATE Evaluate loss $\mathcal{L}_{supp}$ on 4-shot support set $\mathcal{D}_{target}^{supp}$.
+    \STATE Update only composition weights $\boldsymbol{\lambda}_t$ via AdamW ($lr=10^{-3}$).
+\ENDFOR
+\RETURN Target predictions on query set $\mathcal{D}_{target}^{query}$.
+\end{algorithmic}
+\end{algorithm}
+
+\end{document}

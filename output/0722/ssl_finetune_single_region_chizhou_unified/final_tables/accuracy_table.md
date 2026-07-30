@@ -1,0 +1,14 @@
+# ACCURACY table
+
+| Method | Chizhou |
+|---|---:|
+| MR-HuBERT | 54.15 ± 3.45 |
+| MS-HuBERT | 52.82 ± 3.38 |
+| allophant-hierarchical-hfcache | 41.28 ± 4.73 |
+| hubert-base-ls960 | 52.60 ± 3.39 |
+| mHuBERT-147 | 52.44 ± 5.24 |
+| wav2vec2-base | 39.33 ± 3.96 |
+| wav2vec2-large-robust-hfcache | 14.66 ± 2.95 |
+| wav2vec2-xls-r-300m-hfcache | 18.78 ± 2.36 |
+| wavlm-base | 41.35 ± 4.40 |
+| whisper-base | 52.35 ± 3.81 |

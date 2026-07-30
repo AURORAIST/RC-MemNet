@@ -1,0 +1,12 @@
+{
+  "model_type": "whisaid",
+  "holdout_region": "08泾县",
+  "metrics": {
+    "accuracy": 0.4738519637462235
+  },
+  "metrics_std": {
+    "accuracy": 0.03921466901303053
+  },
+  "eval_split_runs": 100,
+  "target_support_shots": 4
+}

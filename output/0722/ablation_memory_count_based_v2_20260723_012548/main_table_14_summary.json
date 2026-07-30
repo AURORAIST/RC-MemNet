@@ -1,0 +1,156 @@
+[
+  {
+    "stem": "01_Dangtu",
+    "Target": "01当涂",
+    "result_file": "output/0722/ablation_memory_count_based_v2_20260723_012548/01_Dangtu/result.json",
+    "status": "done",
+    "accuracy": 0.6002871972318339,
+    "macro_f1": 0.5022652317926325,
+    "weighted_f1": 0.5988924494175688,
+    "val_accuracy": 0.6974770642201835,
+    "val_macro_f1": 0.6179204598278087
+  },
+  {
+    "stem": "02_Wuhu",
+    "Target": "02芜湖",
+    "result_file": "output/0722/ablation_memory_count_based_v2_20260723_012548/02_Wuhu/result.json",
+    "status": "done",
+    "accuracy": 0.693291976840364,
+    "macro_f1": 0.6129639261416607,
+    "weighted_f1": 0.700024886481136,
+    "val_accuracy": 0.6656360424028268,
+    "val_macro_f1": 0.5895862632943604
+  },
+  {
+    "stem": "03_Chizhou",
+    "Target": "03池州",
+    "result_file": "output/0722/ablation_memory_count_based_v2_20260723_012548/03_Chizhou/result.json",
+    "status": "done",
+    "accuracy": 0.7211830933923958,
+    "macro_f1": 0.6593925957266592,
+    "weighted_f1": 0.7275024117849931,
+    "val_accuracy": 0.6661796932067202,
+    "val_macro_f1": 0.6046849873786236
+  },
+  {
+    "stem": "04_Qingyang",
+    "Target": "04青阳",
+    "result_file": "output/0722/ablation_memory_count_based_v2_20260723_012548/04_Qingyang/result.json",
+    "status": "done",
+    "accuracy": 0.7160541845493562,
+    "macro_f1": 0.6461366962093874,
+    "weighted_f1": 0.7197039641709366,
+    "val_accuracy": 0.6875584658559402,
+    "val_macro_f1": 0.605055478744405
+  },
+  {
+    "stem": "05_Suncun",
+    "Target": "05孙村",
+    "result_file": "output/0722/ablation_memory_count_based_v2_20260723_012548/05_Suncun/result.json",
+    "status": "done",
+    "accuracy": 0.7248728465955699,
+    "macro_f1": 0.664418615815963,
+    "weighted_f1": 0.7265137443958517,
+    "val_accuracy": 0.670863706648995,
+    "val_macro_f1": 0.5965848408720965
+  },
+  {
+    "stem": "06_Tongling",
+    "Target": "06铜陵",
+    "result_file": "output/0722/ablation_memory_count_based_v2_20260723_012548/06_Tongling/result.json",
+    "status": "done",
+    "accuracy": 0.6814472608340145,
+    "macro_f1": 0.5989670652392115,
+    "weighted_f1": 0.6942182018092541,
+    "val_accuracy": 0.6619531595227574,
+    "val_macro_f1": 0.5972707669580724
+  },
+  {
+    "stem": "07_Xuancheng",
+    "Target": "07宣城",
+    "result_file": "output/0722/ablation_memory_count_based_v2_20260723_012548/07_Xuancheng/result.json",
+    "status": "done",
+    "accuracy": 0.6783196046128501,
+    "macro_f1": 0.6174351118292436,
+    "weighted_f1": 0.6837535738058197,
+    "val_accuracy": 0.6757234371548487,
+    "val_macro_f1": 0.6042287302138616
+  },
+  {
+    "stem": "08_Jingxian",
+    "Target": "08泾县",
+    "result_file": "output/0722/ablation_memory_count_based_v2_20260723_012548/08_Jingxian/result.json",
+    "status": "done",
+    "accuracy": 0.5465778233384588,
+    "macro_f1": 0.4278133968495832,
+    "weighted_f1": 0.5393639147234279,
+    "val_accuracy": 0.7125276888998278,
+    "val_macro_f1": 0.6357026540981088
+  },
+  {
+    "stem": "09_Fanchang",
+    "Target": "09繁昌",
+    "result_file": "output/0722/ablation_memory_count_based_v2_20260723_012548/09_Fanchang/result.json",
+    "status": "done",
+    "accuracy": 0.7084517304189434,
+    "macro_f1": 0.6254890208581785,
+    "weighted_f1": 0.7046859397398157,
+    "val_accuracy": 0.6935771632471008,
+    "val_macro_f1": 0.6250992198384386
+  },
+  {
+    "stem": "10_Nanling",
+    "Target": "10南陵",
+    "result_file": "output/0722/ablation_memory_count_based_v2_20260723_012548/10_Nanling/result.json",
+    "status": "done",
+    "accuracy": 0.7096782782338584,
+    "macro_f1": 0.641739034270303,
+    "weighted_f1": 0.7122731453210298,
+    "val_accuracy": 0.6881848499285373,
+    "val_macro_f1": 0.6079155491824874
+  },
+  {
+    "stem": "11_Huangshan",
+    "Target": "11黄山",
+    "result_file": "output/0722/ablation_memory_count_based_v2_20260723_012548/11_Huangshan/result.json",
+    "status": "done",
+    "accuracy": 0.6184635165541628,
+    "macro_f1": 0.4657288776032682,
+    "weighted_f1": 0.6118221893381726,
+    "val_accuracy": 0.7014406358668653,
+    "val_macro_f1": 0.6383734778692751
+  },
+  {
+    "stem": "12_Ningguo",
+    "Target": "12宁国",
+    "result_file": "output/0722/ablation_memory_count_based_v2_20260723_012548/12_Ningguo/result.json",
+    "status": "done",
+    "accuracy": 0.6374153074027603,
+    "macro_f1": 0.5761330937692561,
+    "weighted_f1": 0.634601780211008,
+    "val_accuracy": 0.6968702123002846,
+    "val_macro_f1": 0.6345324737988125
+  },
+  {
+    "stem": "13_Gaochun",
+    "Target": "13高淳",
+    "result_file": "output/0722/ablation_memory_count_based_v2_20260723_012548/13_Gaochun/result.json",
+    "status": "done",
+    "accuracy": 0.5184375,
+    "macro_f1": 0.4385240354417854,
+    "weighted_f1": 0.5249849261275891,
+    "val_accuracy": 0.6990225051147988,
+    "val_macro_f1": 0.6302054742149692
+  },
+  {
+    "stem": "14_Lishui",
+    "Target": "14溧水",
+    "result_file": "output/0722/ablation_memory_count_based_v2_20260723_012548/14_Lishui/result.json",
+    "status": "done",
+    "accuracy": 0.5989114391143913,
+    "macro_f1": 0.5513746039886646,
+    "weighted_f1": 0.609875258119106,
+    "val_accuracy": 0.6959429335711101,
+    "val_macro_f1": 0.63930040596668
+  }
+]

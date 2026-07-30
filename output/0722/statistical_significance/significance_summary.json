@@ -1,0 +1,105 @@
+{
+  "main_root": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/main_table_rc_memnet_14targets_20260722_231203",
+  "baseline_root": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/baselines_whisaid_maslora_20260725",
+  "per_run_root": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/baselines_whisaid_maslora_20260725_per_run",
+  "bootstrap_runs": 10000,
+  "seed": 20260727,
+  "comparisons": {
+    "mas_lora": {
+      "accuracy": {
+        "n": 8,
+        "mean_a": 0.6506310864332804,
+        "mean_b": 0.6593678843331894,
+        "mean_diff": -0.008736797899909055,
+        "std_diff": 0.05795858293028235,
+        "t_value": -0.4263630150042375,
+        "p_value_normal_approx": 0.6698433470092826,
+        "p_value_sign_test": 0.7265625,
+        "bootstrap_ci_low": -0.047868280869119983,
+        "bootstrap_ci_high": 0.02644381380251702,
+        "positive_count": 5,
+        "negative_count": 3,
+        "zero_count": 0
+      }
+    },
+    "mas_lora_per_run_qingyang": {
+      "accuracy": {
+        "n": 100,
+        "mean_a": 0.7139940987124461,
+        "mean_b": 0.6783782908933965,
+        "mean_diff": 0.0356158078190496,
+        "std_diff": 0.02405370854996941,
+        "t_value": 14.806784469455499,
+        "p_value_normal_approx": 0.0,
+        "p_value_sign_test": 2.630866896130179e-25,
+        "bootstrap_ci_low": 0.031077584901483785,
+        "bootstrap_ci_high": 0.04051891528560118,
+        "positive_count": 97,
+        "negative_count": 3,
+        "zero_count": 0,
+        "comparison_note": "RC-MemNet point estimate minus saved baseline per-run metrics",
+        "baseline_run_min": 0.588260681916271,
+        "baseline_run_max": 0.7192490289167026,
+        "baseline_run_mean": 0.6783782908933965,
+        "rc_above_baseline_runs": 97
+      },
+      "macro_f1": {
+        "n": 100,
+        "mean_a": 0.6445575466636169,
+        "mean_b": 0.6113409669292893,
+        "mean_diff": 0.033216579734327574,
+        "std_diff": 0.021677680309102814,
+        "t_value": 15.322940121217393,
+        "p_value_normal_approx": 0.0,
+        "p_value_sign_test": 2.630866896130179e-25,
+        "bootstrap_ci_low": 0.029083502966982703,
+        "bootstrap_ci_high": 0.0374700349503783,
+        "positive_count": 97,
+        "negative_count": 3,
+        "zero_count": 0,
+        "comparison_note": "RC-MemNet point estimate minus saved baseline per-run metrics",
+        "baseline_run_min": 0.5404050047031963,
+        "baseline_run_max": 0.651443619128416,
+        "baseline_run_mean": 0.6113409669292893,
+        "rc_above_baseline_runs": 97
+      },
+      "weighted_f1": {
+        "n": 100,
+        "mean_a": 0.7182442690947347,
+        "mean_b": 0.6856388428937037,
+        "mean_diff": 0.03260542620103121,
+        "std_diff": 0.02322232792725125,
+        "t_value": 14.04055024249699,
+        "p_value_normal_approx": 0.0,
+        "p_value_sign_test": 6.449688895763542e-24,
+        "bootstrap_ci_low": 0.02811908428995103,
+        "bootstrap_ci_high": 0.037157902318401985,
+        "positive_count": 96,
+        "negative_count": 4,
+        "zero_count": 0,
+        "comparison_note": "RC-MemNet point estimate minus saved baseline per-run metrics",
+        "baseline_run_min": 0.602982741170433,
+        "baseline_run_max": 0.7223732385841787,
+        "baseline_run_mean": 0.6856388428937037,
+        "rc_above_baseline_runs": 96
+      }
+    },
+    "whisaid": {
+      "accuracy": {
+        "n": 8,
+        "mean_a": 0.6506310864332804,
+        "mean_b": 0.4800234678463531,
+        "mean_diff": 0.17060761858692736,
+        "std_diff": 0.06307221750115166,
+        "t_value": 7.650772958645486,
+        "p_value_normal_approx": 1.9984014443252818e-14,
+        "p_value_sign_test": 0.0078125,
+        "bootstrap_ci_low": 0.12792294757278894,
+        "bootstrap_ci_high": 0.21001595772807535,
+        "positive_count": 8,
+        "negative_count": 0,
+        "zero_count": 0
+      }
+    }
+  }
+}

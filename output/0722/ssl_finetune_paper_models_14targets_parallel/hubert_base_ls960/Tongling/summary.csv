@@ -1,0 +1,2 @@
+﻿model,resolved_model,target,accuracy,accuracy_std,macro_f1,macro_f1_std,weighted_f1,weighted_f1_std,zero_shot_macro_f1,zero_shot_accuracy,time_sec
+hubert-base-ls960,hubert-base-ls960,Tongling,0.4595748160261652,0.05485764160068872,0.421892175742647,0.041273743797398975,0.4686453421306306,0.06464960884072557,0.5103473197970582,0.5901509134233519,179.53630795143545

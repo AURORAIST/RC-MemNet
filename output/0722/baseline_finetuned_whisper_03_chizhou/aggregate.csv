@@ -1,0 +1,2 @@
+﻿method,regions,accuracy,accuracy_std_region,macro_f1,macro_f1_std_region,weighted_f1,weighted_f1_std_region,mean_time_sec
+whisper-svm,1,0.6756508984231756,nan,0.6116157453787878,nan,0.6837633710974318,nan,158.82704751752317

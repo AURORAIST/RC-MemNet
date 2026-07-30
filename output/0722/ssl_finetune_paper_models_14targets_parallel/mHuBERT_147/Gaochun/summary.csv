@@ -1,0 +1,2 @@
+﻿model,resolved_model,target,protocol,k,splits,train_scheme,accuracy,accuracy_std,macro_f1,macro_f1_std,weighted_f1,weighted_f1_std,zero_shot_macro_f1,zero_shot_accuracy,time_sec
+mHuBERT-147,mHuBERT-147,Gaochun,loro,4,100,last_layer,0.3438060897435897,0.03633389155416998,0.3024476055420335,0.030706330940676242,0.3367206557323894,0.04335134240881134,0.35246439181190814,0.41824644549763035,181.2195288799703

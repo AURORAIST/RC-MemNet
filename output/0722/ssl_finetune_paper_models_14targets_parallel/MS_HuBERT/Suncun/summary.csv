@@ -1,0 +1,2 @@
+﻿model,resolved_model,target,protocol,k,splits,train_scheme,accuracy,accuracy_std,macro_f1,macro_f1_std,weighted_f1,weighted_f1_std,zero_shot_macro_f1,zero_shot_accuracy,time_sec
+MS-HuBERT,MS-HuBERT,Suncun,loro,4,100,last_layer,0.5187530762920427,0.03786559854448879,0.48083529969793837,0.03492266702950092,0.537754114807465,0.04252857868858133,0.5731608189032119,0.6143426294820717,160.71507122926414

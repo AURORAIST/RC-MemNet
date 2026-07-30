@@ -1,0 +1,146 @@
+{
+  "model": "wav2vec2-base",
+  "resolved_model": "wav2vec2-base",
+  "model_path": "/home/ustc1958/lxy/graph/tone/model/wav2vec2-base",
+  "target": "Xuancheng",
+  "region_column": "region",
+  "holdout": "07宣城",
+  "split": {
+    "protocol": "loro",
+    "holdout_region": "07宣城",
+    "target_labels_used_for_training": false,
+    "train_regions": [
+      "01当涂",
+      "01横渡镇",
+      "01语音信号",
+      "02七都镇",
+      "02芜湖",
+      "03池州",
+      "04甘棠",
+      "04青阳",
+      "05孙村",
+      "06铜陵",
+      "08泾县",
+      "09繁昌",
+      "10南陵",
+      "11黄山",
+      "13高淳"
+    ],
+    "num_train_regions": 15
+  },
+  "train_scheme": "last_layer",
+  "metrics": {
+    "accuracy": 0.34167215815485996,
+    "macro_f1": 0.31590229989868723,
+    "weighted_f1": 0.33889444727429335,
+    "micro_f1": 0.34167215815485996
+  },
+  "metrics_std": {
+    "accuracy": 0.04329582559902181,
+    "macro_f1": 0.032945392840152084,
+    "weighted_f1": 0.052356796827761606,
+    "micro_f1": 0.04329582559902181
+  },
+  "zero_shot": {
+    "accuracy": 0.4704,
+    "macro_f1": 0.4266575469153542,
+    "micro_f1": 0.4704,
+    "weighted_f1": 0.48708318366707853
+  },
+  "test_embeddings_shape": [
+    1250,
+    768
+  ],
+  "training": {
+    "steps": 1500,
+    "best_val_macro_f1": 0.41848041056142815,
+    "training_time_sec": 196.61023044586182,
+    "backbone": "wav2vec2-base",
+    "train_scheme": "last_layer",
+    "hidden_size": 768
+  },
+  "history": [
+    {
+      "step": 150.0,
+      "loss": 1.8034170866012573,
+      "val_accuracy": 0.41904130770929976,
+      "val_macro_f1": 0.2770291920133491,
+      "val_micro_f1": 0.41904130770929976,
+      "val_weighted_f1": 0.4105575625914592
+    },
+    {
+      "step": 300.0,
+      "loss": 2.171297073364258,
+      "val_accuracy": 0.3688977247625359,
+      "val_macro_f1": 0.3195625498963977,
+      "val_micro_f1": 0.3688977247625359,
+      "val_weighted_f1": 0.37558297626117226
+    },
+    {
+      "step": 450.0,
+      "loss": 1.724785327911377,
+      "val_accuracy": 0.37221117738016346,
+      "val_macro_f1": 0.28342301808175346,
+      "val_micro_f1": 0.37221117738016346,
+      "val_weighted_f1": 0.34974537158067626
+    },
+    {
+      "step": 600.0,
+      "loss": 1.2617709636688232,
+      "val_accuracy": 0.334216920698034,
+      "val_macro_f1": 0.3187787060419066,
+      "val_micro_f1": 0.334216920698034,
+      "val_weighted_f1": 0.3270790811481213
+    },
+    {
+      "step": 750.0,
+      "loss": 1.4590030908584595,
+      "val_accuracy": 0.4146233708857963,
+      "val_macro_f1": 0.36281581051703526,
+      "val_micro_f1": 0.4146233708857963,
+      "val_weighted_f1": 0.424795636883022
+    },
+    {
+      "step": 900.0,
+      "loss": 1.666730284690857,
+      "val_accuracy": 0.39893969516235916,
+      "val_macro_f1": 0.3569693180821432,
+      "val_micro_f1": 0.39893969516235916,
+      "val_weighted_f1": 0.4050741405576456
+    },
+    {
+      "step": 1050.0,
+      "loss": 1.3694108724594116,
+      "val_accuracy": 0.45504749282085266,
+      "val_macro_f1": 0.39214948363598645,
+      "val_micro_f1": 0.45504749282085266,
+      "val_weighted_f1": 0.45059624281417593
+    },
+    {
+      "step": 1200.0,
+      "loss": 1.7177455425262451,
+      "val_accuracy": 0.4669759222443119,
+      "val_macro_f1": 0.41848041056142815,
+      "val_micro_f1": 0.4669759222443119,
+      "val_weighted_f1": 0.47711565420781527
+    },
+    {
+      "step": 1350.0,
+      "loss": 2.197195529937744,
+      "val_accuracy": 0.42876076872100727,
+      "val_macro_f1": 0.3867849517162533,
+      "val_micro_f1": 0.42876076872100727,
+      "val_weighted_f1": 0.4512047771156956
+    },
+    {
+      "step": 1500.0,
+      "loss": 2.0899953842163086,
+      "val_accuracy": 0.39209189308592884,
+      "val_macro_f1": 0.3667155661065167,
+      "val_micro_f1": 0.39209189308592884,
+      "val_weighted_f1": 0.4162213880825955
+    }
+  ],
+  "test_rows": 1250,
+  "time_sec": 199.86177409254014
+}

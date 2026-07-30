@@ -1,0 +1,5 @@
+# ACCURACY table
+
+| Method | Chizhou |
+|---|---:|
+| wav2vec2-base | 24.00 ± 0.00 |

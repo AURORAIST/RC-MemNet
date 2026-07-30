@@ -1,0 +1,2 @@
+﻿model,resolved_model,target,accuracy,accuracy_std,macro_f1,macro_f1_std,weighted_f1,weighted_f1_std,zero_shot_macro_f1,zero_shot_accuracy,time_sec
+wav2vec2-base,wav2vec2-base,Huangshan,0.3153648344583735,0.03877548037534594,0.26424672186621856,0.02718014635232951,0.3299422648371786,0.043620256806349095,0.3539455457088701,0.5,216.34802416153252

@@ -1,0 +1,2 @@
+﻿model,accuracy,macro_f1,weighted_f1,zero_shot_macro_f1,zero_shot_accuracy
+wav2vec2-base,0.34167215815485996,0.31590229989868723,0.33889444727429335,0.4266575469153542,0.4704

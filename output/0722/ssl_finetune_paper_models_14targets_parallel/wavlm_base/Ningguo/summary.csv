@@ -1,0 +1,2 @@
+﻿model,resolved_model,target,protocol,k,splits,train_scheme,accuracy,accuracy_std,macro_f1,macro_f1_std,weighted_f1,weighted_f1_std,zero_shot_macro_f1,zero_shot_accuracy,time_sec
+wavlm-base,wavlm-base,Ningguo,loro,4,100,last_layer,0.30435382685069007,0.03562717035945651,0.2890585138303016,0.0273300681888138,0.28412483477539935,0.040354814381422466,0.40634854527526504,0.3985594237695078,2162.0871627349406

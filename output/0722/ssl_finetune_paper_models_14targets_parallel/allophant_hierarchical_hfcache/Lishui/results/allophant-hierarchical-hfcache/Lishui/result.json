@@ -1,0 +1,174 @@
+{
+  "model": "allophant-hierarchical-hfcache",
+  "resolved_model": "allophant-hierarchical-hfcache",
+  "model_path": "/home/ustc1958/lxy/graph/tone/.hf_cache/models--kgnlp--allophant-hierarchical/snapshots/ee8993bea7a279241dbed810e4dfc8a90a0a59bf/allophant.pt",
+  "target": "Lishui",
+  "protocol": "loro",
+  "k": 4,
+  "splits": 100,
+  "region_column": "site",
+  "holdout": "14溧水",
+  "split": {
+    "protocol": "loro",
+    "holdout_region": "14溧水",
+    "target_labels_used_for_training": false,
+    "train_regions": [
+      "01A酉华",
+      "01塘南",
+      "01墩上镇茅坦村",
+      "01杨柳镇",
+      "01榔桥",
+      "01焦村",
+      "01砖墙",
+      "01繁阳",
+      "01西湖镇",
+      "01许镇",
+      "01长垅",
+      "01香口村",
+      "01高路亭",
+      "02乌石",
+      "02云岭",
+      "02何湾镇",
+      "02崔东安",
+      "02梅龙镇双湖村",
+      "02横渡村",
+      "02河口村",
+      "02淳溪",
+      "02陵阳",
+      "03弋江镇",
+      "03新明",
+      "03新河",
+      "03桃花潭",
+      "03湖阳",
+      "03马衙镇马衙村",
+      "04博望",
+      "04新港",
+      "04梅街镇刘街村",
+      "04甘棠",
+      "04籍山镇",
+      "04茂林",
+      "05新丰",
+      "05棠溪镇石门村",
+      "05黄村",
+      "06铜陵",
+      "12宁国",
+      "六郎镇"
+    ],
+    "num_train_regions": 40
+  },
+  "train_scheme": "last_layer",
+  "metrics": {
+    "accuracy": 0.34740467404674047,
+    "macro_f1": 0.3066331963526854,
+    "weighted_f1": 0.3521449049586361,
+    "micro_f1": 0.34740467404674047
+  },
+  "metrics_std": {
+    "accuracy": 0.050987305787650934,
+    "macro_f1": 0.039885387609008637,
+    "weighted_f1": 0.06266516937889934,
+    "micro_f1": 0.050987305787650934
+  },
+  "zero_shot": {
+    "accuracy": 0.4404332129963899,
+    "macro_f1": 0.3805355280539857,
+    "micro_f1": 0.4404332129963899,
+    "weighted_f1": 0.4444918541753056
+  },
+  "test_embeddings_shape": [
+    1662,
+    1024
+  ],
+  "training": {
+    "steps": 1500,
+    "best_val_macro_f1": 0.3788865101543807,
+    "training_time_sec": 272.8991415500641,
+    "backbone": "allophant-hierarchical-hfcache",
+    "train_scheme": "last_layer",
+    "hidden_size": 1024
+  },
+  "history": [
+    {
+      "step": 150.0,
+      "loss": 2.1512258052825928,
+      "val_accuracy": 0.4132857779759251,
+      "val_macro_f1": 0.12680592130304658,
+      "val_micro_f1": 0.4132857779759251,
+      "val_weighted_f1": 0.2862455437448729
+    },
+    {
+      "step": 300.0,
+      "loss": 2.220510721206665,
+      "val_accuracy": 0.454079358002675,
+      "val_macro_f1": 0.21957607037351642,
+      "val_micro_f1": 0.454079358002675,
+      "val_weighted_f1": 0.37606240086181913
+    },
+    {
+      "step": 450.0,
+      "loss": 2.0768210887908936,
+      "val_accuracy": 0.41105662059741416,
+      "val_macro_f1": 0.17814549668228338,
+      "val_micro_f1": 0.41105662059741416,
+      "val_weighted_f1": 0.31055322096055066
+    },
+    {
+      "step": 600.0,
+      "loss": 2.105719566345215,
+      "val_accuracy": 0.4794917521176995,
+      "val_macro_f1": 0.25282902910698846,
+      "val_micro_f1": 0.4794917521176995,
+      "val_weighted_f1": 0.40506010902229717
+    },
+    {
+      "step": 750.0,
+      "loss": 1.7400697469711304,
+      "val_accuracy": 0.4964333481943825,
+      "val_macro_f1": 0.34016688398787526,
+      "val_micro_f1": 0.4964333481943825,
+      "val_weighted_f1": 0.4827541432233524
+    },
+    {
+      "step": 900.0,
+      "loss": 1.8653640747070312,
+      "val_accuracy": 0.43847525635309853,
+      "val_macro_f1": 0.34206685722017194,
+      "val_micro_f1": 0.43847525635309853,
+      "val_weighted_f1": 0.45414482150924435
+    },
+    {
+      "step": 1050.0,
+      "loss": 1.7772979736328125,
+      "val_accuracy": 0.42643780650913954,
+      "val_macro_f1": 0.3645341682089289,
+      "val_micro_f1": 0.42643780650913954,
+      "val_weighted_f1": 0.4363573742033508
+    },
+    {
+      "step": 1200.0,
+      "loss": 1.8749845027923584,
+      "val_accuracy": 0.4413731609451627,
+      "val_macro_f1": 0.3788865101543807,
+      "val_micro_f1": 0.4413731609451627,
+      "val_weighted_f1": 0.45805746629978544
+    },
+    {
+      "step": 1350.0,
+      "loss": 1.902775526046753,
+      "val_accuracy": 0.3584485064645564,
+      "val_macro_f1": 0.3415658366005223,
+      "val_micro_f1": 0.3584485064645564,
+      "val_weighted_f1": 0.36666911282224124
+    },
+    {
+      "step": 1500.0,
+      "loss": 1.2687592506408691,
+      "val_accuracy": 0.39567543468568883,
+      "val_macro_f1": 0.36304585440412196,
+      "val_micro_f1": 0.39567543468568883,
+      "val_weighted_f1": 0.39978369613366205
+    }
+  ],
+  "test_rows": 1662,
+  "time_sec": 279.60274424031377
+}

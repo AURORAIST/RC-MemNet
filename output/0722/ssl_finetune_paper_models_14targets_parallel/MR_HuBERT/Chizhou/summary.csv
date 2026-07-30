@@ -1,0 +1,2 @@
+﻿model,resolved_model,target,protocol,k,splits,train_scheme,accuracy,accuracy_std,macro_f1,macro_f1_std,weighted_f1,weighted_f1_std,zero_shot_macro_f1,zero_shot_accuracy,time_sec
+MR-HuBERT,MR-HuBERT,Chizhou,loro,4,100,last_layer,0.564359542266519,0.02690039135506647,0.5094429769293137,0.02022154451549259,0.5716703111186967,0.028774549437889305,0.5444108632024359,0.6001100110011001,134.2305892892182

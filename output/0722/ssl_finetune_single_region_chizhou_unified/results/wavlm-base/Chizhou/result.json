@@ -1,0 +1,150 @@
+{
+  "model": "wavlm-base",
+  "resolved_model": "wavlm-base",
+  "model_path": "/home/ustc1958/lxy/graph/tone/model/wavlm-base",
+  "target": "Chizhou",
+  "region_column": "region",
+  "holdout": "03池州",
+  "split": {
+    "protocol": "loro",
+    "holdout_region": "03池州",
+    "target_labels_used_for_training": false,
+    "train_regions": [
+      "01当涂",
+      "01横渡镇",
+      "01语音信号",
+      "02七都镇",
+      "02芜湖",
+      "04甘棠",
+      "04青阳",
+      "05孙村",
+      "06铜陵",
+      "07宣城",
+      "08泾县",
+      "09繁昌",
+      "10南陵",
+      "11黄山",
+      "13高淳"
+    ],
+    "num_train_regions": 15
+  },
+  "train_scheme": "last_layer",
+  "metrics": {
+    "accuracy": 0.41349575489110374,
+    "macro_f1": 0.36751876019494895,
+    "weighted_f1": 0.43223556516204076,
+    "micro_f1": 0.41349575489110374
+  },
+  "metrics_std": {
+    "accuracy": 0.04400996194276426,
+    "macro_f1": 0.028470221718856166,
+    "weighted_f1": 0.049027781323878264,
+    "micro_f1": 0.04400996194276426
+  },
+  "zero_shot": {
+    "accuracy": 0.5038503850385039,
+    "macro_f1": 0.4488552424731674,
+    "micro_f1": 0.5038503850385039,
+    "weighted_f1": 0.5149611428568623
+  },
+  "test_embeddings_shape": [
+    5454,
+    768
+  ],
+  "training": {
+    "steps": 1500,
+    "best_val_macro_f1": 0.40600107280962255,
+    "training_time_sec": 2391.40487074852,
+    "backbone": "wavlm-base",
+    "train_scheme": "last_layer",
+    "hidden_size": 768
+  },
+  "history": [
+    {
+      "step": 150.0,
+      "loss": 1.9095549583435059,
+      "val_accuracy": 0.3907962016070124,
+      "val_macro_f1": 0.3325733997271786,
+      "val_micro_f1": 0.3907962016070124,
+      "val_weighted_f1": 0.3913054691087882
+    },
+    {
+      "step": 300.0,
+      "loss": 1.3999627828598022,
+      "val_accuracy": 0.40735329924519115,
+      "val_macro_f1": 0.3361138064750801,
+      "val_micro_f1": 0.40735329924519115,
+      "val_weighted_f1": 0.4084676730339454
+    },
+    {
+      "step": 450.0,
+      "loss": 2.1923887729644775,
+      "val_accuracy": 0.43413683954224497,
+      "val_macro_f1": 0.36690860582866613,
+      "val_micro_f1": 0.43413683954224497,
+      "val_weighted_f1": 0.4466624841702218
+    },
+    {
+      "step": 600.0,
+      "loss": 1.8576180934906006,
+      "val_accuracy": 0.40564889213537864,
+      "val_macro_f1": 0.3660796882189649,
+      "val_micro_f1": 0.40564889213537864,
+      "val_weighted_f1": 0.4242510266213386
+    },
+    {
+      "step": 750.0,
+      "loss": 1.3377678394317627,
+      "val_accuracy": 0.3985877769661553,
+      "val_macro_f1": 0.36864654909674377,
+      "val_micro_f1": 0.3985877769661553,
+      "val_weighted_f1": 0.41654804891876734
+    },
+    {
+      "step": 900.0,
+      "loss": 1.924228310585022,
+      "val_accuracy": 0.4407109812515218,
+      "val_macro_f1": 0.3935696275455129,
+      "val_micro_f1": 0.4407109812515218,
+      "val_weighted_f1": 0.45346809180932507
+    },
+    {
+      "step": 1050.0,
+      "loss": 1.6982598304748535,
+      "val_accuracy": 0.4560506452398344,
+      "val_macro_f1": 0.4020347956542043,
+      "val_micro_f1": 0.4560506452398344,
+      "val_weighted_f1": 0.4727966046014464
+    },
+    {
+      "step": 1200.0,
+      "loss": 1.3804105520248413,
+      "val_accuracy": 0.44825906988069153,
+      "val_macro_f1": 0.40600107280962255,
+      "val_micro_f1": 0.44825906988069153,
+      "val_weighted_f1": 0.45877054510481213
+    },
+    {
+      "step": 1350.0,
+      "loss": 1.671686053276062,
+      "val_accuracy": 0.4180667153640127,
+      "val_macro_f1": 0.38909946258266903,
+      "val_micro_f1": 0.4180667153640127,
+      "val_weighted_f1": 0.43888528523664705
+    },
+    {
+      "step": 1500.0,
+      "loss": 2.1349871158599854,
+      "val_accuracy": 0.431945458972486,
+      "val_macro_f1": 0.3948953783403844,
+      "val_micro_f1": 0.431945458972486,
+      "val_weighted_f1": 0.44796350347487435
+    }
+  ],
+  "test_rows": 5454,
+  "time_sec": 2491.659455904737,
+  "protocol": "loro",
+  "k": 4,
+  "splits": 100,
+  "cache_source": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/ssl_finetune_paper_models_14targets_parallel/wavlm_base/Chizhou/results/wavlm-base/Chizhou"
+}

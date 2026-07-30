@@ -1,0 +1,25 @@
+﻿Model,Target,checkpoint,exists
+RC-MemNet,03池州,/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/main_table_rc_memnet_14targets_20260722_231203/03_Chizhou/result.pt,True
+RC-MemNet,04青阳,/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/main_table_rc_memnet_14targets_20260722_231203/04_Qingyang/result.pt,True
+RC-MemNet,06铜陵,/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/main_table_rc_memnet_14targets_20260722_231203/06_Tongling/result.pt,True
+RC-MemNet,08泾县,/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/main_table_rc_memnet_14targets_20260722_231203/08_Jingxian/result.pt,True
+RC-MemNet,10南陵,/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/main_table_rc_memnet_14targets_20260722_231203/10_Nanling/result.pt,True
+RC-MemNet,11黄山,/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/main_table_rc_memnet_14targets_20260722_231203/11_Huangshan/result.pt,True
+RC-MemNet,12宁国,/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/main_table_rc_memnet_14targets_20260722_231203/12_Ningguo/result.pt,True
+RC-MemNet,14溧水,/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/main_table_rc_memnet_14targets_20260722_231203/14_Lishui/result.pt,True
+w/o Prompt Routing,03池州,/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/ablation_prompt_20260723_001604/03_Chizhou/result.pt,True
+w/o Prompt Routing,04青阳,/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/ablation_prompt_20260723_001604/04_Qingyang/result.pt,True
+w/o Prompt Routing,06铜陵,/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/ablation_prompt_20260723_001604/06_Tongling/result.pt,True
+w/o Prompt Routing,08泾县,/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/ablation_prompt_20260723_001604/08_Jingxian/result.pt,True
+w/o Prompt Routing,10南陵,/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/ablation_prompt_20260723_001604/10_Nanling/result.pt,True
+w/o Prompt Routing,11黄山,/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/ablation_prompt_20260723_001604/11_Huangshan/result.pt,True
+w/o Prompt Routing,12宁国,/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/ablation_prompt_20260723_001604/12_Ningguo/result.pt,True
+w/o Prompt Routing,14溧水,/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/ablation_prompt_20260723_001604/14_Lishui/result.pt,True
+w/o Adaptive RGMA Write,03池州,/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/ablation_memory_count_based_v2_20260723_012548/03_Chizhou/result.pt,True
+w/o Adaptive RGMA Write,04青阳,/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/ablation_memory_count_based_v2_20260723_012548/04_Qingyang/result.pt,True
+w/o Adaptive RGMA Write,06铜陵,/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/ablation_memory_count_based_v2_20260723_012548/06_Tongling/result.pt,True
+w/o Adaptive RGMA Write,08泾县,/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/ablation_memory_count_based_v2_20260723_012548/08_Jingxian/result.pt,True
+w/o Adaptive RGMA Write,10南陵,/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/ablation_memory_count_based_v2_20260723_012548/10_Nanling/result.pt,True
+w/o Adaptive RGMA Write,11黄山,/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/ablation_memory_count_based_v2_20260723_012548/11_Huangshan/result.pt,True
+w/o Adaptive RGMA Write,12宁国,/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/ablation_memory_count_based_v2_20260723_012548/12_Ningguo/result.pt,True
+w/o Adaptive RGMA Write,14溧水,/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/ablation_memory_count_based_v2_20260723_012548/14_Lishui/result.pt,True

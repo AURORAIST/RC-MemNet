@@ -1,0 +1,134 @@
+{
+  "sample_count": 2556,
+  "feature_shapes": {
+    "backbone": [
+      2556,
+      512
+    ],
+    "rpl": [
+      2556,
+      256
+    ],
+    "full": [
+      2556,
+      256
+    ]
+  },
+  "target_regions": [
+    [
+      "04_Qingyang",
+      "04青阳",
+      "Qingyang"
+    ],
+    [
+      "06_Tongling",
+      "06铜陵",
+      "Tongling"
+    ],
+    [
+      "08_Jingxian",
+      "08泾县",
+      "Jingxian"
+    ],
+    [
+      "10_Nanling",
+      "10南陵",
+      "Nanling"
+    ],
+    [
+      "12_Ningguo",
+      "12宁国",
+      "Ningguo"
+    ],
+    [
+      "14_Lishui",
+      "14溧水",
+      "Lishui"
+    ]
+  ],
+  "query_seed": 42,
+  "support_shots": 4,
+  "per_region_class": 50,
+  "counts": {
+    "Qingyang": {
+      "a": 50,
+      "e": 50,
+      "i": 50,
+      "o": 50,
+      "u": 50,
+      "y": 50,
+      "ɔ": 50,
+      "ə": 50,
+      "ɛ": 50
+    },
+    "Tongling": {
+      "a": 50,
+      "e": 50,
+      "i": 50,
+      "o": 50,
+      "u": 50,
+      "y": 50,
+      "ɔ": 20,
+      "ə": 50,
+      "ɛ": 33
+    },
+    "Jingxian": {
+      "a": 50,
+      "e": 50,
+      "i": 50,
+      "o": 50,
+      "u": 50,
+      "y": 50,
+      "ɔ": 50,
+      "ə": 50,
+      "ɛ": 50
+    },
+    "Nanling": {
+      "a": 50,
+      "e": 50,
+      "i": 50,
+      "o": 50,
+      "u": 50,
+      "y": 50,
+      "ɔ": 50,
+      "ə": 50,
+      "ɛ": 50
+    },
+    "Ningguo": {
+      "a": 50,
+      "e": 50,
+      "i": 50,
+      "o": 50,
+      "u": 50,
+      "y": 48,
+      "ɔ": 12,
+      "ə": 50,
+      "ɛ": 20
+    },
+    "Lishui": {
+      "a": 50,
+      "e": 50,
+      "i": 50,
+      "o": 50,
+      "u": 50,
+      "y": 50,
+      "ɔ": 28,
+      "ə": 50,
+      "ɛ": 45
+    }
+  },
+  "silhouette_cosine_high_dim": {
+    "backbone": -0.048239514231681824,
+    "rpl": 0.04101377725601196,
+    "full": 0.06032966449856758
+  },
+  "dimensionality_note": "Frozen Whisper pooled features and RC-MemNet hidden features have different original dimensions; each panel uses the same PCA/t-SNE hyperparameters but a separate PCA+t-SNE fit.",
+  "files": {
+    "features": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/downstream_tsne_6regions_20260727/downstream_features_6regions_seed42.npz",
+    "coords": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/downstream_tsne_6regions_20260727/downstream_tsne_coords_6regions_seed42.npz",
+    "vowel_pdf": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/downstream_tsne_6regions_20260727/fig_downstream_representation_vowels_6regions.pdf",
+    "vowel_png": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/downstream_tsne_6regions_20260727/fig_downstream_representation_vowels_6regions.png",
+    "region_pdf": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/downstream_tsne_6regions_20260727/fig_downstream_representation_regions_6regions.pdf",
+    "region_png": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/downstream_tsne_6regions_20260727/fig_downstream_representation_regions_6regions.png"
+  }
+}

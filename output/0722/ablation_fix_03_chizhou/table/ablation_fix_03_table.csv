@@ -1,0 +1,5 @@
+﻿Method,Accuracy,Macro-F1,source
+Full RC-MemNet,71.77 ± 0.42,65.36 ± 0.52,/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/main_table_rc_memnet_14targets_20260722_231203/03_Chizhou/result.json
+No context prompt,70.46 ± 0.05,62.27 ± 0.09,/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/ablation_fix_03_chizhou/no_context_prompt/result.json
+No memory adapter,70.37 ± 0.30,64.28 ± 0.32,/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/ablation_fix_03_chizhou/no_memory_adapter/result.json
+No prompt + no memory,69.95 ± 0.05,63.84 ± 0.08,/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/ablation_fix_03_chizhou/no_prompt_no_memory/result.json

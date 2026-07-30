@@ -1,0 +1,2 @@
+﻿model,resolved_model,target,protocol,k,splits,train_scheme,accuracy,accuracy_std,macro_f1,macro_f1_std,weighted_f1,weighted_f1_std,zero_shot_macro_f1,zero_shot_accuracy,time_sec
+MR-HuBERT,MR-HuBERT,Qingyang,loro,4,100,last_layer,0.5261292918454936,0.02611674531171401,0.4784867944654019,0.022900214689442668,0.5354429317357696,0.029328219300646406,0.5374996334890003,0.5874070138150903,128.79270359501243

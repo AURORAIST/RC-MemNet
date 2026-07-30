@@ -1,0 +1,2 @@
+﻿model,resolved_model,target,protocol,k,splits,train_scheme,accuracy,accuracy_std,macro_f1,macro_f1_std,weighted_f1,weighted_f1_std,zero_shot_macro_f1,zero_shot_accuracy,time_sec
+MS-HuBERT,MS-HuBERT,Dangtu,loro,4,100,last_layer,0.4239204152249135,0.040812100709237596,0.3797718244598764,0.03317797094127625,0.4327150787810037,0.05100617067605887,0.47407552136589853,0.5167464114832536,162.8248464949429

@@ -1,0 +1,2 @@
+﻿model,resolved_model,target,accuracy,accuracy_std,macro_f1,macro_f1_std,weighted_f1,weighted_f1_std,zero_shot_macro_f1,zero_shot_accuracy,time_sec
+hubert-base-ls960,hubert-base-ls960,Qingyang,0.4670118025751073,0.03976619018270733,0.4356226630992467,0.030767676874518358,0.4764612273290579,0.04481565888367715,0.49215829856982374,0.507173219978746,180.73066922463477

@@ -1,0 +1,2 @@
+﻿model,resolved_model,target,accuracy,accuracy_std,macro_f1,macro_f1_std,weighted_f1,weighted_f1_std,zero_shot_macro_f1,zero_shot_accuracy,time_sec
+wavlm-base,wavlm-base,Wuhu,0.3720430107526881,0.05774431862459816,0.324028950260295,0.03809910212279278,0.3845341576886824,0.06718971953028871,0.4256077948220851,0.46907630522088356,2521.6780902408063

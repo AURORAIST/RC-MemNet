@@ -1,0 +1,2 @@
+﻿model,accuracy,macro_f1,weighted_f1,zero_shot_macro_f1,zero_shot_accuracy
+hubert-base-ls960,0.4884596375617793,0.4498201120231057,0.48097023348087425,0.5546267366244007,0.5888

@@ -1,0 +1,102 @@
+{
+  "items": [
+    {
+      "region_dir": "01_Dangtu",
+      "checkpoint": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/main_table_rc_memnet_14targets_20260722_231203/01_Dangtu/result.pt",
+      "output": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/01_Dangtu/result.json",
+      "predictions_output": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/01_Dangtu/predictions.csv",
+      "log": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/01_Dangtu/eval.log"
+    },
+    {
+      "region_dir": "02_Wuhu",
+      "checkpoint": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/main_table_rc_memnet_14targets_20260722_231203/02_Wuhu/result.pt",
+      "output": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/02_Wuhu/result.json",
+      "predictions_output": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/02_Wuhu/predictions.csv",
+      "log": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/02_Wuhu/eval.log"
+    },
+    {
+      "region_dir": "03_Chizhou",
+      "checkpoint": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/main_table_rc_memnet_14targets_20260722_231203/03_Chizhou/result.pt",
+      "output": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/03_Chizhou/result.json",
+      "predictions_output": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/03_Chizhou/predictions.csv",
+      "log": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/03_Chizhou/eval.log"
+    },
+    {
+      "region_dir": "04_Qingyang",
+      "checkpoint": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/main_table_rc_memnet_14targets_20260722_231203/04_Qingyang/result.pt",
+      "output": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/04_Qingyang/result.json",
+      "predictions_output": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/04_Qingyang/predictions.csv",
+      "log": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/04_Qingyang/eval.log"
+    },
+    {
+      "region_dir": "05_Suncun",
+      "checkpoint": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/main_table_rc_memnet_14targets_20260722_231203/05_Suncun/result.pt",
+      "output": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/05_Suncun/result.json",
+      "predictions_output": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/05_Suncun/predictions.csv",
+      "log": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/05_Suncun/eval.log"
+    },
+    {
+      "region_dir": "06_Tongling",
+      "checkpoint": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/main_table_rc_memnet_14targets_20260722_231203/06_Tongling/result.pt",
+      "output": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/06_Tongling/result.json",
+      "predictions_output": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/06_Tongling/predictions.csv",
+      "log": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/06_Tongling/eval.log"
+    },
+    {
+      "region_dir": "07_Xuancheng",
+      "checkpoint": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/main_table_rc_memnet_14targets_20260722_231203/07_Xuancheng/result.pt",
+      "output": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/07_Xuancheng/result.json",
+      "predictions_output": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/07_Xuancheng/predictions.csv",
+      "log": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/07_Xuancheng/eval.log"
+    },
+    {
+      "region_dir": "08_Jingxian",
+      "checkpoint": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/main_table_rc_memnet_14targets_20260722_231203/08_Jingxian/result.pt",
+      "output": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/08_Jingxian/result.json",
+      "predictions_output": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/08_Jingxian/predictions.csv",
+      "log": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/08_Jingxian/eval.log"
+    },
+    {
+      "region_dir": "09_Fanchang",
+      "checkpoint": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/main_table_rc_memnet_14targets_20260722_231203/09_Fanchang/result.pt",
+      "output": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/09_Fanchang/result.json",
+      "predictions_output": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/09_Fanchang/predictions.csv",
+      "log": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/09_Fanchang/eval.log"
+    },
+    {
+      "region_dir": "10_Nanling",
+      "checkpoint": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/main_table_rc_memnet_14targets_20260722_231203/10_Nanling/result.pt",
+      "output": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/10_Nanling/result.json",
+      "predictions_output": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/10_Nanling/predictions.csv",
+      "log": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/10_Nanling/eval.log"
+    },
+    {
+      "region_dir": "11_Huangshan",
+      "checkpoint": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/main_table_rc_memnet_14targets_20260722_231203/11_Huangshan/result.pt",
+      "output": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/11_Huangshan/result.json",
+      "predictions_output": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/11_Huangshan/predictions.csv",
+      "log": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/11_Huangshan/eval.log"
+    },
+    {
+      "region_dir": "12_Ningguo",
+      "checkpoint": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/main_table_rc_memnet_14targets_20260722_231203/12_Ningguo/result.pt",
+      "output": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/12_Ningguo/result.json",
+      "predictions_output": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/12_Ningguo/predictions.csv",
+      "log": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/12_Ningguo/eval.log"
+    },
+    {
+      "region_dir": "13_Gaochun",
+      "checkpoint": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/main_table_rc_memnet_14targets_20260722_231203/13_Gaochun/result.pt",
+      "output": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/13_Gaochun/result.json",
+      "predictions_output": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/13_Gaochun/predictions.csv",
+      "log": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/13_Gaochun/eval.log"
+    },
+    {
+      "region_dir": "14_Lishui",
+      "checkpoint": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/main_table_rc_memnet_14targets_20260722_231203/14_Lishui/result.pt",
+      "output": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/14_Lishui/result.json",
+      "predictions_output": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/14_Lishui/predictions.csv",
+      "log": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/checkpoint_eval_14targets_20260723/14_Lishui/eval.log"
+    }
+  ]
+}

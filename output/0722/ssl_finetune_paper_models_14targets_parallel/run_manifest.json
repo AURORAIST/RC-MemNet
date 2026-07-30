@@ -1,0 +1,317 @@
+{
+  "csv": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/data/wu_vowel_segments.paper_regions.csv",
+  "device": "cuda",
+  "concurrency": 2,
+  "models": [
+    "wav2vec2-base",
+    "hubert-base-ls960",
+    "wavlm-base",
+    "whisper-base",
+    "wav2vec2-large-robust-hfcache",
+    "wav2vec2-xls-r-300m-hfcache",
+    "mHuBERT-147",
+    "MR-HuBERT",
+    "MS-HuBERT",
+    "allophant-hierarchical-hfcache"
+  ],
+  "targets": [
+    "Dangtu",
+    "Wuhu",
+    "Chizhou",
+    "Qingyang",
+    "Suncun",
+    "Tongling",
+    "Xuancheng",
+    "Jingxian",
+    "Fanchang",
+    "Nanling",
+    "Huangshan",
+    "Ningguo",
+    "Gaochun",
+    "Lishui"
+  ],
+  "jobs": [
+    {
+      "model": "wav2vec2-large-robust-hfcache",
+      "target": "Dangtu",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_large_robust_hfcache/Dangtu",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_large_robust_hfcache/Dangtu/run.log"
+    },
+    {
+      "model": "wav2vec2-large-robust-hfcache",
+      "target": "Fanchang",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_large_robust_hfcache/Fanchang",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_large_robust_hfcache/Fanchang/run.log"
+    },
+    {
+      "model": "wav2vec2-large-robust-hfcache",
+      "target": "Gaochun",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_large_robust_hfcache/Gaochun",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_large_robust_hfcache/Gaochun/run.log"
+    },
+    {
+      "model": "wav2vec2-large-robust-hfcache",
+      "target": "Huangshan",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_large_robust_hfcache/Huangshan",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_large_robust_hfcache/Huangshan/run.log"
+    },
+    {
+      "model": "wav2vec2-large-robust-hfcache",
+      "target": "Jingxian",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_large_robust_hfcache/Jingxian",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_large_robust_hfcache/Jingxian/run.log"
+    },
+    {
+      "model": "wav2vec2-large-robust-hfcache",
+      "target": "Lishui",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_large_robust_hfcache/Lishui",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_large_robust_hfcache/Lishui/run.log"
+    },
+    {
+      "model": "wav2vec2-large-robust-hfcache",
+      "target": "Nanling",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_large_robust_hfcache/Nanling",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_large_robust_hfcache/Nanling/run.log"
+    },
+    {
+      "model": "wav2vec2-large-robust-hfcache",
+      "target": "Ningguo",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_large_robust_hfcache/Ningguo",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_large_robust_hfcache/Ningguo/run.log"
+    },
+    {
+      "model": "wav2vec2-large-robust-hfcache",
+      "target": "Qingyang",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_large_robust_hfcache/Qingyang",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_large_robust_hfcache/Qingyang/run.log"
+    },
+    {
+      "model": "wav2vec2-large-robust-hfcache",
+      "target": "Suncun",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_large_robust_hfcache/Suncun",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_large_robust_hfcache/Suncun/run.log"
+    },
+    {
+      "model": "wav2vec2-large-robust-hfcache",
+      "target": "Tongling",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_large_robust_hfcache/Tongling",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_large_robust_hfcache/Tongling/run.log"
+    },
+    {
+      "model": "wav2vec2-large-robust-hfcache",
+      "target": "Wuhu",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_large_robust_hfcache/Wuhu",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_large_robust_hfcache/Wuhu/run.log"
+    },
+    {
+      "model": "wav2vec2-large-robust-hfcache",
+      "target": "Xuancheng",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_large_robust_hfcache/Xuancheng",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_large_robust_hfcache/Xuancheng/run.log"
+    },
+    {
+      "model": "wav2vec2-xls-r-300m-hfcache",
+      "target": "Chizhou",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_xls_r_300m_hfcache/Chizhou",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_xls_r_300m_hfcache/Chizhou/run.log"
+    },
+    {
+      "model": "wav2vec2-xls-r-300m-hfcache",
+      "target": "Dangtu",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_xls_r_300m_hfcache/Dangtu",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_xls_r_300m_hfcache/Dangtu/run.log"
+    },
+    {
+      "model": "wav2vec2-xls-r-300m-hfcache",
+      "target": "Fanchang",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_xls_r_300m_hfcache/Fanchang",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_xls_r_300m_hfcache/Fanchang/run.log"
+    },
+    {
+      "model": "wav2vec2-xls-r-300m-hfcache",
+      "target": "Gaochun",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_xls_r_300m_hfcache/Gaochun",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_xls_r_300m_hfcache/Gaochun/run.log"
+    },
+    {
+      "model": "wav2vec2-xls-r-300m-hfcache",
+      "target": "Huangshan",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_xls_r_300m_hfcache/Huangshan",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_xls_r_300m_hfcache/Huangshan/run.log"
+    },
+    {
+      "model": "wav2vec2-xls-r-300m-hfcache",
+      "target": "Jingxian",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_xls_r_300m_hfcache/Jingxian",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_xls_r_300m_hfcache/Jingxian/run.log"
+    },
+    {
+      "model": "wav2vec2-xls-r-300m-hfcache",
+      "target": "Lishui",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_xls_r_300m_hfcache/Lishui",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_xls_r_300m_hfcache/Lishui/run.log"
+    },
+    {
+      "model": "wav2vec2-xls-r-300m-hfcache",
+      "target": "Nanling",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_xls_r_300m_hfcache/Nanling",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_xls_r_300m_hfcache/Nanling/run.log"
+    },
+    {
+      "model": "wav2vec2-xls-r-300m-hfcache",
+      "target": "Ningguo",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_xls_r_300m_hfcache/Ningguo",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_xls_r_300m_hfcache/Ningguo/run.log"
+    },
+    {
+      "model": "wav2vec2-xls-r-300m-hfcache",
+      "target": "Qingyang",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_xls_r_300m_hfcache/Qingyang",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_xls_r_300m_hfcache/Qingyang/run.log"
+    },
+    {
+      "model": "wav2vec2-xls-r-300m-hfcache",
+      "target": "Suncun",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_xls_r_300m_hfcache/Suncun",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_xls_r_300m_hfcache/Suncun/run.log"
+    },
+    {
+      "model": "wav2vec2-xls-r-300m-hfcache",
+      "target": "Tongling",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_xls_r_300m_hfcache/Tongling",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_xls_r_300m_hfcache/Tongling/run.log"
+    },
+    {
+      "model": "wav2vec2-xls-r-300m-hfcache",
+      "target": "Wuhu",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_xls_r_300m_hfcache/Wuhu",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_xls_r_300m_hfcache/Wuhu/run.log"
+    },
+    {
+      "model": "wav2vec2-xls-r-300m-hfcache",
+      "target": "Xuancheng",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_xls_r_300m_hfcache/Xuancheng",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/wav2vec2_xls_r_300m_hfcache/Xuancheng/run.log"
+    },
+    {
+      "model": "whisper-base",
+      "target": "Chizhou",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/whisper_base/Chizhou",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/whisper_base/Chizhou/run.log"
+    },
+    {
+      "model": "whisper-base",
+      "target": "Dangtu",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/whisper_base/Dangtu",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/whisper_base/Dangtu/run.log"
+    },
+    {
+      "model": "whisper-base",
+      "target": "Fanchang",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/whisper_base/Fanchang",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/whisper_base/Fanchang/run.log"
+    },
+    {
+      "model": "whisper-base",
+      "target": "Gaochun",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/whisper_base/Gaochun",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/whisper_base/Gaochun/run.log"
+    },
+    {
+      "model": "whisper-base",
+      "target": "Huangshan",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/whisper_base/Huangshan",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/whisper_base/Huangshan/run.log"
+    },
+    {
+      "model": "whisper-base",
+      "target": "Jingxian",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/whisper_base/Jingxian",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/whisper_base/Jingxian/run.log"
+    },
+    {
+      "model": "whisper-base",
+      "target": "Lishui",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/whisper_base/Lishui",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/whisper_base/Lishui/run.log"
+    },
+    {
+      "model": "whisper-base",
+      "target": "Nanling",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/whisper_base/Nanling",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/whisper_base/Nanling/run.log"
+    },
+    {
+      "model": "whisper-base",
+      "target": "Ningguo",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/whisper_base/Ningguo",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/whisper_base/Ningguo/run.log"
+    },
+    {
+      "model": "whisper-base",
+      "target": "Qingyang",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/whisper_base/Qingyang",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/whisper_base/Qingyang/run.log"
+    },
+    {
+      "model": "whisper-base",
+      "target": "Suncun",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/whisper_base/Suncun",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/whisper_base/Suncun/run.log"
+    },
+    {
+      "model": "whisper-base",
+      "target": "Tongling",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/whisper_base/Tongling",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/whisper_base/Tongling/run.log"
+    },
+    {
+      "model": "whisper-base",
+      "target": "Wuhu",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/whisper_base/Wuhu",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/whisper_base/Wuhu/run.log"
+    },
+    {
+      "model": "whisper-base",
+      "target": "Xuancheng",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/whisper_base/Xuancheng",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/whisper_base/Xuancheng/run.log"
+    },
+    {
+      "model": "wavlm-base",
+      "target": "Fanchang",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/wavlm_base/Fanchang",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/wavlm_base/Fanchang/run.log"
+    },
+    {
+      "model": "wavlm-base",
+      "target": "Gaochun",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/wavlm_base/Gaochun",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/wavlm_base/Gaochun/run.log"
+    },
+    {
+      "model": "wavlm-base",
+      "target": "Huangshan",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/wavlm_base/Huangshan",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/wavlm_base/Huangshan/run.log"
+    },
+    {
+      "model": "wavlm-base",
+      "target": "Lishui",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/wavlm_base/Lishui",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/wavlm_base/Lishui/run.log"
+    },
+    {
+      "model": "wavlm-base",
+      "target": "Nanling",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/wavlm_base/Nanling",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/wavlm_base/Nanling/run.log"
+    },
+    {
+      "model": "wavlm-base",
+      "target": "Ningguo",
+      "output_dir": "output/0722/ssl_finetune_paper_models_14targets_parallel/wavlm_base/Ningguo",
+      "log": "output/0722/ssl_finetune_paper_models_14targets_parallel/wavlm_base/Ningguo/run.log"
+    }
+  ]
+}

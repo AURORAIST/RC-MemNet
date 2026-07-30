@@ -1,0 +1,149 @@
+{
+  "model": "wav2vec2-large-robust-hfcache",
+  "resolved_model": "wav2vec2-large-robust-hfcache",
+  "model_path": "/home/ustc1958/lxy/graph/tone/.hf_cache/prepared_wav2vec2-large-robust",
+  "target": "Qingyang",
+  "protocol": "loro",
+  "k": 4,
+  "splits": 100,
+  "region_column": "region",
+  "holdout": "04青阳",
+  "split": {
+    "protocol": "loro",
+    "holdout_region": "04青阳",
+    "target_labels_used_for_training": false,
+    "train_regions": [
+      "01当涂",
+      "01横渡镇",
+      "01语音信号",
+      "02七都镇",
+      "02芜湖",
+      "03池州",
+      "04甘棠",
+      "05孙村",
+      "06铜陵",
+      "07宣城",
+      "08泾县",
+      "09繁昌",
+      "10南陵",
+      "11黄山",
+      "13高淳"
+    ],
+    "num_train_regions": 15
+  },
+  "train_scheme": "last_layer",
+  "metrics": {
+    "accuracy": 0.1397371244635193,
+    "macro_f1": 0.1124403253911254,
+    "weighted_f1": 0.12717767309229844,
+    "micro_f1": 0.1397371244635193
+  },
+  "metrics_std": {
+    "accuracy": 0.024785721485598582,
+    "macro_f1": 0.014638729795295758,
+    "weighted_f1": 0.0259824173781947,
+    "micro_f1": 0.024785721485598582
+  },
+  "zero_shot": {
+    "accuracy": 0.2332624867162593,
+    "macro_f1": 0.09432145103466699,
+    "micro_f1": 0.2332624867162593,
+    "weighted_f1": 0.16442956406089065
+  },
+  "test_embeddings_shape": [
+    3764,
+    1024
+  ],
+  "training": {
+    "steps": 1500,
+    "best_val_macro_f1": 0.0996999633730445,
+    "training_time_sec": 202.9876720905304,
+    "backbone": "wav2vec2-large-robust-hfcache",
+    "train_scheme": "last_layer",
+    "hidden_size": 1024
+  },
+  "history": [
+    {
+      "step": 150.0,
+      "loss": 2.133740186691284,
+      "val_accuracy": 0.24625818521983162,
+      "val_macro_f1": 0.09809553073872183,
+      "val_micro_f1": 0.24625818521983162,
+      "val_weighted_f1": 0.17493540286924822
+    },
+    {
+      "step": 300.0,
+      "loss": 2.1180593967437744,
+      "val_accuracy": 0.24929840972871842,
+      "val_macro_f1": 0.0996999633730445,
+      "val_micro_f1": 0.24929840972871842,
+      "val_weighted_f1": 0.1797579601836543
+    },
+    {
+      "step": 450.0,
+      "loss": 2.005058765411377,
+      "val_accuracy": 0.16206735266604302,
+      "val_macro_f1": 0.07623261267082374,
+      "val_micro_f1": 0.16206735266604302,
+      "val_weighted_f1": 0.12348076329979647
+    },
+    {
+      "step": 600.0,
+      "loss": 2.042095184326172,
+      "val_accuracy": 0.21164639850327407,
+      "val_macro_f1": 0.08220440960757491,
+      "val_micro_f1": 0.21164639850327407,
+      "val_weighted_f1": 0.16904628465099802
+    },
+    {
+      "step": 750.0,
+      "loss": 2.1451914310455322,
+      "val_accuracy": 0.17773620205799812,
+      "val_macro_f1": 0.06906057768521762,
+      "val_micro_f1": 0.17773620205799812,
+      "val_weighted_f1": 0.1494519720651106
+    },
+    {
+      "step": 900.0,
+      "loss": 1.7076624631881714,
+      "val_accuracy": 0.08465855940130963,
+      "val_macro_f1": 0.02869861439227776,
+      "val_micro_f1": 0.08465855940130963,
+      "val_weighted_f1": 0.03145169044496761
+    },
+    {
+      "step": 1050.0,
+      "loss": 2.107985258102417,
+      "val_accuracy": 0.07951356407857811,
+      "val_macro_f1": 0.02624904868890901,
+      "val_micro_f1": 0.07951356407857811,
+      "val_weighted_f1": 0.020453314849498715
+    },
+    {
+      "step": 1200.0,
+      "loss": 1.979015827178955,
+      "val_accuracy": 0.07951356407857811,
+      "val_macro_f1": 0.02468210440788137,
+      "val_micro_f1": 0.07951356407857811,
+      "val_weighted_f1": 0.02011429807624888
+    },
+    {
+      "step": 1350.0,
+      "loss": 2.1092581748962402,
+      "val_accuracy": 0.0746024321796071,
+      "val_macro_f1": 0.02785236153230293,
+      "val_micro_f1": 0.0746024321796071,
+      "val_weighted_f1": 0.02015641602799519
+    },
+    {
+      "step": 1500.0,
+      "loss": 2.192854404449463,
+      "val_accuracy": 0.07857811038353602,
+      "val_macro_f1": 0.023981724474889127,
+      "val_micro_f1": 0.07857811038353602,
+      "val_weighted_f1": 0.01941127790664232
+    }
+  ],
+  "test_rows": 3764,
+  "time_sec": 213.9106841161847
+}

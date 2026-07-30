@@ -1,0 +1,2 @@
+﻿model,resolved_model,target,protocol,k,splits,train_scheme,accuracy,accuracy_std,macro_f1,macro_f1_std,weighted_f1,weighted_f1_std,zero_shot_macro_f1,zero_shot_accuracy,time_sec
+whisper-base,whisper-base,Suncun,loro,4,100,last_layer,0.5116160787530762,0.0374612613390697,0.471512038273454,0.02907355777924874,0.5298936853036446,0.04017255240418243,0.5903445795290924,0.6645418326693228,576.1565113831311

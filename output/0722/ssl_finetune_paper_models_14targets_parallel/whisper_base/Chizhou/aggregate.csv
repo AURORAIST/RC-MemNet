@@ -1,0 +1,2 @@
+﻿model,accuracy,macro_f1,weighted_f1,zero_shot_macro_f1,zero_shot_accuracy
+whisper-base,0.508313030638612,0.4791545210865301,0.5220020385981894,0.616099280897854,0.6523652365236524

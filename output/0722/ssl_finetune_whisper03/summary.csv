@@ -1,0 +1,2 @@
+﻿model,resolved_model,target,accuracy,accuracy_std,macro_f1,macro_f1_std,weighted_f1,weighted_f1_std,zero_shot_macro_f1,zero_shot_accuracy,time_sec
+whisper-base,whisper-base,Chizhou,0.506546696197859,0.04195751197564849,0.4774020246826056,0.030267125103067997,0.5206281836957142,0.04361892142244112,0.6195738340198803,0.6543821048771544,635.9059071373194

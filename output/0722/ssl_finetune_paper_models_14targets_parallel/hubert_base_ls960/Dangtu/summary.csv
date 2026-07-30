@@ -1,0 +1,2 @@
+﻿model,resolved_model,target,accuracy,accuracy_std,macro_f1,macro_f1_std,weighted_f1,weighted_f1_std,zero_shot_macro_f1,zero_shot_accuracy,time_sec
+hubert-base-ls960,hubert-base-ls960,Dangtu,0.3764532871972318,0.0514397871072337,0.3347009480387746,0.04050990189392985,0.3820690547942855,0.06359329687566694,0.42753407004182603,0.4794941900205058,181.9975975137204

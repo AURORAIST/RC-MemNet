@@ -1,0 +1,2 @@
+﻿model,resolved_model,target,protocol,k,splits,train_scheme,accuracy,accuracy_std,macro_f1,macro_f1_std,weighted_f1,weighted_f1_std,zero_shot_macro_f1,zero_shot_accuracy,time_sec
+wav2vec2-large-robust-hfcache,wav2vec2-large-robust-hfcache,Qingyang,loro,4,100,last_layer,0.1397371244635193,0.024785721485598582,0.1124403253911254,0.014638729795295758,0.12717767309229844,0.0259824173781947,0.09432145103466699,0.2332624867162593,213.9106841161847

@@ -1,0 +1,1531 @@
+{
+  "task": "leave_one_region_out_vowel_classification",
+  "method": "RC-MemNet",
+  "ablation_variant": "rc_memnet",
+  "paper_alignment": {
+    "shared_acoustic_encoder": true,
+    "rpl_prompt_inside_encoder": true,
+    "prompt_conditioned_memory_query": true,
+    "category_aligned_shared_memory": true,
+    "region_level_read_before_write": true,
+    "label_guided_source_region_writes": true,
+    "target_prompt_fusion_only": true,
+    "target_memory_read_only": true,
+    "read_only_query_inference": true
+  },
+  "ablation_semantics": {
+    "dual_level": "target/global memories with target prompt disabled",
+    "uniform_prompt_fusion": "target/global memories with uniform source-prompt fusion and no support adaptation",
+    "rc_memnet": "shared persistent memory with support-adapted source-prompt fusion",
+    "rc_dmnet": "legacy alias for rc_memnet",
+    "no_context_prompt": "remove learned context prompts from source and target encoding",
+    "no_memory_adapter": "remove memory read/write adaptation and keep prompt-conditioned encoder",
+    "no_prompt_no_memory": "remove both context prompts and memory adaptation",
+    "no_slow_consolidation": "full PCLR without slow global-memory consolidation",
+    "full_pclr": "full PCLR with prompt routing, gated adaptation, and slow consolidation"
+  },
+  "metrics": {
+    "accuracy": 0.6453326180257511,
+    "macro_f1": 0.596602475267183,
+    "weighted_f1": 0.6430082871376995,
+    "micro_f1": 0.6453326180257511,
+    "support_size": 36.0,
+    "query_size": 3728.0
+  },
+  "metrics_std": {
+    "accuracy": 0.002387505609629617,
+    "macro_f1": 0.0017777257994085916,
+    "weighted_f1": 0.0021191964806126493,
+    "micro_f1": 0.002387505609629617,
+    "support_size": 0.0,
+    "query_size": 0.0
+  },
+  "val_metrics": {
+    "accuracy": 0.6251169317118802,
+    "macro_f1": 0.5413593897087052,
+    "weighted_f1": 0.6227911475825806,
+    "micro_f1": 0.6251169317118802
+  },
+  "evaluation_splits": {
+    "test": {
+      "runs": 20,
+      "support_shots": 4,
+      "metrics": [
+        {
+          "accuracy": 0.6459227467811158,
+          "macro_f1": 0.5974161637401916,
+          "weighted_f1": 0.6447214689222586,
+          "micro_f1": 0.6459227467811158,
+          "support_size": 36,
+          "query_size": 3728
+        },
+        {
+          "accuracy": 0.6472639484978541,
+          "macro_f1": 0.5972522866057126,
+          "weighted_f1": 0.6426363041689043,
+          "micro_f1": 0.6472639484978541,
+          "support_size": 36,
+          "query_size": 3728
+        },
+        {
+          "accuracy": 0.6467274678111588,
+          "macro_f1": 0.5975072361430155,
+          "weighted_f1": 0.6449403604986208,
+          "micro_f1": 0.6467274678111588,
+          "support_size": 36,
+          "query_size": 3728
+        },
+        {
+          "accuracy": 0.6472639484978541,
+          "macro_f1": 0.598989563307522,
+          "weighted_f1": 0.6453865598058395,
+          "micro_f1": 0.6472639484978541,
+          "support_size": 36,
+          "query_size": 3728
+        },
+        {
+          "accuracy": 0.6437768240343348,
+          "macro_f1": 0.5955240770892608,
+          "weighted_f1": 0.6423290189406246,
+          "micro_f1": 0.6437768240343348,
+          "support_size": 36,
+          "query_size": 3728
+        },
+        {
+          "accuracy": 0.6427038626609443,
+          "macro_f1": 0.5960566376646967,
+          "weighted_f1": 0.6414608382823735,
+          "micro_f1": 0.6427038626609443,
+          "support_size": 36,
+          "query_size": 3728
+        },
+        {
+          "accuracy": 0.6435085836909872,
+          "macro_f1": 0.5958900248575582,
+          "weighted_f1": 0.6425052809526185,
+          "micro_f1": 0.6435085836909872,
+          "support_size": 36,
+          "query_size": 3728
+        },
+        {
+          "accuracy": 0.6429721030042919,
+          "macro_f1": 0.5957134642022711,
+          "weighted_f1": 0.6422522953798592,
+          "micro_f1": 0.6429721030042919,
+          "support_size": 36,
+          "query_size": 3728
+        },
+        {
+          "accuracy": 0.6494098712446352,
+          "macro_f1": 0.5988191195283883,
+          "weighted_f1": 0.6460698192608121,
+          "micro_f1": 0.6494098712446352,
+          "support_size": 36,
+          "query_size": 3728
+        },
+        {
+          "accuracy": 0.6448497854077253,
+          "macro_f1": 0.5966530478601797,
+          "weighted_f1": 0.6434795709579019,
+          "micro_f1": 0.6448497854077253,
+          "support_size": 36,
+          "query_size": 3728
+        },
+        {
+          "accuracy": 0.6421673819742489,
+          "macro_f1": 0.5972309529255933,
+          "weighted_f1": 0.6420792465436186,
+          "micro_f1": 0.6421673819742489,
+          "support_size": 36,
+          "query_size": 3728
+        },
+        {
+          "accuracy": 0.6456545064377682,
+          "macro_f1": 0.5987334756737055,
+          "weighted_f1": 0.6442410259102423,
+          "micro_f1": 0.6456545064377682,
+          "support_size": 36,
+          "query_size": 3728
+        },
+        {
+          "accuracy": 0.6421673819742489,
+          "macro_f1": 0.5937344323709048,
+          "weighted_f1": 0.6392592786177037,
+          "micro_f1": 0.6421673819742489,
+          "support_size": 36,
+          "query_size": 3728
+        },
+        {
+          "accuracy": 0.6440450643776824,
+          "macro_f1": 0.5938285918961919,
+          "weighted_f1": 0.6396803568033135,
+          "micro_f1": 0.6440450643776824,
+          "support_size": 36,
+          "query_size": 3728
+        },
+        {
+          "accuracy": 0.641362660944206,
+          "macro_f1": 0.5939813364728285,
+          "weighted_f1": 0.638837330786542,
+          "micro_f1": 0.641362660944206,
+          "support_size": 36,
+          "query_size": 3728
+        },
+        {
+          "accuracy": 0.6478004291845494,
+          "macro_f1": 0.5960328006609609,
+          "weighted_f1": 0.6438300893817329,
+          "micro_f1": 0.6478004291845494,
+          "support_size": 36,
+          "query_size": 3728
+        },
+        {
+          "accuracy": 0.6464592274678111,
+          "macro_f1": 0.5949862804139818,
+          "weighted_f1": 0.6418072575719962,
+          "micro_f1": 0.6464592274678111,
+          "support_size": 36,
+          "query_size": 3728
+        },
+        {
+          "accuracy": 0.6486051502145923,
+          "macro_f1": 0.5977490342859331,
+          "weighted_f1": 0.6452045129731001,
+          "micro_f1": 0.6486051502145923,
+          "support_size": 36,
+          "query_size": 3728
+        },
+        {
+          "accuracy": 0.6459227467811158,
+          "macro_f1": 0.5958516131591904,
+          "weighted_f1": 0.6437576151259269,
+          "micro_f1": 0.6459227467811158,
+          "support_size": 36,
+          "query_size": 3728
+        },
+        {
+          "accuracy": 0.648068669527897,
+          "macro_f1": 0.6000993664855728,
+          "weighted_f1": 0.6456875118700018,
+          "micro_f1": 0.648068669527897,
+          "support_size": 36,
+          "query_size": 3728
+        }
+      ],
+      "mean": {
+        "accuracy": 0.6453326180257511,
+        "macro_f1": 0.596602475267183,
+        "weighted_f1": 0.6430082871376995,
+        "micro_f1": 0.6453326180257511,
+        "support_size": 36.0,
+        "query_size": 3728.0
+      },
+      "std": {
+        "accuracy": 0.002387505609629617,
+        "macro_f1": 0.0017777257994085916,
+        "weighted_f1": 0.0021191964806126493,
+        "micro_f1": 0.002387505609629617,
+        "support_size": 0.0,
+        "query_size": 0.0
+      }
+    }
+  },
+  "target_eval_device": "cpu",
+  "report": {
+    "a": {
+      "precision": 0.8883861236802413,
+      "recall": 0.5359417652411284,
+      "f1-score": 0.6685584562996595,
+      "support": 1099.0
+    },
+    "e": {
+      "precision": 0.5097276264591439,
+      "recall": 0.46785714285714286,
+      "f1-score": 0.48789571694599626,
+      "support": 280.0
+    },
+    "i": {
+      "precision": 0.7049180327868853,
+      "recall": 0.8657718120805369,
+      "f1-score": 0.7771084337349398,
+      "support": 745.0
+    },
+    "o": {
+      "precision": 0.6282467532467533,
+      "recall": 0.8815489749430524,
+      "f1-score": 0.7336492890995261,
+      "support": 439.0
+    },
+    "u": {
+      "precision": 0.6051502145922747,
+      "recall": 0.5444015444015444,
+      "f1-score": 0.573170731707317,
+      "support": 518.0
+    },
+    "y": {
+      "precision": 0.389937106918239,
+      "recall": 0.5391304347826087,
+      "f1-score": 0.45255474452554745,
+      "support": 230.0
+    },
+    "ɔ": {
+      "precision": 0.6091954022988506,
+      "recall": 0.7794117647058824,
+      "f1-score": 0.6838709677419355,
+      "support": 68.0
+    },
+    "ə": {
+      "precision": 0.5503875968992248,
+      "recall": 0.5843621399176955,
+      "f1-score": 0.5668662674650699,
+      "support": 243.0
+    },
+    "ɛ": {
+      "precision": 0.3716216216216216,
+      "recall": 0.5188679245283019,
+      "f1-score": 0.4330708661417323,
+      "support": 106.0
+    },
+    "accuracy": 0.6459227467811158,
+    "macro avg": {
+      "precision": 0.5841744976114706,
+      "recall": 0.6352548337175438,
+      "f1-score": 0.5974161637401916,
+      "support": 3728.0
+    },
+    "weighted avg": {
+      "precision": 0.6807239955685136,
+      "recall": 0.6459227467811158,
+      "f1-score": 0.6447214689222586,
+      "support": 3728.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      589,
+      39,
+      109,
+      163,
+      46,
+      17,
+      29,
+      57,
+      50
+    ],
+    [
+      11,
+      131,
+      41,
+      11,
+      43,
+      15,
+      0,
+      11,
+      17
+    ],
+    [
+      22,
+      10,
+      645,
+      0,
+      5,
+      44,
+      0,
+      8,
+      11
+    ],
+    [
+      9,
+      2,
+      0,
+      387,
+      25,
+      7,
+      2,
+      7,
+      0
+    ],
+    [
+      3,
+      63,
+      30,
+      18,
+      282,
+      92,
+      0,
+      30,
+      0
+    ],
+    [
+      0,
+      3,
+      33,
+      5,
+      52,
+      124,
+      0,
+      3,
+      10
+    ],
+    [
+      15,
+      0,
+      0,
+      0,
+      0,
+      0,
+      53,
+      0,
+      0
+    ],
+    [
+      5,
+      7,
+      35,
+      16,
+      13,
+      17,
+      3,
+      142,
+      5
+    ],
+    [
+      9,
+      2,
+      22,
+      16,
+      0,
+      2,
+      0,
+      0,
+      55
+    ]
+  ],
+  "top_confusions": [
+    {
+      "true_label": "a",
+      "pred_label": "o",
+      "count": 163
+    },
+    {
+      "true_label": "a",
+      "pred_label": "i",
+      "count": 109
+    },
+    {
+      "true_label": "u",
+      "pred_label": "y",
+      "count": 92
+    },
+    {
+      "true_label": "u",
+      "pred_label": "e",
+      "count": 63
+    },
+    {
+      "true_label": "a",
+      "pred_label": "ə",
+      "count": 57
+    },
+    {
+      "true_label": "y",
+      "pred_label": "u",
+      "count": 52
+    },
+    {
+      "true_label": "a",
+      "pred_label": "ɛ",
+      "count": 50
+    },
+    {
+      "true_label": "a",
+      "pred_label": "u",
+      "count": 46
+    },
+    {
+      "true_label": "i",
+      "pred_label": "y",
+      "count": 44
+    },
+    {
+      "true_label": "e",
+      "pred_label": "u",
+      "count": 43
+    }
+  ],
+  "split": {
+    "protocol": "loro",
+    "holdout_region": "04青阳",
+    "target_labels_used_for_training": false,
+    "train_regions": [
+      "01当涂",
+      "01横渡镇",
+      "01语音信号",
+      "02七都镇",
+      "02芜湖",
+      "03池州",
+      "04甘棠",
+      "05孙村",
+      "06铜陵",
+      "07宣城",
+      "08泾县",
+      "09繁昌",
+      "10南陵",
+      "11黄山",
+      "12宁国",
+      "13高淳",
+      "14溧水"
+    ],
+    "num_train_regions": 17
+  },
+  "split_audit": {
+    "protocol": "loro",
+    "holdout_region": "04青阳",
+    "all_regions": [
+      "01当涂",
+      "01横渡镇",
+      "01语音信号",
+      "02七都镇",
+      "02芜湖",
+      "03池州",
+      "04甘棠",
+      "04青阳",
+      "05孙村",
+      "06铜陵",
+      "07宣城",
+      "08泾县",
+      "09繁昌",
+      "10南陵",
+      "11黄山",
+      "12宁国",
+      "13高淳",
+      "14溧水"
+    ],
+    "num_all_regions": 18,
+    "source_pool_regions": [
+      "01当涂",
+      "01横渡镇",
+      "01语音信号",
+      "02七都镇",
+      "02芜湖",
+      "03池州",
+      "04甘棠",
+      "05孙村",
+      "06铜陵",
+      "07宣城",
+      "08泾县",
+      "09繁昌",
+      "10南陵",
+      "11黄山",
+      "12宁国",
+      "13高淳",
+      "14溧水"
+    ],
+    "num_source_pool_regions": 17,
+    "train_regions": [
+      "01当涂",
+      "01横渡镇",
+      "01语音信号",
+      "02七都镇",
+      "02芜湖",
+      "03池州",
+      "04甘棠",
+      "05孙村",
+      "06铜陵",
+      "07宣城",
+      "08泾县",
+      "09繁昌",
+      "10南陵",
+      "11黄山",
+      "12宁国",
+      "13高淳",
+      "14溧水"
+    ],
+    "val_regions": [
+      "01当涂",
+      "01横渡镇",
+      "01语音信号",
+      "02七都镇",
+      "02芜湖",
+      "03池州",
+      "04甘棠",
+      "05孙村",
+      "06铜陵",
+      "07宣城",
+      "08泾县",
+      "09繁昌",
+      "10南陵",
+      "11黄山",
+      "12宁国",
+      "13高淳",
+      "14溧水"
+    ],
+    "test_regions": [
+      "04青阳"
+    ],
+    "num_train_regions": 17,
+    "source_pool_rows": 42753,
+    "train_rows": 38477,
+    "val_rows": 4276,
+    "test_rows": 3764,
+    "train_plus_val_rows": 42753,
+    "target_rows_in_train": 0,
+    "target_rows_in_val": 0,
+    "non_target_rows_in_test": 0,
+    "target_labels_used_for_training": false,
+    "train_regions_cover_all_non_target_regions": true,
+    "missing_source_regions_in_train": [],
+    "val_regions_subset_of_source_pool": true,
+    "test_is_holdout_only": true,
+    "train_fraction": 1.0,
+    "val_size": 0.1,
+    "region_counts": {
+      "full": {
+        "01当涂": 2926,
+        "01横渡镇": 2478,
+        "01语音信号": 609,
+        "02七都镇": 2458,
+        "02芜湖": 1245,
+        "03池州": 5454,
+        "04甘棠": 419,
+        "04青阳": 3764,
+        "05孙村": 1255,
+        "06铜陵": 1259,
+        "07宣城": 1250,
+        "08泾县": 5889,
+        "09繁昌": 1683,
+        "10南陵": 4543,
+        "11黄山": 6258,
+        "12宁国": 833,
+        "13高淳": 2532,
+        "14溧水": 1662
+      },
+      "source_pool": {
+        "01当涂": 2926,
+        "01横渡镇": 2478,
+        "01语音信号": 609,
+        "02七都镇": 2458,
+        "02芜湖": 1245,
+        "03池州": 5454,
+        "04甘棠": 419,
+        "05孙村": 1255,
+        "06铜陵": 1259,
+        "07宣城": 1250,
+        "08泾县": 5889,
+        "09繁昌": 1683,
+        "10南陵": 4543,
+        "11黄山": 6258,
+        "12宁国": 833,
+        "13高淳": 2532,
+        "14溧水": 1662
+      },
+      "train": {
+        "01当涂": 2647,
+        "01横渡镇": 2228,
+        "01语音信号": 550,
+        "02七都镇": 2217,
+        "02芜湖": 1135,
+        "03池州": 4890,
+        "04甘棠": 376,
+        "05孙村": 1132,
+        "06铜陵": 1129,
+        "07宣城": 1131,
+        "08泾县": 5281,
+        "09繁昌": 1507,
+        "10南陵": 4057,
+        "11黄山": 5647,
+        "12宁国": 760,
+        "13高淳": 2284,
+        "14溧水": 1506
+      },
+      "val": {
+        "01当涂": 279,
+        "01横渡镇": 250,
+        "01语音信号": 59,
+        "02七都镇": 241,
+        "02芜湖": 110,
+        "03池州": 564,
+        "04甘棠": 43,
+        "05孙村": 123,
+        "06铜陵": 130,
+        "07宣城": 119,
+        "08泾县": 608,
+        "09繁昌": 176,
+        "10南陵": 486,
+        "11黄山": 611,
+        "12宁国": 73,
+        "13高淳": 248,
+        "14溧水": 156
+      },
+      "test": {
+        "04青阳": 3764
+      }
+    },
+    "label_counts_by_region": {
+      "train": {
+        "01当涂": {
+          "a": 772,
+          "e": 195,
+          "i": 523,
+          "o": 307,
+          "u": 380,
+          "y": 168,
+          "ɔ": 53,
+          "ə": 172,
+          "ɛ": 77
+        },
+        "01横渡镇": {
+          "a": 647,
+          "e": 169,
+          "i": 450,
+          "o": 263,
+          "u": 305,
+          "y": 135,
+          "ɔ": 42,
+          "ə": 149,
+          "ɛ": 68
+        },
+        "01语音信号": {
+          "a": 190,
+          "e": 33,
+          "i": 100,
+          "o": 57,
+          "u": 68,
+          "y": 30,
+          "ɔ": 11,
+          "ə": 49,
+          "ɛ": 12
+        },
+        "02七都镇": {
+          "a": 648,
+          "e": 161,
+          "i": 455,
+          "o": 260,
+          "u": 303,
+          "y": 143,
+          "ɔ": 44,
+          "ə": 141,
+          "ɛ": 62
+        },
+        "02芜湖": {
+          "a": 334,
+          "e": 85,
+          "i": 226,
+          "o": 134,
+          "u": 163,
+          "y": 68,
+          "ɔ": 21,
+          "ə": 74,
+          "ɛ": 30
+        },
+        "03池州": {
+          "a": 1448,
+          "e": 375,
+          "i": 965,
+          "o": 566,
+          "u": 683,
+          "y": 309,
+          "ɔ": 90,
+          "ə": 308,
+          "ɛ": 146
+        },
+        "04甘棠": {
+          "a": 110,
+          "e": 30,
+          "i": 78,
+          "o": 42,
+          "u": 49,
+          "y": 25,
+          "ɔ": 6,
+          "ə": 25,
+          "ɛ": 11
+        },
+        "05孙村": {
+          "a": 333,
+          "e": 84,
+          "i": 228,
+          "o": 133,
+          "u": 157,
+          "y": 67,
+          "ɔ": 20,
+          "ə": 76,
+          "ɛ": 34
+        },
+        "06铜陵": {
+          "a": 337,
+          "e": 82,
+          "i": 222,
+          "o": 134,
+          "u": 149,
+          "y": 71,
+          "ɔ": 22,
+          "ə": 78,
+          "ɛ": 34
+        },
+        "07宣城": {
+          "a": 329,
+          "e": 85,
+          "i": 222,
+          "o": 137,
+          "u": 152,
+          "y": 71,
+          "ɔ": 24,
+          "ə": 76,
+          "ɛ": 35
+        },
+        "08泾县": {
+          "a": 1557,
+          "e": 396,
+          "i": 1045,
+          "o": 629,
+          "u": 714,
+          "y": 330,
+          "ɔ": 102,
+          "ə": 347,
+          "ɛ": 161
+        },
+        "09繁昌": {
+          "a": 439,
+          "e": 108,
+          "i": 300,
+          "o": 186,
+          "u": 203,
+          "y": 100,
+          "ɔ": 28,
+          "ə": 97,
+          "ɛ": 46
+        },
+        "10南陵": {
+          "a": 1177,
+          "e": 310,
+          "i": 827,
+          "o": 483,
+          "u": 553,
+          "y": 254,
+          "ɔ": 77,
+          "ə": 260,
+          "ɛ": 116
+        },
+        "11黄山": {
+          "a": 1655,
+          "e": 426,
+          "i": 1142,
+          "o": 659,
+          "u": 773,
+          "y": 349,
+          "ɔ": 107,
+          "ə": 372,
+          "ɛ": 164
+        },
+        "12宁国": {
+          "a": 225,
+          "e": 55,
+          "i": 150,
+          "o": 96,
+          "u": 106,
+          "y": 44,
+          "ɔ": 13,
+          "ə": 49,
+          "ɛ": 22
+        },
+        "13高淳": {
+          "a": 655,
+          "e": 183,
+          "i": 460,
+          "o": 266,
+          "u": 314,
+          "y": 147,
+          "ɔ": 45,
+          "ə": 152,
+          "ɛ": 62
+        },
+        "14溧水": {
+          "a": 442,
+          "e": 115,
+          "i": 299,
+          "o": 177,
+          "u": 209,
+          "y": 94,
+          "ɔ": 31,
+          "ə": 99,
+          "ɛ": 40
+        }
+      },
+      "test": {
+        "04青阳": {
+          "a": 1103,
+          "e": 284,
+          "i": 749,
+          "o": 443,
+          "u": 522,
+          "y": 234,
+          "ɔ": 72,
+          "ə": 247,
+          "ɛ": 110
+        }
+      }
+    }
+  },
+  "init_checkpoint": {
+    "enabled": false
+  },
+  "split_sizes": {
+    "train": 38477,
+    "val": 4276,
+    "test": 3764
+  },
+  "label_counts": {
+    "train": {
+      "a": 11298,
+      "e": 2892,
+      "i": 7692,
+      "o": 4529,
+      "u": 5281,
+      "y": 2405,
+      "ɔ": 736,
+      "ə": 2524,
+      "ɛ": 1120
+    },
+    "val": {
+      "a": 1256,
+      "e": 322,
+      "i": 855,
+      "o": 503,
+      "u": 587,
+      "y": 267,
+      "ɔ": 82,
+      "ə": 280,
+      "ɛ": 124
+    },
+    "test": {
+      "a": 1103,
+      "e": 284,
+      "i": 749,
+      "o": 443,
+      "u": 522,
+      "y": 234,
+      "ɔ": 72,
+      "ə": 247,
+      "ɛ": 110
+    }
+  },
+  "source_regions": [
+    "01当涂",
+    "01横渡镇",
+    "01语音信号",
+    "02七都镇",
+    "02芜湖",
+    "03池州",
+    "04甘棠",
+    "05孙村",
+    "06铜陵",
+    "07宣城",
+    "08泾县",
+    "09繁昌",
+    "10南陵",
+    "11黄山",
+    "12宁国",
+    "13高淳",
+    "14溧水"
+  ],
+  "cache": {
+    "matrix": {
+      "train": {
+        "source": "exact",
+        "path": "/home/ustc1958/lxy/graph/tone/complete_package0712/output/0712/matrix_cache/train_1a186a2ad061e6516743d6b9535f1037e555f1d0b87d516378448151e57d85e8.npy"
+      },
+      "val": {
+        "source": "exact",
+        "path": "/home/ustc1958/lxy/graph/tone/complete_package0712/output/0712/matrix_cache/val_8feca16ba6ca30248fb2a45d18017566e47ee1b7b171c79139dd0e513dd1c62b.npy"
+      },
+      "test": {
+        "source": "exact",
+        "path": "/home/ustc1958/lxy/graph/tone/complete_package0712/output/0712/matrix_cache/test_f3730873329032e1f5cb457e9343cfc3386be9cfd991418fcb6beb10dba796f1.npy"
+      },
+      "token_norm": {
+        "mode": "global",
+        "mean_shape": [
+          1,
+          1,
+          512
+        ],
+        "std_shape": [
+          1,
+          1,
+          512
+        ]
+      }
+    },
+    "aux": {
+      "train": {
+        "split": "train",
+        "rows": 38477,
+        "source": "acoustic",
+        "representation": "sequence",
+        "source_counts": {
+          "acoustic:row_cache": 28058,
+          "acoustic": 10419
+        },
+        "shape": [
+          38477,
+          32,
+          245
+        ],
+        "branch_dims": [
+          128,
+          39,
+          78
+        ],
+        "row_hash": "44d4cd56ff58d6bc594a78c7eddd5f4b2c3df2dfb76d9982b5a3e9c76a71ab8d",
+        "config": {
+          "sample_rate": 16000,
+          "n_mfcc": 39,
+          "n_mels": 128,
+          "f0_segments": 5,
+          "use_delta_mfcc": true,
+          "use_formants": true,
+          "f0_min": 75.0,
+          "f0_max": 600.0,
+          "n_fft_mfcc": 2048,
+          "n_fft_mel": 2048
+        },
+        "token_shape": [
+          32,
+          512
+        ],
+        "path": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/feature_memory_aux_cache/train_b8e199f4a6715113c5c3f44db2bd4d0f539fb202df6487b00f42aa412478bb5c.npy",
+        "meta_path": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/feature_memory_aux_cache/train_b8e199f4a6715113c5c3f44db2bd4d0f539fb202df6487b00f42aa412478bb5c.json"
+      },
+      "val": {
+        "split": "val",
+        "rows": 4276,
+        "source": "acoustic",
+        "representation": "sequence",
+        "source_counts": {
+          "acoustic:row_cache": 2784,
+          "acoustic": 1492
+        },
+        "shape": [
+          4276,
+          32,
+          245
+        ],
+        "branch_dims": [
+          128,
+          39,
+          78
+        ],
+        "row_hash": "c1542e423aea7e918a18872bc88f4da55d98f70f58a37965d755b788688756ff",
+        "config": {
+          "sample_rate": 16000,
+          "n_mfcc": 39,
+          "n_mels": 128,
+          "f0_segments": 5,
+          "use_delta_mfcc": true,
+          "use_formants": true,
+          "f0_min": 75.0,
+          "f0_max": 600.0,
+          "n_fft_mfcc": 2048,
+          "n_fft_mel": 2048
+        },
+        "token_shape": [
+          32,
+          512
+        ],
+        "path": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/feature_memory_aux_cache/val_0f2ed839a784a8cd76f5e43d348641e7f8af324c6a4494d69705dd33a4b889eb.npy",
+        "meta_path": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/feature_memory_aux_cache/val_0f2ed839a784a8cd76f5e43d348641e7f8af324c6a4494d69705dd33a4b889eb.json"
+      },
+      "test": {
+        "split": "test",
+        "rows": 3764,
+        "source": "acoustic",
+        "representation": "sequence",
+        "source_counts": {
+          "acoustic:row_cache": 3764
+        },
+        "shape": [
+          3764,
+          32,
+          245
+        ],
+        "branch_dims": [
+          128,
+          39,
+          78
+        ],
+        "row_hash": "de4d1950b3caa561154d6b834e5b6f4e720833e26914659d083f8020f417812c",
+        "config": {
+          "sample_rate": 16000,
+          "n_mfcc": 39,
+          "n_mels": 128,
+          "f0_segments": 5,
+          "use_delta_mfcc": true,
+          "use_formants": true,
+          "f0_min": 75.0,
+          "f0_max": 600.0,
+          "n_fft_mfcc": 2048,
+          "n_fft_mel": 2048
+        },
+        "token_shape": [
+          32,
+          512
+        ],
+        "path": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/feature_memory_aux_cache/test_1e07bc58d83081fe8eea922433e54095528345c5668b032b47f27b434adbd85e.npy",
+        "meta_path": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/feature_memory_aux_cache/test_1e07bc58d83081fe8eea922433e54095528345c5668b032b47f27b434adbd85e.json"
+      },
+      "norm": {
+        "mode": "global",
+        "mean_shape": [
+          1,
+          1,
+          245
+        ],
+        "std_shape": [
+          1,
+          1,
+          245
+        ]
+      },
+      "rows_hash": {
+        "train": "44d4cd56ff58d6bc594a78c7eddd5f4b2c3df2dfb76d9982b5a3e9c76a71ab8d",
+        "val": "c1542e423aea7e918a18872bc88f4da55d98f70f58a37965d755b788688756ff",
+        "test": "de4d1950b3caa561154d6b834e5b6f4e720833e26914659d083f8020f417812c"
+      }
+    }
+  },
+  "config": {
+    "csv": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/data/wu_vowel_segments.paper_regions.csv",
+    "output": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/missing_ablations_20260724/slots_M1/04_Qingyang/result.json",
+    "predictions_output": "",
+    "curve_output": "",
+    "audit_output": "",
+    "checkpoint_output": "",
+    "init_checkpoint": "",
+    "save_checkpoint": false,
+    "path_column": "wav_path",
+    "start_column": "start_time",
+    "end_column": "end_time",
+    "label_column": "vowel",
+    "region_column": "paper_region",
+    "speaker_column": "speaker_id",
+    "labels": [
+      "a",
+      "e",
+      "i",
+      "o",
+      "u",
+      "y",
+      "ɔ",
+      "ə",
+      "ɛ"
+    ],
+    "protocol": "loro",
+    "holdout_region": "04青阳",
+    "val_size": 0.1,
+    "test_size": 0.1,
+    "train_fraction": 1.0,
+    "seed": 0,
+    "cache_dir": "/home/ustc1958/lxy/graph/tone/complete_package0712/output/salmonn_style_whisper_cache_base",
+    "matrix_cache_dir": "/home/ustc1958/lxy/graph/tone/complete_package0712/output/0712/matrix_cache",
+    "feature_norm": "global",
+    "matrix_cache_scan": true,
+    "whisper_model": "base",
+    "device": "cuda",
+    "target_sr": 16000,
+    "token_chunks": 32,
+    "audio_root": "",
+    "aux_source": "acoustic",
+    "aux_representation": "sequence",
+    "aux_cache_dir": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/feature_memory_aux_cache",
+    "old_feature_cache_dir": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/feature_cache_vowel",
+    "aux_n_mfcc": 39,
+    "aux_n_mels": 128,
+    "aux_f0_segments": 5,
+    "aux_use_delta_mfcc": true,
+    "aux_use_formants": true,
+    "batch_size": 64,
+    "eval_batch_size": 256,
+    "max_steps": 1200,
+    "lr": 0.0003,
+    "weight_decay": 0.0001,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.0,
+    "class_weight_power": 0.5,
+    "sampler_domain_power": 1.0,
+    "sampler_class_power": 0.5,
+    "hidden_dim": 256,
+    "score_dim": 128,
+    "prompt_dim": 128,
+    "num_slots": 1,
+    "num_prompts": 8,
+    "dropout": 0.1,
+    "address_temperature": 0.2,
+    "classifier_temperature": 0.2,
+    "memory_mix": 0.5,
+    "source_write_kappa": 4.0,
+    "target_write_kappa": 1.0,
+    "global_momentum": 0.1,
+    "ablation_variant": "rc_memnet",
+    "write_top_k": 1,
+    "target_support_shots": 4,
+    "target_adapt_steps": 50,
+    "target_adapt_lr": 0.05,
+    "eval_split_runs": 20,
+    "log_every": 50,
+    "eval_every": 300,
+    "require_all_source_regions": true,
+    "quiet": false
+  },
+  "checkpoint_manifest": {
+    "schema_version": 1,
+    "task": "leave_one_region_out_vowel_classification",
+    "method": "RC-MemNet",
+    "script": "tools/experiments/run_rc_dmnet.py",
+    "data": {
+      "csv": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/data/wu_vowel_segments.paper_regions.csv",
+      "path_column": "wav_path",
+      "start_column": "start_time",
+      "end_column": "end_time",
+      "label_column": "vowel",
+      "region_column": "paper_region",
+      "speaker_column": "speaker_id",
+      "labels": [
+        "a",
+        "e",
+        "i",
+        "o",
+        "u",
+        "y",
+        "ɔ",
+        "ə",
+        "ɛ"
+      ],
+      "protocol": "loro",
+      "holdout_region": "04青阳",
+      "val_size": 0.1,
+      "test_size": 0.1,
+      "train_fraction": 1.0,
+      "seed": 0,
+      "target_sr": 16000
+    },
+    "feature_pipeline": {
+      "whisper_model": "base",
+      "cache_dir": "/home/ustc1958/lxy/graph/tone/complete_package0712/output/salmonn_style_whisper_cache_base",
+      "matrix_cache_dir": "/home/ustc1958/lxy/graph/tone/complete_package0712/output/0712/matrix_cache",
+      "feature_norm": "global",
+      "matrix_cache_scan": true,
+      "token_chunks": 32,
+      "audio_root": "",
+      "aux_source": "acoustic",
+      "aux_representation": "sequence",
+      "aux_cache_dir": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/feature_memory_aux_cache",
+      "old_feature_cache_dir": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/feature_cache_vowel",
+      "aux_n_mfcc": 39,
+      "aux_n_mels": 128,
+      "aux_f0_segments": 5,
+      "aux_use_delta_mfcc": true,
+      "aux_use_formants": true
+    },
+    "evaluation": {
+      "target_support_shots": 4,
+      "target_adapt_steps": 50,
+      "target_adapt_lr": 0.05,
+      "eval_split_runs": 20,
+      "ablation_variant": "rc_memnet"
+    },
+    "model": {
+      "rcdmnet_config": {
+        "input_dim": 512,
+        "aux_dim": 245,
+        "aux_branch_dims": [
+          128,
+          39,
+          78
+        ],
+        "num_classes": 9,
+        "num_regions": 17,
+        "hidden_dim": 256,
+        "score_dim": 128,
+        "prompt_dim": 128,
+        "num_slots": 1,
+        "num_prompts": 8,
+        "dropout": 0.1,
+        "address_temperature": 0.2,
+        "classifier_temperature": 0.2,
+        "memory_mix": 0.5,
+        "source_write_kappa": 4.0,
+        "target_write_kappa": 1.0,
+        "global_momentum": 0.1,
+        "use_context_prompts": true,
+        "use_memory_read": true,
+        "use_prompt_routing": true,
+        "count_based_adaptation": false,
+        "slow_consolidation": true,
+        "write_top_k": 1
+      },
+      "source_regions": [
+        "01当涂",
+        "01横渡镇",
+        "01语音信号",
+        "02七都镇",
+        "02芜湖",
+        "03池州",
+        "04甘棠",
+        "05孙村",
+        "06铜陵",
+        "07宣城",
+        "08泾县",
+        "09繁昌",
+        "10南陵",
+        "11黄山",
+        "12宁国",
+        "13高淳",
+        "14溧水"
+      ],
+      "num_source_regions": 17,
+      "parameters": {
+        "trainable": 2444787,
+        "total": 2444787
+      }
+    },
+    "split": {
+      "protocol": "loro",
+      "holdout_region": "04青阳",
+      "target_labels_used_for_training": false,
+      "train_regions": [
+        "01当涂",
+        "01横渡镇",
+        "01语音信号",
+        "02七都镇",
+        "02芜湖",
+        "03池州",
+        "04甘棠",
+        "05孙村",
+        "06铜陵",
+        "07宣城",
+        "08泾县",
+        "09繁昌",
+        "10南陵",
+        "11黄山",
+        "12宁国",
+        "13高淳",
+        "14溧水"
+      ],
+      "num_train_regions": 17
+    },
+    "split_hash": {
+      "train": "8db1edca9631dd984e9f94d753dd303a750f8453855c19e396c8aaf789599a16",
+      "val": "d2116eaad5e306a5f0c209db6d4aefee3143fdfcfc748ac73ce0f569b01cd9d4",
+      "test": "dcda35389bde8fdfa34e47441ed7f92bbfd46ce8be17fb56252d955cea27a930"
+    },
+    "cache": {
+      "matrix": {
+        "train": {
+          "source": "exact",
+          "path": "/home/ustc1958/lxy/graph/tone/complete_package0712/output/0712/matrix_cache/train_1a186a2ad061e6516743d6b9535f1037e555f1d0b87d516378448151e57d85e8.npy"
+        },
+        "val": {
+          "source": "exact",
+          "path": "/home/ustc1958/lxy/graph/tone/complete_package0712/output/0712/matrix_cache/val_8feca16ba6ca30248fb2a45d18017566e47ee1b7b171c79139dd0e513dd1c62b.npy"
+        },
+        "test": {
+          "source": "exact",
+          "path": "/home/ustc1958/lxy/graph/tone/complete_package0712/output/0712/matrix_cache/test_f3730873329032e1f5cb457e9343cfc3386be9cfd991418fcb6beb10dba796f1.npy"
+        },
+        "token_norm": {
+          "mode": "global",
+          "mean_shape": [
+            1,
+            1,
+            512
+          ],
+          "std_shape": [
+            1,
+            1,
+            512
+          ]
+        }
+      },
+      "aux": {
+        "train": {
+          "split": "train",
+          "rows": 38477,
+          "source": "acoustic",
+          "representation": "sequence",
+          "source_counts": {
+            "acoustic:row_cache": 28058,
+            "acoustic": 10419
+          },
+          "shape": [
+            38477,
+            32,
+            245
+          ],
+          "branch_dims": [
+            128,
+            39,
+            78
+          ],
+          "row_hash": "44d4cd56ff58d6bc594a78c7eddd5f4b2c3df2dfb76d9982b5a3e9c76a71ab8d",
+          "config": {
+            "sample_rate": 16000,
+            "n_mfcc": 39,
+            "n_mels": 128,
+            "f0_segments": 5,
+            "use_delta_mfcc": true,
+            "use_formants": true,
+            "f0_min": 75.0,
+            "f0_max": 600.0,
+            "n_fft_mfcc": 2048,
+            "n_fft_mel": 2048
+          },
+          "token_shape": [
+            32,
+            512
+          ],
+          "path": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/feature_memory_aux_cache/train_b8e199f4a6715113c5c3f44db2bd4d0f539fb202df6487b00f42aa412478bb5c.npy",
+          "meta_path": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/feature_memory_aux_cache/train_b8e199f4a6715113c5c3f44db2bd4d0f539fb202df6487b00f42aa412478bb5c.json"
+        },
+        "val": {
+          "split": "val",
+          "rows": 4276,
+          "source": "acoustic",
+          "representation": "sequence",
+          "source_counts": {
+            "acoustic:row_cache": 2784,
+            "acoustic": 1492
+          },
+          "shape": [
+            4276,
+            32,
+            245
+          ],
+          "branch_dims": [
+            128,
+            39,
+            78
+          ],
+          "row_hash": "c1542e423aea7e918a18872bc88f4da55d98f70f58a37965d755b788688756ff",
+          "config": {
+            "sample_rate": 16000,
+            "n_mfcc": 39,
+            "n_mels": 128,
+            "f0_segments": 5,
+            "use_delta_mfcc": true,
+            "use_formants": true,
+            "f0_min": 75.0,
+            "f0_max": 600.0,
+            "n_fft_mfcc": 2048,
+            "n_fft_mel": 2048
+          },
+          "token_shape": [
+            32,
+            512
+          ],
+          "path": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/feature_memory_aux_cache/val_0f2ed839a784a8cd76f5e43d348641e7f8af324c6a4494d69705dd33a4b889eb.npy",
+          "meta_path": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/feature_memory_aux_cache/val_0f2ed839a784a8cd76f5e43d348641e7f8af324c6a4494d69705dd33a4b889eb.json"
+        },
+        "test": {
+          "split": "test",
+          "rows": 3764,
+          "source": "acoustic",
+          "representation": "sequence",
+          "source_counts": {
+            "acoustic:row_cache": 3764
+          },
+          "shape": [
+            3764,
+            32,
+            245
+          ],
+          "branch_dims": [
+            128,
+            39,
+            78
+          ],
+          "row_hash": "de4d1950b3caa561154d6b834e5b6f4e720833e26914659d083f8020f417812c",
+          "config": {
+            "sample_rate": 16000,
+            "n_mfcc": 39,
+            "n_mels": 128,
+            "f0_segments": 5,
+            "use_delta_mfcc": true,
+            "use_formants": true,
+            "f0_min": 75.0,
+            "f0_max": 600.0,
+            "n_fft_mfcc": 2048,
+            "n_fft_mel": 2048
+          },
+          "token_shape": [
+            32,
+            512
+          ],
+          "path": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/feature_memory_aux_cache/test_1e07bc58d83081fe8eea922433e54095528345c5668b032b47f27b434adbd85e.npy",
+          "meta_path": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/feature_memory_aux_cache/test_1e07bc58d83081fe8eea922433e54095528345c5668b032b47f27b434adbd85e.json"
+        },
+        "norm": {
+          "mode": "global",
+          "mean_shape": [
+            1,
+            1,
+            245
+          ],
+          "std_shape": [
+            1,
+            1,
+            245
+          ]
+        },
+        "rows_hash": {
+          "train": "44d4cd56ff58d6bc594a78c7eddd5f4b2c3df2dfb76d9982b5a3e9c76a71ab8d",
+          "val": "c1542e423aea7e918a18872bc88f4da55d98f70f58a37965d755b788688756ff",
+          "test": "de4d1950b3caa561154d6b834e5b6f4e720833e26914659d083f8020f417812c"
+        }
+      }
+    },
+    "training": {
+      "steps": 1200,
+      "best_val_macro_f1": 0.5413593897087052,
+      "training_time_sec": 16.985222339630127
+    },
+    "init_checkpoint": {
+      "enabled": false
+    },
+    "labels": [
+      "a",
+      "e",
+      "i",
+      "o",
+      "u",
+      "y",
+      "ɔ",
+      "ə",
+      "ɛ"
+    ],
+    "runtime": {
+      "device": "cuda",
+      "torch_version": "2.10.0+cu128"
+    }
+  },
+  "training": {
+    "steps": 1200,
+    "best_val_macro_f1": 0.5413593897087052,
+    "training_time_sec": 16.985222339630127
+  },
+  "files": {
+    "output": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/missing_ablations_20260724/slots_M1/04_Qingyang/result.json",
+    "curve": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/missing_ablations_20260724/slots_M1/04_Qingyang/result.curve.csv",
+    "predictions": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/missing_ablations_20260724/slots_M1/04_Qingyang/result.predictions.csv",
+    "audit": "/home/ustc1958/lxy/graph/tone/complete_package0722/output/0722/missing_ablations_20260724/slots_M1/04_Qingyang/result.audit.json",
+    "checkpoint": ""
+  },
+  "parameters": {
+    "trainable": 2444787,
+    "total": 2444787
+  },
+  "split_hash": {
+    "train": "8db1edca9631dd984e9f94d753dd303a750f8453855c19e396c8aaf789599a16",
+    "val": "d2116eaad5e306a5f0c209db6d4aefee3143fdfcfc748ac73ce0f569b01cd9d4",
+    "test": "dcda35389bde8fdfa34e47441ed7f92bbfd46ce8be17fb56252d955cea27a930"
+  }
+}

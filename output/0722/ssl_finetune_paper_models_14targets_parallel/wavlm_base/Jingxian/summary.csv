@@ -1,0 +1,2 @@
+﻿model,resolved_model,target,accuracy,accuracy_std,macro_f1,macro_f1_std,weighted_f1,weighted_f1_std,zero_shot_macro_f1,zero_shot_accuracy,time_sec
+wavlm-base,wavlm-base,Jingxian,0.2524329403724586,0.036652837656338276,0.24079850297606842,0.02924507927946999,0.25071704220414576,0.04677050036932803,0.3270148432888823,0.3552385804041433,2534.54877907224

@@ -1,0 +1,2 @@
+﻿model,resolved_model,target,protocol,k,splits,train_scheme,accuracy,accuracy_std,macro_f1,macro_f1_std,weighted_f1,weighted_f1_std,zero_shot_macro_f1,zero_shot_accuracy,time_sec
+allophant-hierarchical-hfcache,allophant-hierarchical-hfcache,Suncun,loro,4,100,last_layer,0.4105414273995078,0.0649020619544124,0.35699289779384913,0.047025104062789425,0.42087111974132235,0.07291798671226646,0.47687006171369006,0.5553784860557769,265.1605938151479
